@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    class Areas
+    public class Area
     {
         public int id_area { set; get; }
         public string descripcion { set; get; }

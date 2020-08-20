@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    class Asistencia
+    public class Asistencia
     {
         public int id_asistencia { set; get; }
         public DateTime fecha { set; get; }

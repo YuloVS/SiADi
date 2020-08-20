@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    class Cargo
+    public class Cargo
     {
         public int id_cargo { set; get; }
         public string descripcion { set; get; }
