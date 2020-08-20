@@ -15,6 +15,24 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid Grid.RowSpan="2" Background="#FFBF8FF3">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="#FF3E3E40" Width="100" Height="50" BorderBrush="{x:Null}" Content="Ver infome" FontFamily="Sitka Text" FontSize="14" FontStretch="SemiCondensed" Foreground="#FFFFFF">
+                    
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="#FF3E3E40" Width="100" Height="50" BorderBrush="{x:Null}" Content="Asistencia" FontFamily="Sitka Text" FontSize="14" FontStretch="SemiCondensed" Foreground="#FFFFFF" Margin="0,3,0,0">
+
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Height="164">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="#FF3E3E40" Width="100" Height="50" BorderBrush="{x:Null}" Content="Ver areas" FontFamily="Sitka Text" FontSize="14" FontStretch="SemiCondensed" Foreground="#FFFFFF">
+
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="#FF3E3E40" Width="100" Height="50" BorderBrush="{x:Null}" Content="Ver cargos" FontFamily="Sitka Text" FontSize="14" FontStretch="SemiCondensed" Foreground="#FFFFFF" Margin="0,3,0,0">
+
+                </Button>
+            </StackPanel>
+        </Grid>
         <Grid Grid.ColumnSpan="2" Background="#FF6E33AD">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
                 <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton} " Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB681F2">
