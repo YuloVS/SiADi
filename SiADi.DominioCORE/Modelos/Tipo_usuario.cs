@@ -6,7 +6,7 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Tipo_usuario
     {
-        public int id_tipo_usuario { set; get; }
+        public int id { set; get; }
         public string descripcion { set; get; }
     }
 }

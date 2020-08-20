@@ -6,7 +6,7 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Area
     {
-        public int id_area { set; get; }
+        public int id { set; get; }
         public string descripcion { set; get; }
     }
 }

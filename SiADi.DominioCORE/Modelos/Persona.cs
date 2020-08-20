@@ -6,7 +6,7 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Persona
     {
-        public int id_persona { set; get; }
+        public int id { set; get; }
         public int dni { set; get; }
         public int cuil { set; get; }
         public string nombre { set; get; }

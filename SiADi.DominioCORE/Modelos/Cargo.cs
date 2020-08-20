@@ -6,7 +6,7 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Cargo
     {
-        public int id_cargo { set; get; }
+        public int id { set; get; }
         public string descripcion { set; get; }
         public DateTime horario_entrada { set; get; }
         public DateTime horario_salida { set; get; }
