@@ -6,11 +6,10 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Asistencia
     {
-        public int id { set; get; }
-        public DateTime fecha { set; get; }
-        public DateTime hora { set; get; }
-        public int id_persona { set; get; }
-        public bool tipo { set; get; }
+        public int Id { set; get; }
+        public DateTime Fecha { set; get; }
+        public DateTime Hora { set; get; }
+        public bool Tipo { set; get; }
 
     }
 }

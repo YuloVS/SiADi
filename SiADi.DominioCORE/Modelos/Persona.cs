@@ -6,19 +6,19 @@ namespace SiADi.DominioCORE.Modelos
 {
     public class Persona
     {
-        public int id { set; get; }
-        public int dni { set; get; }
-        public int cuil { set; get; }
-        public string nombre { set; get; }
-        public string apellido { set; get; }
-        public DateTime fecha_nacimiento { set; get; }
-        public int edad { set; get; }
-        public string direccion { set; get; }
-        public int id_cargo { set; get; }
-        public int telefono { set; get; }
-        public string codigo_qr { set; get; }
-        public string foto { set; get; }
-        public int id_tipo_usuario { set; get; }
+        public int Id { set; get; }
+        public int Dni { set; get; }
+        public int Cuil { set; get; }
+        public string Nombre { set; get; }
+        public string Apellido { set; get; }
+        public DateTime Fecha_nacimiento { set; get; }
+        public int Edad { set; get; }
+        public string Direccion { set; get; }
+        public int Telefono { set; get; }
+        public string Codigo_qr { set; get; }
+        public string Foto { set; get; }
+        public Cargo Cargo { set; get; }
+        public Tipo_usuario Tipo_Usuario { set; get; }
 
     }
 }
