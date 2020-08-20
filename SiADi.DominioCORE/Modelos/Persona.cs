@@ -19,6 +19,7 @@ namespace SiADi.DominioCORE.Modelos
         public string Foto { set; get; }
         public Cargo Cargo { set; get; }
         public Tipo_usuario Tipo_Usuario { set; get; }
+        public IEnumerable<Asistencia> Asistencias { set; get; }
 
     }
 }

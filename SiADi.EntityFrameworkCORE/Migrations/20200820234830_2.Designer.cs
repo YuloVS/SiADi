@@ -10,8 +10,8 @@ using SiADi.EntityCORE;
 namespace SiADi.EntityCORE.Migrations
 {
     [DbContext(typeof(SiADiDataContext))]
-    [Migration("20200820174847_initial")]
-    partial class initial
+    [Migration("20200820234830_2")]
+    partial class _2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,134 +23,167 @@ namespace SiADi.EntityCORE.Migrations
 
             modelBuilder.Entity("SiADi.DominioCORE.Modelos.Area", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("descripcion")
+                    b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Areas");
                 });
 
             modelBuilder.Entity("SiADi.DominioCORE.Modelos.Asistencia", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("fecha")
+                    b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("hora")
+                    b.Property<DateTime>("Hora")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("id_persona")
+                    b.Property<int?>("PersonaId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("tipo")
+                    b.Property<bool>("Tipo")
                         .HasColumnType("bit");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonaId");
 
                     b.ToTable("Asistencias");
                 });
 
             modelBuilder.Entity("SiADi.DominioCORE.Modelos.Cargo", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("descripcion")
+                    b.Property<int?>("AreaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("horario_entrada")
+                    b.Property<DateTime>("Horario_entrada")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("horario_salida")
+                    b.Property<DateTime>("Horario_salida")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("id_area")
+                    b.Property<int>("Nivel")
                         .HasColumnType("int");
 
-                    b.Property<int>("nivel")
-                        .HasColumnType("int");
-
-                    b.Property<float>("salario")
+                    b.Property<float>("Salario")
                         .HasColumnType("real");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
 
                     b.ToTable("Cargos");
                 });
 
             modelBuilder.Entity("SiADi.DominioCORE.Modelos.Persona", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("apellido")
+                    b.Property<string>("Apellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("codigo_qr")
+                    b.Property<int?>("CargoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Codigo_qr")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("cuil")
+                    b.Property<int>("Cuil")
                         .HasColumnType("int");
 
-                    b.Property<string>("direccion")
+                    b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("dni")
+                    b.Property<int>("Dni")
                         .HasColumnType("int");
 
-                    b.Property<int>("edad")
+                    b.Property<int>("Edad")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("fecha_nacimiento")
+                    b.Property<DateTime>("Fecha_nacimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("foto")
+                    b.Property<string>("Foto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("id_cargo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("id_tipo_usuario")
-                        .HasColumnType("int");
-
-                    b.Property<string>("nombre")
+                    b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("telefono")
+                    b.Property<int>("Telefono")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
+                    b.Property<int?>("Tipo_UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CargoId");
+
+                    b.HasIndex("Tipo_UsuarioId");
 
                     b.ToTable("Personas");
                 });
 
             modelBuilder.Entity("SiADi.DominioCORE.Modelos.Tipo_usuario", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("descripcion")
+                    b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Tipos_usuarios");
+                });
+
+            modelBuilder.Entity("SiADi.DominioCORE.Modelos.Asistencia", b =>
+                {
+                    b.HasOne("SiADi.DominioCORE.Modelos.Persona", null)
+                        .WithMany("Asistencias")
+                        .HasForeignKey("PersonaId");
+                });
+
+            modelBuilder.Entity("SiADi.DominioCORE.Modelos.Cargo", b =>
+                {
+                    b.HasOne("SiADi.DominioCORE.Modelos.Area", null)
+                        .WithMany("Cargos")
+                        .HasForeignKey("AreaId");
+                });
+
+            modelBuilder.Entity("SiADi.DominioCORE.Modelos.Persona", b =>
+                {
+                    b.HasOne("SiADi.DominioCORE.Modelos.Cargo", "Cargo")
+                        .WithMany()
+                        .HasForeignKey("CargoId");
+
+                    b.HasOne("SiADi.DominioCORE.Modelos.Tipo_usuario", "Tipo_Usuario")
+                        .WithMany()
+                        .HasForeignKey("Tipo_UsuarioId");
                 });
 #pragma warning restore 612, 618
         }
