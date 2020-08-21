@@ -4,9 +4,9 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    class Tipo_usuario
+    public class Tipo_usuario
     {
-        public int id_tipo_usuario { set; get; }
-        public string descripcion { set; get; }
+        public int Id { set; get; }
+        public string Descripcion { set; get; }
     }
 }

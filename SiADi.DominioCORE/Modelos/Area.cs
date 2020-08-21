@@ -4,12 +4,10 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class Asistencia
+    public class Area
     {
         public int Id { set; get; }
-        public DateTime Fecha { set; get; }
-        public DateTime Hora { set; get; }
-        public bool Tipo { set; get; }
-
+        public string Descripcion { set; get; }
+        public IEnumerable<Cargo> Cargos { set; get; }
     }
 }
