@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SiADi.DominioCORE.Servicios
 {
-    interface IServicioDatos<T>
+    public interface IDataService<T>
     {
         Task<IEnumerable<T>> GetAll();
         Task<T> Get(int id);

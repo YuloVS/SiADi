@@ -6,18 +6,14 @@ using System.Text;
 
 namespace SiADi.EntityCORE
 {
-    class SiADiDataContext : DbContext
+    public class SiADiDbContext : DbContext
     {
         public DbSet<Area> Areas { get; set; }
         public DbSet<Asistencia> Asistencias { get; set; }
         public DbSet<Cargo> Cargos { get; set; }
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Tipo_usuario> Tipos_usuarios { get; set; }
+        public SiADiDbContext(DbContextOptions options) : base(options) { }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=SiADiDB;Trusted_Connection=True;");
-            base.OnConfiguring(optionsBuilder);
-        }
     }
 }

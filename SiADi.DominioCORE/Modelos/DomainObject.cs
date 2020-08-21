@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class Tipo_usuario : DomainObject
+    public class DomainObject
     {
-        public string Descripcion { set; get; }
+        public int id { get; set; }
     }
 }
