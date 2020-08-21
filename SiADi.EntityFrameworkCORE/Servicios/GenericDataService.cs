@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SiADi.EntityCORE.Servicios
 {
-    public class GenericDataService<T> : IDataService<T> where T : DomainObject
+    public class GenericDataService<T> : IDataService<T> where T : Base
     {
         private readonly SiADiDbContextFactory _contextFactory;
 

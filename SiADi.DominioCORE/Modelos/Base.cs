@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class DomainObject
+    public class Base
     {
         public int id { get; set; }
     }
