@@ -4,9 +4,8 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class Area
+    public class Area : DomainObject
     {
-        public int Id { set; get; }
         public string Descripcion { set; get; }
         public IEnumerable<Cargo> Cargos { set; get; }
     }
