@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiADi.EntityCORE", "SiADi.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiADi.DominioCORE", "SiADi.DominioCORE\SiADi.DominioCORE.csproj", "{567A55B2-EF58-4C54-9CF2-3F1D924C36F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas", "Pruebas\Pruebas.csproj", "{43FB53C5-BC2C-4120-BEC3-645260F59AEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pruebas", "Pruebas\Pruebas.csproj", "{43FB53C5-BC2C-4120-BEC3-645260F59AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiADi.WPF", "SiADi.WPF\SiADi.WPF.csproj", "{993A9EB6-9745-4A24-B788-4E4636CFB51B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{43FB53C5-BC2C-4120-BEC3-645260F59AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FB53C5-BC2C-4120-BEC3-645260F59AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FB53C5-BC2C-4120-BEC3-645260F59AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993A9EB6-9745-4A24-B788-4E4636CFB51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993A9EB6-9745-4A24-B788-4E4636CFB51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993A9EB6-9745-4A24-B788-4E4636CFB51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993A9EB6-9745-4A24-B788-4E4636CFB51B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
