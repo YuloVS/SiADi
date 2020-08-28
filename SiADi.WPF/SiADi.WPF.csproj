@@ -8,12 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SiADi.DominioCORE\SiADi.DominioCORE.csproj" />
     <ProjectReference Include="..\SiADi.EntityFrameworkCORE\SiADi.EntityCORE.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

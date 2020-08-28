@@ -22,5 +22,6 @@ namespace SiADi.WPF.Controls
         {
             InitializeComponent();
         }
+
     }
 }

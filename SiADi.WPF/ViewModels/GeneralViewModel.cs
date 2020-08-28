@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.WPF.ViewModels
 {
-    public class PrincipalViewModel : ViewModelBase
+    public class GeneralViewModel : ViewModelBase
     {
     }
 }
