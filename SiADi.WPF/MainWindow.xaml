@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SiADi.WPF"
+        xmlns:controls="clr-namespace:SiADi.WPF.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-
+        <controls:NavbarHorizontal/>
     </Grid>
 </Window>

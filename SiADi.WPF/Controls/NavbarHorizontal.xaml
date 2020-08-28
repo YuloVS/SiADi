@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1000">
     <Grid>
-            
+        <TextBlock Background="{StaticResource BrushFondoBoton}" Text="LOOOOOOOOOOOOOOOOOOOOOOOL"/>
     </Grid>
 </UserControl>

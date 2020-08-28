@@ -12,5 +12,16 @@
     <Color x:Key="LetrasBoton">#201335</Color>
     <Color x:Key="FondoContenido">#FFFDED</Color>
     <Color x:Key="LetrasContenido">#201335</Color>
-    
+
+    <SolidColorBrush x:Key="BrushBarraVertical" Color="{StaticResource BarraVertical}"/>
+    <SolidColorBrush x:Key="BrushLetrasBV" Color="{StaticResource LetrasBV}"/>
+    <SolidColorBrush x:Key="BrushLetrasBVSeleccionadas" Color="{StaticResource LetrasBVSeleccionadas}"/>
+    <SolidColorBrush x:Key="BrushBarraHorizontal" Color="{StaticResource BarraHorizontal}"/>
+    <SolidColorBrush x:Key="BrushSubBarraHorizontal" Color="{StaticResource SubBarraHorizontal}"/>
+    <SolidColorBrush x:Key="BrushLetrasSBH" Color="{StaticResource LetrasSBH}"/>
+    <SolidColorBrush x:Key="BrushFondoBoton" Color="{StaticResource FondoBoton}"/>
+    <SolidColorBrush x:Key="BrushLetrasBoton" Color="{StaticResource LetrasBoton}"/>
+    <SolidColorBrush x:Key="BrushFondoContenido" Color="{StaticResource FondoContenido}"/>
+    <SolidColorBrush x:Key="BrushLetrasContenido" Color="{StaticResource LetrasContenido}"/>
+
 </ResourceDictionary>
