@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class Persona : DomainObject
+    public class Persona : Base
     {
         public int Dni { set; get; }
         public int Cuil { set; get; }

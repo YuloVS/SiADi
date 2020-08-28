@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.DominioCORE.Modelos
 {
-    public class Cargo : DomainObject
+    public class Cargo : Base
     {
         public string Descripcion { set; get; }
         public DateTime Horario_entrada { set; get; }
