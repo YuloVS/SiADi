@@ -11,6 +11,6 @@ namespace SiADi.WPF.State.Navigators
     {
         public ViewModelBase CurrentViewModel { get; set; }
 
-        public ICommand UpdateCurrenViewModelCommand => new UpdateCurrentViewModelCommand(this);
+        public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);
     }
 }

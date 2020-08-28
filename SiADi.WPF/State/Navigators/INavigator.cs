@@ -6,15 +6,16 @@ using System.Windows.Input;
 
 namespace SiADi.WPF.State.Navigators
 {
-    public interface INavigator
-    {
-        public enum ViewType
+    public enum ViewType
         {
             General,
             Principal,
             lol
         }
+    public interface INavigator
+    {
+        
         public ViewModelBase CurrentViewModel { get; set; }
-        public ICommand UpdateCurrenViewModelCommand { get; }
+        public ICommand UpdateCurrentViewModelCommand { get; }
     }
 }

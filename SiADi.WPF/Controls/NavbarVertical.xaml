@@ -24,8 +24,8 @@
                 </Grid.RenderTransform>
                 <Image Source="/img/Logo.png" Height="80" VerticalAlignment="Top"/>
             </Grid>
-            <RadioButton Content="General" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.lol}"/>
-            <RadioButton Content="Principal" Command="{Binding UpdateCurrentViewModelCommand}" />
+            <RadioButton Content="General" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.General}"/>
+            <RadioButton Content="Principal" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewType.Principal}"/>
             <ListView x:Name="ListViewMenu" Foreground="#FFFDED" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ListViewItem x:Name="ItemHome" Height="60">
                     <StackPanel Orientation="Horizontal">
