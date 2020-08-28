@@ -8,6 +8,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
-        <controls:NavbarVertical DataContext="{Binding Navigator}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <controls:NavbarVertical Grid.Column="0" DataContext="{Binding Navigator}"/>
+        <ContentControl Grid.Column="1" Content="{Binding Navigator.CurrentViewModel}"/>
     </Grid>
 </Window>
