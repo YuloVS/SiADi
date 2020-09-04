@@ -13,8 +13,8 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <DataTemplate DataType="{x:Type viewmodels:PrincipalViewModel}">
-                <views:Principal/>
+            <DataTemplate DataType="{x:Type viewmodels:UsuariosBorrarViewModel}">
+                <views:UsuariosBorrar/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewmodels:GeneralViewModel}">
                 <views:AsistenciasInformeGeneral/>

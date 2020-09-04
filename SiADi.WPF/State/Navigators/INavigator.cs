@@ -10,7 +10,21 @@ namespace SiADi.WPF.State.Navigators
         {
             General,
             Principal,
-            lol
+            AreasBorrar,
+            AreasCrear,
+            AreasEditar,
+            AsistenciasBorrar,
+            AsistenciasEditar,
+            AsistenciasInformeGeneral,
+            AsistenciasInformeIndividual,
+            AsistenciasPrincipal,
+            AsistenciasRegistrar,
+            CargosBorrar,
+            CargosCrear,
+            CargosEditar,
+            UsuariosBorrar,
+            UsuariosCrear,
+            UsuariosEditar
         }
     public interface INavigator
     {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SiADi.WPF.ViewModels
 {
-    public class AreasCrearViewModel
+    public class AreasCrearViewModel : ViewModelBase
     {
     }
 }
