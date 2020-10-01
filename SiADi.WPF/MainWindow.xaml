@@ -13,6 +13,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <controls:NavbarVertical Grid.Column="0" DataContext="{Binding Navigator}"/>
-        <ContentControl Grid.Column="1" Content="{Binding Navigator.CurrentViewModel}"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <controls:BarraSuperior Grid.Row="0" DataContext="{Binding Navigator}"/>
+            <controls:BarraSuperiorAsistencias Grid.Row="1" DataContext="{Binding Navigator}"/>
+            <ContentControl Grid.Row="2" Content="{Binding Navigator.CurrentViewModel}"/>
+        </Grid>
     </Grid>
 </Window>

@@ -46,6 +46,9 @@ namespace SiADi.WPF.Commands
                     case ViewType.AreasEditar:
                         _navigator.CurrentViewModel = new AreasEditarViewModel();
                         break;
+                    case ViewType.AreasPrincipal:
+                        _navigator.CurrentViewModel = new AreasPrincipalViewModel();
+                        break;
                     case ViewType.AsistenciasBorrar:
                         _navigator.CurrentViewModel = new AsistenciasBorrarViewModel();
                         break;
@@ -73,6 +76,9 @@ namespace SiADi.WPF.Commands
                     case ViewType.CargosEditar:
                         _navigator.CurrentViewModel = new CargosEditarViewModel();
                         break;
+                    case ViewType.CargosPrincipal:
+                        _navigator.CurrentViewModel = new CargosPrincipalViewModel();
+                        break;
                     case ViewType.UsuariosBorrar:
                         _navigator.CurrentViewModel = new UsuariosBorrarViewModel();
                         break;
@@ -81,6 +87,9 @@ namespace SiADi.WPF.Commands
                         break;
                     case ViewType.UsuariosEditar:
                         _navigator.CurrentViewModel = new UsuariosEditarViewModel();
+                        break;
+                    case ViewType.UsuariosPrincipal:
+                        _navigator.CurrentViewModel = new UsuariosPrincipalViewModel();
                         break;
                     default:
                         break;

@@ -13,6 +13,7 @@ namespace SiADi.WPF.State.Navigators
             AreasBorrar,
             AreasCrear,
             AreasEditar,
+            AreasPrincipal,
             AsistenciasBorrar,
             AsistenciasEditar,
             AsistenciasInformeGeneral,
@@ -22,9 +23,11 @@ namespace SiADi.WPF.State.Navigators
             CargosBorrar,
             CargosCrear,
             CargosEditar,
+            CargosPrincipal,
             UsuariosBorrar,
             UsuariosCrear,
-            UsuariosEditar
+            UsuariosEditar,
+            UsuariosPrincipal
         }
     public interface INavigator
     {
