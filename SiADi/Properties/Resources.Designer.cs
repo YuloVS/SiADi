@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PlayerUI.Properties {
+namespace SiADi.Properties {
     using System;
     
     

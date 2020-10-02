@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace PlayerUI
+namespace SiADi
 {
     public partial class UsuariosAñadir : Form
     {

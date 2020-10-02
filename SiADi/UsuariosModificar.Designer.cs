@@ -1,4 +1,4 @@
-﻿namespace PlayerUI
+﻿namespace SiADi
 {
     partial class UsuariosModificar
     {
