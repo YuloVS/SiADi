@@ -7,8 +7,8 @@
     <ProjectGuid>{B265B459-B4B6-44BC-BDB1-B401C58DC48F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlayerUI</RootNamespace>
-    <AssemblyName>PlayerUI</AssemblyName>
+    <RootNamespace>SiADi</RootNamespace>
+    <AssemblyName>SiADi</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
