@@ -20,3 +20,25 @@ C:\Users\valle\source\repos\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\Pl
 C:\Users\valle\source\repos\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.CargosModificar.resources
 C:\Users\valle\source\repos\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.UsuariosAñadir.resources
 C:\Users\valle\source\repos\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.UsuariosModificar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\bin\Debug\PlayerUI.exe.config
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\bin\Debug\PlayerUI.exe
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\bin\Debug\PlayerUI.pdb
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\SiADiUI.csprojAssemblyReference.cache
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AreasAñadir.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AreasModificar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AsistenciasInformeGral.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AsistenciasInformeInd.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AsistenciasModificar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.AsistenciasRegistrar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.CargosAñadir.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.CargosModificar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.Form1.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.Form2.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.Form3.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.UsuariosAñadir.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.UsuariosModificar.resources
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\SiADiUI.csproj.GenerateResource.cache
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\SiADiUI.csproj.CoreCompileInputs.cache
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.exe
+C:\Users\pauli\OneDrive\Facultad\4to LSI\Taller de Programacion 2\SiADi\PlayerUI\obj\Debug\PlayerUI.pdb
