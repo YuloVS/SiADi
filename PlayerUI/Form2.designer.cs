@@ -125,12 +125,12 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.LightGray;
+            this.button4.ForeColor = System.Drawing.Color.LightGreen;
             this.button4.Location = new System.Drawing.Point(508, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 40);
             this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
+            this.button4.Text = "cccc";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
