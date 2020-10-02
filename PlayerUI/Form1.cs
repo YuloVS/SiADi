@@ -186,5 +186,10 @@ namespace PlayerUI
         {
             openChildForm(new AreasModificar());
         }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
