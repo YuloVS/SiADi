@@ -28,27 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelHorario = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.labelA = new System.Windows.Forms.Label();
+            this.labelArea = new System.Windows.Forms.Label();
+            this.comboBoxArea = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDesde = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
+            this.labelSalario = new System.Windows.Forms.Label();
+            this.textBoxSalario = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(246, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 22);
-            this.textBox1.TabIndex = 26;
+            this.textBoxNombre.Location = new System.Drawing.Point(246, 112);
+            this.textBoxNombre.MaxLength = 25;
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(208, 22);
+            this.textBoxNombre.TabIndex = 0;
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
+            this.textBoxNombre.Validated += new System.EventHandler(this.textBoxNombre_Validated);
             // 
             // btnLimpiar
             // 
@@ -82,32 +88,31 @@
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // labelHorario
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label3.Location = new System.Drawing.Point(231, 154);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 29);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Horario";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.labelHorario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelHorario.AutoSize = true;
+            this.labelHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelHorario.Location = new System.Drawing.Point(231, 154);
+            this.labelHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHorario.Name = "labelHorario";
+            this.labelHorario.Size = new System.Drawing.Size(93, 29);
+            this.labelHorario.TabIndex = 23;
+            this.labelHorario.Text = "Horario";
             // 
-            // label2
+            // labelNombre
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(235, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 29);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Nombre";
+            this.labelNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelNombre.Location = new System.Drawing.Point(235, 80);
+            this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(101, 29);
+            this.labelNombre.TabIndex = 21;
+            this.labelNombre.Text = "Nombre";
             // 
             // label4
             // 
@@ -121,79 +126,88 @@
             this.label4.Size = new System.Drawing.Size(161, 29);
             this.label4.TabIndex = 20;
             this.label4.Text = "Nuevo Cargo";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label1
+            // labelA
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(348, 179);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 29);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "a";
+            this.labelA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelA.AutoSize = true;
+            this.labelA.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelA.Location = new System.Drawing.Point(348, 179);
+            this.labelA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelA.Name = "labelA";
+            this.labelA.Size = new System.Drawing.Size(26, 29);
+            this.labelA.TabIndex = 27;
+            this.labelA.Text = "a";
             // 
-            // label5
+            // labelArea
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label5.Location = new System.Drawing.Point(235, 240);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 29);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Área";
+            this.labelArea.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelArea.AutoSize = true;
+            this.labelArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelArea.Location = new System.Drawing.Point(235, 240);
+            this.labelArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelArea.Name = "labelArea";
+            this.labelArea.Size = new System.Drawing.Size(63, 29);
+            this.labelArea.TabIndex = 28;
+            this.labelArea.Text = "Área";
             // 
-            // comboBox1
+            // comboBoxArea
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(246, 272);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 29;
+            this.comboBoxArea.FormattingEnabled = true;
+            this.comboBoxArea.Location = new System.Drawing.Point(246, 272);
+            this.comboBoxArea.Name = "comboBoxArea";
+            this.comboBoxArea.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxArea.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateTimePickerDesde
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 186);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(82, 22);
-            this.dateTimePicker1.TabIndex = 30;
+            this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerDesde.Location = new System.Drawing.Point(246, 186);
+            this.dateTimePickerDesde.Name = "dateTimePickerDesde";
+            this.dateTimePickerDesde.ShowUpDown = true;
+            this.dateTimePickerDesde.Size = new System.Drawing.Size(82, 22);
+            this.dateTimePickerDesde.TabIndex = 1;
+            this.dateTimePickerDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateTimePickerDesde_KeyPress);
+            this.dateTimePickerDesde.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerDesde_Validating);
             // 
-            // dateTimePicker2
+            // dateTimePickerHasta
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(396, 186);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(82, 22);
-            this.dateTimePicker2.TabIndex = 31;
+            this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerHasta.Location = new System.Drawing.Point(396, 186);
+            this.dateTimePickerHasta.Name = "dateTimePickerHasta";
+            this.dateTimePickerHasta.ShowUpDown = true;
+            this.dateTimePickerHasta.Size = new System.Drawing.Size(82, 22);
+            this.dateTimePickerHasta.TabIndex = 2;
+            this.dateTimePickerHasta.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerHasta_Validating);
             // 
-            // label6
+            // labelSalario
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label6.Location = new System.Drawing.Point(235, 322);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 29);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Salario";
+            this.labelSalario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelSalario.AutoSize = true;
+            this.labelSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSalario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelSalario.Location = new System.Drawing.Point(235, 322);
+            this.labelSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSalario.Name = "labelSalario";
+            this.labelSalario.Size = new System.Drawing.Size(89, 29);
+            this.labelSalario.TabIndex = 32;
+            this.labelSalario.Text = "Salario";
             // 
-            // textBox2
+            // textBoxSalario
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 354);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 22);
-            this.textBox2.TabIndex = 33;
+            this.textBoxSalario.Location = new System.Drawing.Point(246, 354);
+            this.textBoxSalario.MaxLength = 6;
+            this.textBoxSalario.Name = "textBoxSalario";
+            this.textBoxSalario.Size = new System.Drawing.Size(128, 22);
+            this.textBoxSalario.TabIndex = 4;
+            this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_KeyPress);
+            this.textBoxSalario.Validated += new System.EventHandler(this.textBoxSalario_Validated);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CargosAñadir
             // 
@@ -201,21 +215,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(666, 514);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSalario);
+            this.Controls.Add(this.labelSalario);
+            this.Controls.Add(this.dateTimePickerHasta);
+            this.Controls.Add(this.dateTimePickerDesde);
+            this.Controls.Add(this.comboBoxArea);
+            this.Controls.Add(this.labelArea);
+            this.Controls.Add(this.labelA);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelHorario);
+            this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label4);
             this.Name = "CargosAñadir";
             this.Text = "CargosAñadir";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,18 +238,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelHorario;
+        private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label labelA;
+        private System.Windows.Forms.Label labelArea;
+        private System.Windows.Forms.ComboBox comboBoxArea;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDesde;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
+        private System.Windows.Forms.Label labelSalario;
+        private System.Windows.Forms.TextBox textBoxSalario;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
