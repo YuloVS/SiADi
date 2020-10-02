@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
@@ -41,14 +42,19 @@
             this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
             this.labelSalario = new System.Windows.Forms.Label();
             this.textBoxSalario = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(246, 112);
+            this.textBoxNombre.MaxLength = 25;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(208, 22);
             this.textBoxNombre.TabIndex = 0;
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
+            this.textBoxNombre.Validated += new System.EventHandler(this.textBoxNombre_Validated);
             // 
             // btnLimpiar
             // 
@@ -163,6 +169,8 @@
             this.dateTimePickerDesde.ShowUpDown = true;
             this.dateTimePickerDesde.Size = new System.Drawing.Size(82, 22);
             this.dateTimePickerDesde.TabIndex = 1;
+            this.dateTimePickerDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateTimePickerDesde_KeyPress);
+            this.dateTimePickerDesde.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerDesde_Validating);
             // 
             // dateTimePickerHasta
             // 
@@ -172,6 +180,7 @@
             this.dateTimePickerHasta.ShowUpDown = true;
             this.dateTimePickerHasta.Size = new System.Drawing.Size(82, 22);
             this.dateTimePickerHasta.TabIndex = 2;
+            this.dateTimePickerHasta.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerHasta_Validating);
             // 
             // labelSalario
             // 
@@ -189,9 +198,16 @@
             // textBoxSalario
             // 
             this.textBoxSalario.Location = new System.Drawing.Point(246, 354);
+            this.textBoxSalario.MaxLength = 6;
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(128, 22);
             this.textBoxSalario.TabIndex = 4;
+            this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_KeyPress);
+            this.textBoxSalario.Validated += new System.EventHandler(this.textBoxSalario_Validated);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CargosAñadir
             // 
@@ -214,6 +230,7 @@
             this.Controls.Add(this.label4);
             this.Name = "CargosAñadir";
             this.Text = "CargosAñadir";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +251,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
         private System.Windows.Forms.Label labelSalario;
         private System.Windows.Forms.TextBox textBoxSalario;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
