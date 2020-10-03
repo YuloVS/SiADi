@@ -12,19 +12,32 @@ namespace SiADi
 {
     public partial class AreasAñadir : Form
     {
+        private Verificaciones verificaciones = new Verificaciones();
         public AreasAñadir()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextboxNombreAreasAñadir_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            verificaciones.soloLetras(e);
         }
 
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        private void TextboxDescipcionAreasAñadir_KeyPress(object sender, KeyPressEventArgs e)
         {
+            verificaciones.soloLetras(e);
+        }
 
+        private void TextboxNombreAreasAñadir_Validated(object sender, EventArgs e)
+        {
+            if (TextboxNombreAreasAñadir.TextLength < 3)
+            {
+                errorProvider1.SetError(TextboxNombreAreasAñadir, "Ingrese un nombre válido.");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }
