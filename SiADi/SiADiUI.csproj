@@ -94,6 +94,12 @@
     <Compile Include="CargosModificar.Designer.cs">
       <DependentUpon>CargosModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngresoVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoVista.Designer.cs">
+      <DependentUpon>IngresoVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargosModificar.resx">
       <DependentUpon>CargosModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoVista.resx">
+      <DependentUpon>IngresoVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
