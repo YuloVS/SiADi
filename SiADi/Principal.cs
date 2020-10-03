@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SiADi
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
             hideSubMenu();
@@ -38,7 +38,7 @@ namespace SiADi
         }
 
 
-        #region MediaSubMenu
+        #region -
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new Form2());
@@ -78,7 +78,7 @@ namespace SiADi
             showSubMenu(panelUsuariosSubMenu);
         }
 
-        #region PlayListManagemetSubMenu
+        #region -
         private void button8_Click(object sender, EventArgs e)
         {
             //..
