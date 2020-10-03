@@ -28,61 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.LabelAreasAñadir = new System.Windows.Forms.Label();
+            this.NombreAreasAñadir = new System.Windows.Forms.Label();
+            this.TextboxDescipcionAreasAñadir = new System.Windows.Forms.RichTextBox();
+            this.DescripcionAreasAñadir = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextboxNombreAreasAñadir = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LabelAreasAñadir
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(263, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nueva Área";
+            this.LabelAreasAñadir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LabelAreasAñadir.AutoSize = true;
+            this.LabelAreasAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAreasAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.LabelAreasAñadir.Location = new System.Drawing.Point(197, 15);
+            this.LabelAreasAñadir.Name = "LabelAreasAñadir";
+            this.LabelAreasAñadir.Size = new System.Drawing.Size(116, 25);
+            this.LabelAreasAñadir.TabIndex = 2;
+            this.LabelAreasAñadir.Text = "Nueva Área";
             // 
-            // label2
+            // NombreAreasAñadir
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(163, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre";
+            this.NombreAreasAñadir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NombreAreasAñadir.AutoSize = true;
+            this.NombreAreasAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreAreasAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.NombreAreasAñadir.Location = new System.Drawing.Point(122, 62);
+            this.NombreAreasAñadir.Name = "NombreAreasAñadir";
+            this.NombreAreasAñadir.Size = new System.Drawing.Size(79, 24);
+            this.NombreAreasAñadir.TabIndex = 4;
+            this.NombreAreasAñadir.Text = "Nombre";
             // 
-            // richTextBox1
+            // TextboxDescipcionAreasAñadir
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(177, 235);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 154);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.TextboxDescipcionAreasAñadir.Location = new System.Drawing.Point(133, 191);
+            this.TextboxDescipcionAreasAñadir.Margin = new System.Windows.Forms.Padding(2);
+            this.TextboxDescipcionAreasAñadir.MaxLength = 100;
+            this.TextboxDescipcionAreasAñadir.Name = "TextboxDescipcionAreasAñadir";
+            this.TextboxDescipcionAreasAñadir.Size = new System.Drawing.Size(248, 126);
+            this.TextboxDescipcionAreasAñadir.TabIndex = 5;
+            this.TextboxDescipcionAreasAñadir.Text = "";
+            this.TextboxDescipcionAreasAñadir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxDescipcionAreasAñadir_KeyPress);
             // 
-            // label3
+            // DescripcionAreasAñadir
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label3.Location = new System.Drawing.Point(163, 203);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 29);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Descripción";
+            this.DescripcionAreasAñadir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DescripcionAreasAñadir.AutoSize = true;
+            this.DescripcionAreasAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripcionAreasAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.DescripcionAreasAñadir.Location = new System.Drawing.Point(122, 165);
+            this.DescripcionAreasAñadir.Name = "DescripcionAreasAñadir";
+            this.DescripcionAreasAñadir.Size = new System.Drawing.Size(110, 24);
+            this.DescripcionAreasAñadir.TabIndex = 6;
+            this.DescripcionAreasAñadir.Text = "Descripción";
             // 
             // btnCrear
             // 
@@ -92,10 +95,9 @@
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.ForeColor = System.Drawing.Color.LightGray;
-            this.btnCrear.Location = new System.Drawing.Point(397, 452);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrear.Location = new System.Drawing.Point(298, 367);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(200, 49);
+            this.btnCrear.Size = new System.Drawing.Size(150, 40);
             this.btnCrear.TabIndex = 17;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -108,36 +110,45 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLimpiar.Location = new System.Drawing.Point(73, 452);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Location = new System.Drawing.Point(55, 367);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(200, 49);
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
             this.btnLimpiar.TabIndex = 18;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // TextboxNombreAreasAñadir
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 22);
-            this.textBox1.TabIndex = 19;
+            this.TextboxNombreAreasAñadir.Location = new System.Drawing.Point(133, 88);
+            this.TextboxNombreAreasAñadir.Margin = new System.Windows.Forms.Padding(2);
+            this.TextboxNombreAreasAñadir.MaxLength = 30;
+            this.TextboxNombreAreasAñadir.Name = "TextboxNombreAreasAñadir";
+            this.TextboxNombreAreasAñadir.Size = new System.Drawing.Size(157, 20);
+            this.TextboxNombreAreasAñadir.TabIndex = 19;
+            this.TextboxNombreAreasAñadir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextboxNombreAreasAñadir_KeyPress);
+            this.TextboxNombreAreasAñadir.Validated += new System.EventHandler(this.TextboxNombreAreasAñadir_Validated);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // AreasAñadir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(666, 514);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(500, 418);
+            this.Controls.Add(this.TextboxNombreAreasAñadir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DescripcionAreasAñadir);
+            this.Controls.Add(this.TextboxDescipcionAreasAñadir);
+            this.Controls.Add(this.NombreAreasAñadir);
+            this.Controls.Add(this.LabelAreasAñadir);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AreasAñadir";
             this.Text = "AreasAñadir";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,12 +156,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelAreasAñadir;
+        private System.Windows.Forms.Label NombreAreasAñadir;
+        private System.Windows.Forms.RichTextBox TextboxDescipcionAreasAñadir;
+        private System.Windows.Forms.Label DescripcionAreasAñadir;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextboxNombreAreasAñadir;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
