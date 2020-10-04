@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiADi.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace SiADi
     public partial class AreasAñadir : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
+        private int error = 1;
         public AreasAñadir()
         {
             InitializeComponent();
@@ -33,10 +35,12 @@ namespace SiADi
             if (TextboxNombreAreasAñadir.TextLength < 3)
             {
                 errorProvider1.SetError(TextboxNombreAreasAñadir, "Ingrese un nombre válido.");
+                error = 1;
             }
             else
             {
                 errorProvider1.Clear();
+                error = 0;
             }
         }
 
@@ -49,7 +53,22 @@ namespace SiADi
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-
+            if(error == 0)
+            {
+                using (var db = new SiADiDB())
+                {
+                    db.Areas.Add(new Area { Nombre = TextboxNombreAreasAñadir.Text, Descripcion = TextboxDescipcionAreasAñadir.Text });
+                    db.SaveChanges();
+                }
+                MessageBox.Show("Area añadida.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.TextboxNombreAreasAñadir.Clear();
+                this.TextboxDescipcionAreasAñadir.Clear();
+                errorProvider1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error, verifique el campo 'Nombre'.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
