@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(168, 9);
+            this.label1.Location = new System.Drawing.Point(179, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 30);
             this.label1.TabIndex = 1;
@@ -54,7 +54,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(169, 339);
+            this.label2.Location = new System.Drawing.Point(179, 333);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 30);
             this.label2.TabIndex = 43;
