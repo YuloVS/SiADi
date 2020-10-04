@@ -51,10 +51,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.btnAgregarFoto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -334,15 +336,16 @@
             this.comboBox2.Size = new System.Drawing.Size(128, 29);
             this.comboBox2.TabIndex = 8;
             // 
-            // pictureBox1
+            // pictureBoxUsuario
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(352, 56);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 126);
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(371, 56);
+            this.pictureBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(116, 126);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsuario.TabIndex = 61;
+            this.pictureBoxUsuario.TabStop = false;
             // 
             // textBoxDNI
             // 
@@ -362,13 +365,34 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // btnAgregarFoto
+            // 
+            this.btnAgregarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarFoto.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.btnAgregarFoto.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAgregarFoto.Location = new System.Drawing.Point(371, 125);
+            this.btnAgregarFoto.Name = "btnAgregarFoto";
+            this.btnAgregarFoto.Size = new System.Drawing.Size(84, 28);
+            this.btnAgregarFoto.TabIndex = 63;
+            this.btnAgregarFoto.Text = "Añadir foto";
+            this.btnAgregarFoto.UseVisualStyleBackColor = false;
+            this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
+            // 
             // UsuariosAñadir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(500, 418);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAgregarFoto);
+            this.Controls.Add(this.pictureBoxUsuario);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -395,7 +419,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsuariosAñadir";
             this.Text = "UsuariosAñadir";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -426,8 +450,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Button btnAgregarFoto;
     }
 }

@@ -155,5 +155,21 @@ namespace SiADi
         {
 
         }
+
+        private void btnAgregarFoto_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                string imagen = openFileDialog2.FileName;
+                if (Image.FromFile(imagen).Width == Image.FromFile(imagen).Height)
+                {
+                    pictureBoxUsuario.Image = Image.FromFile(imagen);
+                }
+                else
+                {
+                    MessageBox.Show("La imagen debe ser cuadrada", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
