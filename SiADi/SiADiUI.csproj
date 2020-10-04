@@ -117,6 +117,10 @@
     <Compile Include="Migrations\202010041355429_Cotraseña Personas.Designer.cs">
       <DependentUpon>202010041355429_Cotraseña Personas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010041403417_Corregido Area.cs" />
+    <Compile Include="Migrations\202010041403417_Corregido Area.Designer.cs">
+      <DependentUpon>202010041403417_Corregido Area.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -180,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010041355429_Cotraseña Personas.resx">
       <DependentUpon>202010041355429_Cotraseña Personas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010041403417_Corregido Area.resx">
+      <DependentUpon>202010041403417_Corregido Area.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
