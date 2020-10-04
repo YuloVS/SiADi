@@ -37,11 +37,11 @@ namespace SiADi
 
         private void dateTimePickerHasta_Validating(object sender, CancelEventArgs e)
         {
-            int horas = dateTimePickerHasta.Value.Hour - dateTimePickerDesde.Value.Hour;
+            int horas = horarioSalida.Value.Hour - horarioEntrada.Value.Hour;
             if (horas < 4)
             {
-                errorProvider1.SetError(dateTimePickerDesde, "La cantidad minima de horas es cuatro.");
-                errorProvider1.SetError(dateTimePickerHasta, "La cantidad minima de horas es cuatro.");
+                errorProvider1.SetError(horarioEntrada, "La cantidad minima de horas es cuatro.");
+                errorProvider1.SetError(horarioSalida, "La cantidad minima de horas es cuatro.");
             }
             else
             {
@@ -51,11 +51,11 @@ namespace SiADi
 
         private void dateTimePickerDesde_Validating(object sender, CancelEventArgs e)
         {
-            int horas = dateTimePickerHasta.Value.Hour - dateTimePickerDesde.Value.Hour;
+            int horas = horarioSalida.Value.Hour - horarioEntrada.Value.Hour;
             if (horas < 4)
             {
-                errorProvider1.SetError(dateTimePickerDesde, "La cantidad minima de horas es cuatro.");
-                errorProvider1.SetError(dateTimePickerHasta, "La cantidad minima de horas es cuatro.");
+                errorProvider1.SetError(horarioEntrada, "La cantidad minima de horas es cuatro.");
+                errorProvider1.SetError(horarioSalida, "La cantidad minima de horas es cuatro.");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace SiADi
 
         private void dateTimePickerDesde_KeyPress(object sender, KeyPressEventArgs e)
         {
-            dateTimePickerDesde.Value = dateTimePickerDesde.Value.AddHours(dateTimePickerDesde.Value.Hour + 4);
+            horarioEntrada.Value = horarioEntrada.Value.AddHours(horarioEntrada.Value.Hour + 4);
             //TODO: Que la diferencia entre desde y hasta automaticamente sea minimamente 4.
         }
 
@@ -76,14 +76,29 @@ namespace SiADi
 
         private void textBoxSalario_Validated(object sender, EventArgs e)
         {
-            if (Convert.ToDouble(textBoxSalario.Text) < 10000)
+            try
+            {
+                if (Convert.ToDouble(textBoxSalario.Text) < 10000)
+                {
+                    errorProvider1.SetError(textBoxSalario, "El salario minimo es $10.000.");
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                }
+            }
+            catch (SystemException) 
             {
                 errorProvider1.SetError(textBoxSalario, "El salario minimo es $10.000.");
             }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textBoxNombre.Clear();
+            this.textBoxSalario.Clear();
+            errorProvider1.Clear();
         }
     }
 }

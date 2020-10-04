@@ -17,17 +17,7 @@ namespace SiADi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
-            /*using (var db = new SiADiDB())
-            {
-                db.Areas.Add(new Area { Nombre = "Test area", Descripcion = "Esta es una area de prueba"});
-                db.SaveChanges();
-
-                foreach (var cargo in db.Cargos)
-                {
-                    Console.WriteLine(cargo.Nombre);
-                }
-            }*/
+            Application.Run(new IngresoVista());
         }
     }
 }
