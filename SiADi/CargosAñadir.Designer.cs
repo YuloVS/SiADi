@@ -51,7 +51,7 @@
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxNombre.Location = new System.Drawing.Point(184, 91);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 25;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(157, 23);
@@ -156,7 +156,7 @@
             this.comboBoxArea.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxArea.FormattingEnabled = true;
             this.comboBoxArea.Location = new System.Drawing.Point(184, 221);
-            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(92, 29);
             this.comboBoxArea.TabIndex = 3;
@@ -166,7 +166,7 @@
             this.horarioEntrada.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.horarioEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioEntrada.Location = new System.Drawing.Point(184, 151);
-            this.horarioEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horarioEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.horarioEntrada.Name = "horarioEntrada";
             this.horarioEntrada.ShowUpDown = true;
             this.horarioEntrada.Size = new System.Drawing.Size(62, 30);
@@ -179,7 +179,7 @@
             this.horarioSalida.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.horarioSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioSalida.Location = new System.Drawing.Point(297, 151);
-            this.horarioSalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horarioSalida.Margin = new System.Windows.Forms.Padding(2);
             this.horarioSalida.Name = "horarioSalida";
             this.horarioSalida.ShowUpDown = true;
             this.horarioSalida.Size = new System.Drawing.Size(62, 30);
@@ -203,7 +203,7 @@
             this.textBoxSalario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSalario.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxSalario.Location = new System.Drawing.Point(184, 288);
-            this.textBoxSalario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSalario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalario.MaxLength = 6;
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(97, 23);
@@ -217,6 +217,7 @@
             // 
             // CargosAñadir
             // 
+            this.AcceptButton = this.btnCrear;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -234,7 +235,7 @@
             this.Controls.Add(this.labelHorario);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CargosAñadir";
             this.Text = "CargosAñadir";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
