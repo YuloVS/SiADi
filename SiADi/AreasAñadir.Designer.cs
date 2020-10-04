@@ -122,6 +122,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(208, 22);
             this.textBox1.TabIndex = 19;
+            this.textBox1.Text = "6+";
             // 
             // AreasAñadir
             // 
