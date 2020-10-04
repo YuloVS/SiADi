@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiADi.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,13 @@ namespace SiADi
     public partial class CargosAñadir : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
+        private bool errorNombre=true;
+        private bool errorHorario=true;
+        private bool errorSalario=true;
         public CargosAñadir()
         {
             InitializeComponent();
+            cargarComboBox();
         }
 
         private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -28,10 +33,12 @@ namespace SiADi
             if(textBoxNombre.TextLength < 3)
             {
                 errorProvider1.SetError(textBoxNombre, "Ingrese un nombre válido.");
+                errorNombre = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorNombre = false;
             }
         }
 
@@ -42,10 +49,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(horarioEntrada, "La cantidad minima de horas es cuatro.");
                 errorProvider1.SetError(horarioSalida, "La cantidad minima de horas es cuatro.");
+                errorHorario = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorHorario = false;
             }
         }
 
@@ -56,10 +65,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(horarioEntrada, "La cantidad minima de horas es cuatro.");
                 errorProvider1.SetError(horarioSalida, "La cantidad minima de horas es cuatro.");
+                errorHorario = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorHorario = false;
             }
         }
 
@@ -81,15 +92,18 @@ namespace SiADi
                 if (Convert.ToDouble(textBoxSalario.Text) < 10000)
                 {
                     errorProvider1.SetError(textBoxSalario, "El salario minimo es $10.000.");
+                    errorSalario = true;
                 }
                 else
                 {
                     errorProvider1.Clear();
+                    errorSalario = false;
                 }
             }
             catch (SystemException) 
             {
                 errorProvider1.SetError(textBoxSalario, "El salario minimo es $10.000.");
+                errorSalario = true;
             }
             
         }
@@ -99,6 +113,36 @@ namespace SiADi
             this.textBoxNombre.Clear();
             this.textBoxSalario.Clear();
             errorProvider1.Clear();
+        }
+        private void cargarComboBox()
+        {
+            using (var db = new SiADiDB())
+            {
+                comboBoxArea.DataSource = db.Areas.ToList();
+                comboBoxArea.DisplayMember = "Nombre";
+                comboBoxArea.ValueMember = "Id";
+                comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            if (!errorHorario && !errorNombre && !errorSalario)
+            {
+                using (var db = new SiADiDB())
+                {
+                    db.Areas.Find(comboBoxArea.SelectedValue)?.Cargos.Add(new Cargo { Nombre = textBoxNombre.Text, Salario = float.Parse(textBoxSalario.Text), Horario_entrada = horarioEntrada.Value, Horario_salida = horarioSalida.Value });
+                    db.SaveChanges();
+                }
+                MessageBox.Show("Cargo añadido.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.textBoxNombre.Clear();
+                this.textBoxSalario.Clear();
+                errorProvider1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
