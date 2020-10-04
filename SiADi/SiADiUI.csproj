@@ -109,6 +109,7 @@
     <Compile Include="IngresoVista.Designer.cs">
       <DependentUpon>IngresoVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Area.cs" />
     <Compile Include="Modelo\Asistencia.cs" />
     <Compile Include="Modelo\Base.cs" />
