@@ -30,15 +30,6 @@ namespace SiADi
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Principal principal = new Principal();
-            principal.Show();
-
-            this.Hide();
-
-        }
-
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             verificaciones.soloNumeros(e);
@@ -89,6 +80,14 @@ namespace SiADi
                 textBoxContraseña.UseSystemPasswordChar = true;
                 textBoxContraseña.Text = text;
             }
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Principal principal = new Principal();
+            principal.Show();
+
+            this.Hide();
         }
     }
 }
