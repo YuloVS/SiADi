@@ -132,5 +132,17 @@ namespace SiADi
                 errorProvider1.Clear();
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textBoxNombre.Clear();
+            this.textBoxDNI.Clear();
+            this.textBoxCUIL.Clear();
+            this.textBoxApellido.Clear();
+            this.textBoxEdad.Clear();
+            this.textBoxTelefono.Clear();
+            this.textBoxDireccion.Clear();
+            errorProvider1.Clear();
+        }
     }
 }
