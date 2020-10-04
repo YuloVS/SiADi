@@ -46,5 +46,10 @@ namespace SiADi
             this.TextboxDescipcionAreasAñadir.Clear();
             errorProvider1.Clear();
         }
+
+        private void LabelAreasAñadir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -101,6 +101,7 @@
             this.btnAreasModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAreasModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAreasModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAreasModificar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAreasModificar.ForeColor = System.Drawing.Color.Silver;
             this.btnAreasModificar.Location = new System.Drawing.Point(0, 40);
             this.btnAreasModificar.Name = "btnAreasModificar";
@@ -119,6 +120,7 @@
             this.btnAreasAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAreasAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAreasAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAreasAñadir.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAreasAñadir.ForeColor = System.Drawing.Color.Silver;
             this.btnAreasAñadir.Location = new System.Drawing.Point(0, 0);
             this.btnAreasAñadir.Name = "btnAreasAñadir";
@@ -137,6 +139,7 @@
             this.btnAreas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnAreas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnAreas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAreas.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAreas.ForeColor = System.Drawing.Color.Silver;
             this.btnAreas.Image = ((System.Drawing.Image)(resources.GetObject("btnAreas.Image")));
             this.btnAreas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,6 +172,7 @@
             this.btnCargosModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCargosModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCargosModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargosModificar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargosModificar.ForeColor = System.Drawing.Color.Silver;
             this.btnCargosModificar.Location = new System.Drawing.Point(0, 40);
             this.btnCargosModificar.Name = "btnCargosModificar";
@@ -187,6 +191,7 @@
             this.btnCargosAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCargosAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnCargosAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargosAñadir.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargosAñadir.ForeColor = System.Drawing.Color.Silver;
             this.btnCargosAñadir.Location = new System.Drawing.Point(0, 0);
             this.btnCargosAñadir.Name = "btnCargosAñadir";
@@ -205,6 +210,7 @@
             this.btnCargos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnCargos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargos.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargos.ForeColor = System.Drawing.Color.Silver;
             this.btnCargos.Image = ((System.Drawing.Image)(resources.GetObject("btnCargos.Image")));
             this.btnCargos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,6 +232,7 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,6 +265,7 @@
             this.btnUsuariosModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnUsuariosModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnUsuariosModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuariosModificar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuariosModificar.ForeColor = System.Drawing.Color.Silver;
             this.btnUsuariosModificar.Location = new System.Drawing.Point(0, 40);
             this.btnUsuariosModificar.Name = "btnUsuariosModificar";
@@ -276,6 +284,7 @@
             this.btnUsuariosAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnUsuariosAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnUsuariosAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuariosAñadir.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuariosAñadir.ForeColor = System.Drawing.Color.Silver;
             this.btnUsuariosAñadir.Location = new System.Drawing.Point(0, 0);
             this.btnUsuariosAñadir.Name = "btnUsuariosAñadir";
@@ -294,6 +303,7 @@
             this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Silver;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,6 +338,7 @@
             this.btnAsistenciasInformeInd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasInformeInd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasInformeInd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistenciasInformeInd.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistenciasInformeInd.ForeColor = System.Drawing.Color.Silver;
             this.btnAsistenciasInformeInd.Location = new System.Drawing.Point(0, 120);
             this.btnAsistenciasInformeInd.Name = "btnAsistenciasInformeInd";
@@ -346,6 +357,7 @@
             this.btnAsistenciasInformeGral.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasInformeGral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasInformeGral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistenciasInformeGral.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistenciasInformeGral.ForeColor = System.Drawing.Color.Silver;
             this.btnAsistenciasInformeGral.Location = new System.Drawing.Point(0, 80);
             this.btnAsistenciasInformeGral.Name = "btnAsistenciasInformeGral";
@@ -364,6 +376,7 @@
             this.btnAsistenciasModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistenciasModificar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistenciasModificar.ForeColor = System.Drawing.Color.Silver;
             this.btnAsistenciasModificar.Location = new System.Drawing.Point(0, 40);
             this.btnAsistenciasModificar.Name = "btnAsistenciasModificar";
@@ -382,6 +395,7 @@
             this.btnAsistenciasRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistenciasRegistrar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistenciasRegistrar.ForeColor = System.Drawing.Color.Silver;
             this.btnAsistenciasRegistrar.Location = new System.Drawing.Point(0, 0);
             this.btnAsistenciasRegistrar.Name = "btnAsistenciasRegistrar";
@@ -400,6 +414,7 @@
             this.btnAsistencias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnAsistencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistencias.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsistencias.ForeColor = System.Drawing.Color.Silver;
             this.btnAsistencias.Image = ((System.Drawing.Image)(resources.GetObject("btnAsistencias.Image")));
             this.btnAsistencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,12 +462,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // Form1
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(934, 584);
+            this.ClientSize = new System.Drawing.Size(950, 600);
             this.ControlBox = false;
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
@@ -461,7 +476,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelSideMenu.ResumeLayout(false);
             this.panelAreasSubMenu.ResumeLayout(false);

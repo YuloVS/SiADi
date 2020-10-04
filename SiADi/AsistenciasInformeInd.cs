@@ -16,5 +16,10 @@ namespace SiADi
         {
             InitializeComponent();
         }
+
+        private void AsistenciasInformeInd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
