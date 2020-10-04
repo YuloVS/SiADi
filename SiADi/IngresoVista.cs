@@ -16,6 +16,8 @@ namespace SiADi
         public IngresoVista()
         {
             InitializeComponent();
+            textBoxContraseña.UseSystemPasswordChar = true;
+            
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -61,13 +63,29 @@ namespace SiADi
 
         private void textBoxContraseña_Validating(object sender, CancelEventArgs e)
         {
-            if (textBoxContraseña.TextLength < 2)
+            if (textBoxContraseña.TextLength != 2)
             {
                 errorProvider1.SetError(textBoxContraseña, "Contraseña invalida.");
             }
             else
             {
                 errorProvider1.Clear();
+            }
+        }
+
+        private void checkBoxContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            string text = textBoxContraseña.Text;
+            if (checkBoxContraseña.Checked)
+            {
+                textBoxContraseña.UseSystemPasswordChar = false;
+                textBoxContraseña.Text = text;
+
+            }
+            else
+            {
+                textBoxContraseña.UseSystemPasswordChar = true;
+                textBoxContraseña.Text = text;
             }
         }
     }
