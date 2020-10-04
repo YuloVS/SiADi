@@ -34,6 +34,7 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxNombre, "Ingrese un nombre válido.");
                 errorNombre = true;
+                verificaciones.bordeError(textBoxNombre, this);
             }
             else
             {
@@ -93,6 +94,7 @@ namespace SiADi
                 {
                     errorProvider1.SetError(textBoxSalario, "El salario minimo es $10.000.");
                     errorSalario = true;
+                    verificaciones.bordeError(textBoxSalario, this);
                 }
                 else
                 {
