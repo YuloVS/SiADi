@@ -83,7 +83,7 @@
             this.checkBoxContraseña.AutoSize = true;
             this.checkBoxContraseña.Font = new System.Drawing.Font("Myriad Pro Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxContraseña.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBoxContraseña.Location = new System.Drawing.Point(285, 288);
+            this.checkBoxContraseña.Location = new System.Drawing.Point(282, 291);
             this.checkBoxContraseña.Name = "checkBoxContraseña";
             this.checkBoxContraseña.Size = new System.Drawing.Size(41, 21);
             this.checkBoxContraseña.TabIndex = 40;
@@ -121,10 +121,11 @@
             // 
             // textBoxContraseña
             // 
+            this.textBoxContraseña.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxContraseña.Location = new System.Drawing.Point(81, 286);
             this.textBoxContraseña.MaxLength = 8;
             this.textBoxContraseña.Name = "textBoxContraseña";
-            this.textBoxContraseña.Size = new System.Drawing.Size(178, 20);
+            this.textBoxContraseña.Size = new System.Drawing.Size(178, 30);
             this.textBoxContraseña.TabIndex = 37;
             this.textBoxContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContraseña_KeyPress);
             this.textBoxContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxContraseña_Validating);
@@ -143,10 +144,11 @@
             // 
             // textBoxDNI
             // 
+            this.textBoxDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDNI.Location = new System.Drawing.Point(81, 200);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(178, 20);
+            this.textBoxDNI.Size = new System.Drawing.Size(178, 30);
             this.textBoxDNI.TabIndex = 2;
             this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);
             this.textBoxDNI.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxDNI_Validating);
