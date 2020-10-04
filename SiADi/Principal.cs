@@ -36,65 +36,6 @@ namespace SiADi
             else
                 subMenu.Visible = false;
         }
-
-
-        #region -
-        private void button2_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form2());
-            //..
-            //your codes
-            //..
-            hideSubMenu();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //..
-            //your codes
-            //..
-            hideSubMenu();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //..
-            //your codes
-            //..
-            hideSubMenu();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //..
-            //your codes
-            //..
-            hideSubMenu();
-        }
-        #endregion
-
-        private void btnPlaylist_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelUsuariosSubMenu);
-        }
-
-        #region -
-        private void button8_Click(object sender, EventArgs e)
-        {
-            //..
-            //your codes
-            //..
-            hideSubMenu();
-        }
-
-        
-       
-
-        
-        #endregion
-
-       
-
        
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -115,7 +56,6 @@ namespace SiADi
             childForm.Show();
         }
 
-      
         private void btnAsistencias_Click(object sender, EventArgs e)
         {
             showSubMenu(panelAsistenciasSubMenu);
