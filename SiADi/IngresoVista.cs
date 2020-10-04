@@ -49,6 +49,7 @@ namespace SiADi
             if(textBoxDNI.TextLength < 7 || Int32.Parse(textBoxDNI.Text) <= 8000000)
             {
                 errorProvider1.SetError(textBoxDNI, "Ingrese un DNI válido.");
+                verificaciones.bordeError(textBoxDNI, this);
             }
             else
             {
@@ -66,6 +67,7 @@ namespace SiADi
             if (textBoxContraseña.TextLength != 2)
             {
                 errorProvider1.SetError(textBoxContraseña, "Contraseña invalida.");
+                verificaciones.bordeError(textBoxContraseña, this);
             }
             else
             {

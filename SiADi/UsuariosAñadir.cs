@@ -39,6 +39,7 @@ namespace SiADi
             if(textBoxDNI.TextLength < 7 || Int32.Parse(textBoxDNI.Text) <= 8000000)
             {
                 errorProvider1.SetError(textBoxDNI, "Ingrese un DNI válido.");
+                verificaciones.bordeError(textBoxDNI, this);
             }
             else
             {
@@ -57,6 +58,7 @@ namespace SiADi
             if (textBoxCUIL.TextLength != textBoxDNI.TextLength + 3 || !textBoxCUIL.Text.Contains(textBoxDNI.Text))
             {
                 errorProvider1.SetError(textBoxCUIL, "CUIL invalido.");
+                verificaciones.bordeError(textBoxCUIL, this);
             }
             else
             {
@@ -74,6 +76,7 @@ namespace SiADi
             if(textBoxNombre.TextLength < 2)
             {
                 errorProvider1.SetError(textBoxNombre, "Nombre invalido.");
+                verificaciones.bordeError(textBoxNombre, this);
             }
             else
             {
@@ -91,6 +94,7 @@ namespace SiADi
             if (textBoxApellido.TextLength < 2)
             {
                 errorProvider1.SetError(textBoxApellido, "Apellido invalido.");
+                verificaciones.bordeError(textBoxApellido, this);
             }
             else
             {
@@ -114,6 +118,7 @@ namespace SiADi
             if (textBoxTelefono.TextLength < 10)
             {
                 errorProvider1.SetError(textBoxTelefono, "Número telefonico invalido.");
+                verificaciones.bordeError(textBoxTelefono, this);
             }
             else
             {
@@ -126,6 +131,7 @@ namespace SiADi
             if (textBoxDireccion.TextLength < 6)
             {
                 errorProvider1.SetError(textBoxDireccion, "Dirección invalida.");
+                verificaciones.bordeError(textBoxDireccion, this);
             }
             else
             {

@@ -72,13 +72,14 @@
             // 
             // textBoxDireccion
             // 
+            this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDireccion.Location = new System.Drawing.Point(35, 259);
             this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDireccion.MaxLength = 45;
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(342, 30);
-            this.textBoxDireccion.TabIndex = 46;
+            this.textBoxDireccion.Size = new System.Drawing.Size(342, 23);
+            this.textBoxDireccion.TabIndex = 6;
             this.textBoxDireccion.Validated += new System.EventHandler(this.textBoxDireccion_Validated);
             // 
             // labelDireccion
@@ -101,7 +102,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 29);
-            this.comboBox1.TabIndex = 42;
+            this.comboBox1.TabIndex = 7;
             // 
             // labelFechaNacimiento
             // 
@@ -185,12 +186,13 @@
             // 
             // textBoxCUIL
             // 
+            this.textBoxCUIL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCUIL.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxCUIL.Location = new System.Drawing.Point(184, 82);
             this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCUIL.MaxLength = 11;
             this.textBoxCUIL.Name = "textBoxCUIL";
-            this.textBoxCUIL.Size = new System.Drawing.Size(120, 30);
+            this.textBoxCUIL.Size = new System.Drawing.Size(120, 23);
             this.textBoxCUIL.TabIndex = 1;
             this.textBoxCUIL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIL_KeyPress);
             this.textBoxCUIL.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCUIL_Validating);
@@ -209,23 +211,25 @@
             // 
             // textBoxNombre
             // 
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxNombre.Location = new System.Drawing.Point(35, 140);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(120, 30);
+            this.textBoxNombre.Size = new System.Drawing.Size(120, 23);
             this.textBoxNombre.TabIndex = 2;
             this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             this.textBoxNombre.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNombre_Validating);
             // 
             // textBoxApellido
             // 
+            this.textBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellido.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxApellido.Location = new System.Drawing.Point(184, 140);
             this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(120, 30);
+            this.textBoxApellido.Size = new System.Drawing.Size(120, 23);
             this.textBoxApellido.TabIndex = 3;
             this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             this.textBoxApellido.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxApellido_Validating);
@@ -259,24 +263,26 @@
             // 
             // textBoxEdad
             // 
+            this.textBoxEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEdad.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxEdad.Location = new System.Drawing.Point(184, 200);
             this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdad.MaxLength = 2;
             this.textBoxEdad.Name = "textBoxEdad";
             this.textBoxEdad.ReadOnly = true;
-            this.textBoxEdad.Size = new System.Drawing.Size(34, 30);
+            this.textBoxEdad.Size = new System.Drawing.Size(34, 23);
             this.textBoxEdad.TabIndex = 55;
             this.textBoxEdad.TabStop = false;
             // 
             // textBoxTelefono
             // 
+            this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxTelefono.Location = new System.Drawing.Point(248, 200);
             this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.MaxLength = 10;
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(128, 30);
+            this.textBoxTelefono.Size = new System.Drawing.Size(128, 23);
             this.textBoxTelefono.TabIndex = 5;
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             this.textBoxTelefono.Validated += new System.EventHandler(this.textBoxTelefono_Validated);
@@ -326,7 +332,7 @@
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(128, 29);
-            this.comboBox2.TabIndex = 60;
+            this.comboBox2.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -340,12 +346,13 @@
             // 
             // textBoxDNI
             // 
+            this.textBoxDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDNI.Location = new System.Drawing.Point(35, 82);
             this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(120, 30);
+            this.textBoxDNI.Size = new System.Drawing.Size(120, 23);
             this.textBoxDNI.TabIndex = 0;
             this.textBoxDNI.TextChanged += new System.EventHandler(this.textBoxDNI_TextChanged);
             this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);

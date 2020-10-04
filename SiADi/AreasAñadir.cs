@@ -36,6 +36,7 @@ namespace SiADi
             {
                 errorProvider1.SetError(TextboxNombreAreasAñadir, "Ingrese un nombre válido.");
                 error = 1;
+                verificaciones.bordeError(TextboxNombreAreasAñadir, this);
             }
             else
             {
