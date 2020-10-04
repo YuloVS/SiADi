@@ -63,7 +63,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
             this.btnLimpiar.Location = new System.Drawing.Point(46, 358);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -79,7 +79,7 @@
             this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.ForeColor = System.Drawing.Color.LightGray;
             this.btnCrear.Location = new System.Drawing.Point(308, 358);
             this.btnCrear.Name = "btnCrear";
@@ -92,11 +92,11 @@
             // 
             this.labelHorario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelHorario.AutoSize = true;
-            this.labelHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHorario.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.labelHorario.Location = new System.Drawing.Point(165, 126);
             this.labelHorario.Name = "labelHorario";
-            this.labelHorario.Size = new System.Drawing.Size(72, 24);
+            this.labelHorario.Size = new System.Drawing.Size(65, 26);
             this.labelHorario.TabIndex = 23;
             this.labelHorario.Text = "Horario";
             // 
@@ -104,11 +104,11 @@
             // 
             this.labelNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.labelNombre.Location = new System.Drawing.Point(167, 66);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(79, 24);
+            this.labelNombre.Size = new System.Drawing.Size(69, 26);
             this.labelNombre.TabIndex = 21;
             this.labelNombre.Text = "Nombre";
             // 
@@ -116,11 +116,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label4.Location = new System.Drawing.Point(196, 20);
+            this.label4.Location = new System.Drawing.Point(206, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 25);
+            this.label4.Size = new System.Drawing.Size(118, 30);
             this.label4.TabIndex = 20;
             this.label4.Text = "Nuevo Cargo";
             // 
@@ -128,11 +128,11 @@
             // 
             this.labelA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelA.AutoSize = true;
-            this.labelA.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.labelA.Location = new System.Drawing.Point(261, 145);
             this.labelA.Name = "labelA";
-            this.labelA.Size = new System.Drawing.Size(20, 24);
+            this.labelA.Size = new System.Drawing.Size(20, 26);
             this.labelA.TabIndex = 27;
             this.labelA.Text = "a";
             // 
@@ -140,11 +140,11 @@
             // 
             this.labelArea.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelArea.AutoSize = true;
-            this.labelArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelArea.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.labelArea.Location = new System.Drawing.Point(168, 199);
             this.labelArea.Name = "labelArea";
-            this.labelArea.Size = new System.Drawing.Size(50, 24);
+            this.labelArea.Size = new System.Drawing.Size(44, 26);
             this.labelArea.TabIndex = 28;
             this.labelArea.Text = "Área";
             // 
@@ -184,11 +184,11 @@
             // 
             this.labelSalario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSalario.AutoSize = true;
-            this.labelSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSalario.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelSalario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.labelSalario.Location = new System.Drawing.Point(168, 263);
             this.labelSalario.Name = "labelSalario";
-            this.labelSalario.Size = new System.Drawing.Size(67, 24);
+            this.labelSalario.Size = new System.Drawing.Size(59, 26);
             this.labelSalario.TabIndex = 32;
             this.labelSalario.Text = "Salario";
             // 
