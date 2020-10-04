@@ -58,7 +58,7 @@
             this.NombreAreasAñadir.AutoSize = true;
             this.NombreAreasAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreAreasAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.NombreAreasAñadir.Location = new System.Drawing.Point(122, 62);
+            this.NombreAreasAñadir.Location = new System.Drawing.Point(115, 65);
             this.NombreAreasAñadir.Name = "NombreAreasAñadir";
             this.NombreAreasAñadir.Size = new System.Drawing.Size(79, 24);
             this.NombreAreasAñadir.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.DescripcionAreasAñadir.AutoSize = true;
             this.DescripcionAreasAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripcionAreasAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.DescripcionAreasAñadir.Location = new System.Drawing.Point(122, 165);
+            this.DescripcionAreasAñadir.Location = new System.Drawing.Point(114, 165);
             this.DescripcionAreasAñadir.Name = "DescripcionAreasAñadir";
             this.DescripcionAreasAñadir.Size = new System.Drawing.Size(110, 24);
             this.DescripcionAreasAñadir.TabIndex = 6;
@@ -116,6 +116,7 @@
             this.btnLimpiar.TabIndex = 18;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // TextboxNombreAreasAñadir
             // 

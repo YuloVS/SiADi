@@ -39,5 +39,12 @@ namespace SiADi
                 errorProvider1.Clear();
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.TextboxNombreAreasAñadir.Clear();
+            this.TextboxDescipcionAreasAñadir.Clear();
+            errorProvider1.Clear();
+        }
     }
 }
