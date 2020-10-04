@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBoxContraseña = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +60,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxContraseña);
             this.splitContainer1.Panel1.Controls.Add(this.button9);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.textBoxContraseña);
@@ -107,8 +109,8 @@
             // textBoxContraseña
             // 
             this.textBoxContraseña.Location = new System.Drawing.Point(81, 286);
+            this.textBoxContraseña.MaxLength = 8;
             this.textBoxContraseña.Name = "textBoxContraseña";
-            this.textBoxContraseña.PasswordChar = '*';
             this.textBoxContraseña.Size = new System.Drawing.Size(178, 20);
             this.textBoxContraseña.TabIndex = 37;
             this.textBoxContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContraseña_KeyPress);
@@ -186,6 +188,18 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // checkBoxContraseña
+            // 
+            this.checkBoxContraseña.AutoSize = true;
+            this.checkBoxContraseña.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBoxContraseña.Location = new System.Drawing.Point(285, 288);
+            this.checkBoxContraseña.Name = "checkBoxContraseña";
+            this.checkBoxContraseña.Size = new System.Drawing.Size(42, 17);
+            this.checkBoxContraseña.TabIndex = 40;
+            this.checkBoxContraseña.Text = "Ver";
+            this.checkBoxContraseña.UseVisualStyleBackColor = true;
+            this.checkBoxContraseña.CheckedChanged += new System.EventHandler(this.checkBoxContraseña_CheckedChanged);
+            // 
             // IngresoVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +238,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox checkBoxContraseña;
     }
 }
