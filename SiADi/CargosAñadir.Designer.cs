@@ -48,11 +48,12 @@
             // 
             // textBoxNombre
             // 
+            this.textBoxNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxNombre.Location = new System.Drawing.Point(184, 91);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 25;
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(157, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(157, 30);
             this.textBoxNombre.TabIndex = 0;
             this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             this.textBoxNombre.Validated += new System.EventHandler(this.textBoxNombre_Validated);
@@ -150,33 +151,36 @@
             // 
             // comboBoxArea
             // 
+            this.comboBoxArea.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxArea.FormattingEnabled = true;
             this.comboBoxArea.Location = new System.Drawing.Point(184, 221);
             this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArea.Name = "comboBoxArea";
-            this.comboBoxArea.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxArea.Size = new System.Drawing.Size(92, 29);
             this.comboBoxArea.TabIndex = 3;
             // 
             // horarioEntrada
             // 
+            this.horarioEntrada.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.horarioEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioEntrada.Location = new System.Drawing.Point(184, 151);
             this.horarioEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.horarioEntrada.Name = "horarioEntrada";
             this.horarioEntrada.ShowUpDown = true;
-            this.horarioEntrada.Size = new System.Drawing.Size(62, 20);
+            this.horarioEntrada.Size = new System.Drawing.Size(62, 30);
             this.horarioEntrada.TabIndex = 1;
             this.horarioEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dateTimePickerDesde_KeyPress);
             this.horarioEntrada.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerDesde_Validating);
             // 
             // horarioSalida
             // 
+            this.horarioSalida.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.horarioSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioSalida.Location = new System.Drawing.Point(297, 151);
             this.horarioSalida.Margin = new System.Windows.Forms.Padding(2);
             this.horarioSalida.Name = "horarioSalida";
             this.horarioSalida.ShowUpDown = true;
-            this.horarioSalida.Size = new System.Drawing.Size(62, 20);
+            this.horarioSalida.Size = new System.Drawing.Size(62, 30);
             this.horarioSalida.TabIndex = 2;
             this.horarioSalida.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePickerHasta_Validating);
             // 
@@ -194,11 +198,12 @@
             // 
             // textBoxSalario
             // 
+            this.textBoxSalario.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxSalario.Location = new System.Drawing.Point(184, 288);
             this.textBoxSalario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalario.MaxLength = 6;
             this.textBoxSalario.Name = "textBoxSalario";
-            this.textBoxSalario.Size = new System.Drawing.Size(97, 20);
+            this.textBoxSalario.Size = new System.Drawing.Size(97, 30);
             this.textBoxSalario.TabIndex = 4;
             this.textBoxSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalario_KeyPress);
             this.textBoxSalario.Validated += new System.EventHandler(this.textBoxSalario_Validated);
