@@ -49,7 +49,7 @@
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(184, 91);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 25;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(157, 20);
@@ -94,7 +94,7 @@
             this.labelHorario.AutoSize = true;
             this.labelHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelHorario.Location = new System.Drawing.Point(173, 125);
+            this.labelHorario.Location = new System.Drawing.Point(165, 126);
             this.labelHorario.Name = "labelHorario";
             this.labelHorario.Size = new System.Drawing.Size(72, 24);
             this.labelHorario.TabIndex = 23;
@@ -106,7 +106,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelNombre.Location = new System.Drawing.Point(176, 65);
+            this.labelNombre.Location = new System.Drawing.Point(167, 66);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(79, 24);
             this.labelNombre.TabIndex = 21;
@@ -142,7 +142,7 @@
             this.labelArea.AutoSize = true;
             this.labelArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelArea.Location = new System.Drawing.Point(176, 195);
+            this.labelArea.Location = new System.Drawing.Point(168, 199);
             this.labelArea.Name = "labelArea";
             this.labelArea.Size = new System.Drawing.Size(50, 24);
             this.labelArea.TabIndex = 28;
@@ -152,7 +152,7 @@
             // 
             this.comboBoxArea.FormattingEnabled = true;
             this.comboBoxArea.Location = new System.Drawing.Point(184, 221);
-            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(92, 21);
             this.comboBoxArea.TabIndex = 3;
@@ -161,7 +161,7 @@
             // 
             this.horarioEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioEntrada.Location = new System.Drawing.Point(184, 151);
-            this.horarioEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horarioEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.horarioEntrada.Name = "horarioEntrada";
             this.horarioEntrada.ShowUpDown = true;
             this.horarioEntrada.Size = new System.Drawing.Size(62, 20);
@@ -173,7 +173,7 @@
             // 
             this.horarioSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.horarioSalida.Location = new System.Drawing.Point(297, 151);
-            this.horarioSalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.horarioSalida.Margin = new System.Windows.Forms.Padding(2);
             this.horarioSalida.Name = "horarioSalida";
             this.horarioSalida.ShowUpDown = true;
             this.horarioSalida.Size = new System.Drawing.Size(62, 20);
@@ -186,7 +186,7 @@
             this.labelSalario.AutoSize = true;
             this.labelSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSalario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelSalario.Location = new System.Drawing.Point(176, 262);
+            this.labelSalario.Location = new System.Drawing.Point(168, 263);
             this.labelSalario.Name = "labelSalario";
             this.labelSalario.Size = new System.Drawing.Size(67, 24);
             this.labelSalario.TabIndex = 32;
@@ -195,7 +195,7 @@
             // textBoxSalario
             // 
             this.textBoxSalario.Location = new System.Drawing.Point(184, 288);
-            this.textBoxSalario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSalario.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalario.MaxLength = 6;
             this.textBoxSalario.Name = "textBoxSalario";
             this.textBoxSalario.Size = new System.Drawing.Size(97, 20);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.labelHorario);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CargosAñadir";
             this.Text = "CargosAñadir";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

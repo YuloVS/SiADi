@@ -73,7 +73,7 @@
             // textBoxDireccion
             // 
             this.textBoxDireccion.Location = new System.Drawing.Point(35, 259);
-            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDireccion.MaxLength = 45;
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(342, 20);
@@ -86,7 +86,7 @@
             this.labelDireccion.AutoSize = true;
             this.labelDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelDireccion.Location = new System.Drawing.Point(23, 233);
+            this.labelDireccion.Location = new System.Drawing.Point(19, 235);
             this.labelDireccion.Name = "labelDireccion";
             this.labelDireccion.Size = new System.Drawing.Size(90, 24);
             this.labelDireccion.TabIndex = 45;
@@ -96,7 +96,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(35, 319);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
             this.comboBox1.TabIndex = 42;
@@ -107,7 +107,7 @@
             this.labelFechaNacimiento.AutoSize = true;
             this.labelFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFechaNacimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelFechaNacimiento.Location = new System.Drawing.Point(23, 172);
+            this.labelFechaNacimiento.Location = new System.Drawing.Point(19, 175);
             this.labelFechaNacimiento.Name = "labelFechaNacimiento";
             this.labelFechaNacimiento.Size = new System.Drawing.Size(161, 24);
             this.labelFechaNacimiento.TabIndex = 41;
@@ -150,7 +150,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelNombre.Location = new System.Drawing.Point(23, 114);
+            this.labelNombre.Location = new System.Drawing.Point(17, 115);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(79, 24);
             this.labelNombre.TabIndex = 36;
@@ -162,7 +162,7 @@
             this.labelDNI.AutoSize = true;
             this.labelDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelDNI.Location = new System.Drawing.Point(23, 56);
+            this.labelDNI.Location = new System.Drawing.Point(20, 56);
             this.labelDNI.Name = "labelDNI";
             this.labelDNI.Size = new System.Drawing.Size(41, 24);
             this.labelDNI.TabIndex = 35;
@@ -174,16 +174,17 @@
             this.labelCUIL.AutoSize = true;
             this.labelCUIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCUIL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelCUIL.Location = new System.Drawing.Point(174, 56);
+            this.labelCUIL.Location = new System.Drawing.Point(168, 56);
             this.labelCUIL.Name = "labelCUIL";
             this.labelCUIL.Size = new System.Drawing.Size(50, 24);
             this.labelCUIL.TabIndex = 47;
             this.labelCUIL.Text = "CUIL";
+            this.labelCUIL.Click += new System.EventHandler(this.labelCUIL_Click);
             // 
             // textBoxCUIL
             // 
             this.textBoxCUIL.Location = new System.Drawing.Point(184, 82);
-            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCUIL.MaxLength = 11;
             this.textBoxCUIL.Name = "textBoxCUIL";
             this.textBoxCUIL.Size = new System.Drawing.Size(120, 20);
@@ -197,7 +198,7 @@
             this.labelApellido.AutoSize = true;
             this.labelApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelApellido.Location = new System.Drawing.Point(174, 114);
+            this.labelApellido.Location = new System.Drawing.Point(167, 113);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(79, 24);
             this.labelApellido.TabIndex = 49;
@@ -206,7 +207,7 @@
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(35, 140);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(120, 20);
@@ -217,7 +218,7 @@
             // textBoxApellido
             // 
             this.textBoxApellido.Location = new System.Drawing.Point(184, 140);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(120, 20);
             this.textBoxApellido.TabIndex = 3;
@@ -228,7 +229,7 @@
             // 
             this.dateTimePickerFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(35, 198);
-            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaNacimiento.MaxDate = new System.DateTime(2002, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
@@ -244,7 +245,7 @@
             this.labelEdad.AutoSize = true;
             this.labelEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelEdad.Location = new System.Drawing.Point(174, 172);
+            this.labelEdad.Location = new System.Drawing.Point(169, 172);
             this.labelEdad.Name = "labelEdad";
             this.labelEdad.Size = new System.Drawing.Size(55, 24);
             this.labelEdad.TabIndex = 54;
@@ -253,7 +254,7 @@
             // textBoxEdad
             // 
             this.textBoxEdad.Location = new System.Drawing.Point(184, 200);
-            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdad.MaxLength = 2;
             this.textBoxEdad.Name = "textBoxEdad";
             this.textBoxEdad.ReadOnly = true;
@@ -264,7 +265,7 @@
             // textBoxTelefono
             // 
             this.textBoxTelefono.Location = new System.Drawing.Point(248, 200);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.MaxLength = 10;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(128, 20);
@@ -278,7 +279,7 @@
             this.labelTelefono.AutoSize = true;
             this.labelTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelTelefono.Location = new System.Drawing.Point(238, 172);
+            this.labelTelefono.Location = new System.Drawing.Point(234, 173);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(85, 24);
             this.labelTelefono.TabIndex = 57;
@@ -291,7 +292,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label10.Location = new System.Drawing.Point(23, 293);
+            this.label10.Location = new System.Drawing.Point(21, 294);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 24);
             this.label10.TabIndex = 58;
@@ -303,7 +304,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label11.Location = new System.Drawing.Point(238, 293);
+            this.label11.Location = new System.Drawing.Point(233, 295);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 24);
             this.label11.TabIndex = 59;
@@ -313,7 +314,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(248, 319);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(128, 21);
             this.comboBox2.TabIndex = 60;
@@ -322,7 +323,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(352, 56);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 126);
             this.pictureBox1.TabIndex = 61;
@@ -331,7 +332,7 @@
             // textBoxDNI
             // 
             this.textBoxDNI.Location = new System.Drawing.Point(35, 82);
-            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(120, 20);
@@ -374,7 +375,7 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsuariosAñadir";
             this.Text = "UsuariosAñadir";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -144,5 +144,10 @@ namespace SiADi
             this.textBoxDireccion.Clear();
             errorProvider1.Clear();
         }
+
+        private void labelCUIL_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
