@@ -15,6 +15,10 @@ namespace SiADi
         [STAThread]
         static void Main()
         {
+            using (var db = new SiADiDB())
+            {
+                db.SaveChanges();
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new IngresoVista());
