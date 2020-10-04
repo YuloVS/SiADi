@@ -12,6 +12,7 @@ namespace SiADi
 {
     public partial class IngresoVista : Form
     {
+        private Verificaciones verificaciones = new Verificaciones();
         public IngresoVista()
         {
             InitializeComponent();
@@ -34,6 +35,40 @@ namespace SiADi
 
             this.Hide();
 
+        }
+
+        private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            verificaciones.soloNumeros(e);
+        }
+
+        private void textBoxDNI_Validating(object sender, CancelEventArgs e)
+        {
+            if(textBoxDNI.TextLength < 7 || Int32.Parse(textBoxDNI.Text) <= 8000000)
+            {
+                errorProvider1.SetError(textBoxDNI, "Ingrese un DNI válido.");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void textBoxContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            verificaciones.soloLetras(e);
+        }
+
+        private void textBoxContraseña_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBoxContraseña.TextLength < 2)
+            {
+                errorProvider1.SetError(textBoxContraseña, "Contraseña invalida.");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
         }
     }
 }
