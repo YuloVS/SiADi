@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiADi.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,18 +15,20 @@ namespace SiADi
     public partial class UsuariosAñadir : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
+        private bool errorDni = true;
+        private bool errorCuil = true;
+        private bool errorNombre = true;
+        private bool errorApellido = true;
+        private bool errorFecha = true;
+        private bool errorTelefono = true;
+        private bool errorDireccion = true;
+        private bool errorImagen = true;
+
         public UsuariosAñadir()
         {
             InitializeComponent();
-            
-        }
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxDNI_TextChanged(object sender, EventArgs e)
-        {
+            cargarComboBoxArea();
+            //cargarComboBoxCargo();
 
         }
 
@@ -38,12 +41,14 @@ namespace SiADi
         {
             if(textBoxDNI.TextLength < 7 || Int32.Parse(textBoxDNI.Text) <= 8000000)
             {
-                errorProvider1.SetError(textBoxDNI, "Ingrese un DNI válido.");
+                errorProvider1.SetError(textBoxDNI, "DNI invalido.");
                 verificaciones.bordeError(textBoxDNI, this);
+                errorDni = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorDni = false;
             }
             
         }
@@ -59,10 +64,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxCUIL, "CUIL invalido.");
                 verificaciones.bordeError(textBoxCUIL, this);
+                errorCuil = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorCuil = false;
             }
         }
 
@@ -77,10 +84,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxNombre, "Nombre invalido.");
                 verificaciones.bordeError(textBoxNombre, this);
+                errorNombre = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorNombre = false;
             }
         }
 
@@ -95,10 +104,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxApellido, "Apellido invalido.");
                 verificaciones.bordeError(textBoxApellido, this);
+                errorApellido = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorApellido = false;
             }
         }
 
@@ -119,10 +130,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxTelefono, "Número telefonico invalido.");
                 verificaciones.bordeError(textBoxTelefono, this);
+                errorTelefono = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorTelefono = false;
             }
         }
 
@@ -132,10 +145,12 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxDireccion, "Dirección invalida.");
                 verificaciones.bordeError(textBoxDireccion, this);
+                errorDireccion = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorDireccion = false;
             }
         }
 
@@ -151,11 +166,6 @@ namespace SiADi
             errorProvider1.Clear();
         }
 
-        private void labelCUIL_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarFoto_Click(object sender, EventArgs e)
         {
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
@@ -164,12 +174,90 @@ namespace SiADi
                 if (Image.FromFile(imagen).Width == Image.FromFile(imagen).Height)
                 {
                     pictureBoxUsuario.Image = Image.FromFile(imagen);
+                    errorImagen = false;
                 }
                 else
                 {
                     MessageBox.Show("La imagen debe ser cuadrada", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    errorImagen = true;
                 }
             }
+            else
+            {
+                errorImagen = true;
+            }
+        }
+
+        private bool hayErrores()
+        {
+            return errorApellido && errorCuil && errorDireccion && errorDni && errorFecha && errorImagen && errorNombre && errorTelefono;
+        }
+
+        private void cargarComboBoxArea()
+        {
+            using (var db = new SiADiDB())
+            {
+                comboBoxArea.DataSource = db.Areas.ToList();
+                comboBoxArea.DisplayMember = "Nombre";
+                comboBoxArea.ValueMember = "Id";
+                comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+        }
+
+        private void cargarComboBoxCargo()
+        {
+            try
+            {
+                using (var db = new SiADiDB())
+                            {
+                                comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue).Cargos.ToList();
+                                comboBoxCargo.DisplayMember = "Nombre";
+                                comboBoxCargo.ValueMember = "Id";
+                                comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
+                            }
+            }
+            catch(System.ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Error");
+            }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            if (!hayErrores())
+            {
+                using (var db = new SiADiDB())
+                {
+                    Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue) };
+                    db.Personas.Add(persona);
+                    db.SaveChanges();
+                }
+                MessageBox.Show("Usuario añadido.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBoxDNI.Clear();
+                textBoxCUIL.Clear();
+                textBoxNombre.Clear();
+                textBoxApellido.Clear();
+                textBoxTelefono.Clear();
+                textBoxDireccion.Clear();
+                errorProvider1.Clear();
+                errorDni = true;
+                errorCuil = true;
+                errorNombre = true;
+                errorApellido = true;
+                errorFecha = true;
+                errorTelefono = true;
+                errorDireccion = true;
+                errorImagen = true;
+    }
+            else
+            {
+                MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBoxArea_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cargarComboBoxCargo();
         }
     }
 }

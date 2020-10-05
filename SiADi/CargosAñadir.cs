@@ -140,7 +140,10 @@ namespace SiADi
                 this.textBoxNombre.Clear();
                 this.textBoxSalario.Clear();
                 errorProvider1.Clear();
-            }
+                errorNombre = true;
+                errorHorario = true;
+                errorSalario = true;
+    }
             else
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
