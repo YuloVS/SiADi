@@ -101,7 +101,6 @@ namespace SiADi
                         Principal principal = new Principal();
                         principal.Show();
                         this.Hide();
-                        db.SaveChanges();
                     }
                     else
                     {
