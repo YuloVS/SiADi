@@ -28,7 +28,7 @@ namespace SiADi
         {
             InitializeComponent();
             cargarComboBoxArea();
-            //cargarComboBoxCargo();
+            //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
 
         }
 
@@ -228,11 +228,11 @@ namespace SiADi
             {
                 using (var db = new SiADiDB())
                 {
-                    Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue) };
+                    Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue), Contraseña = crearContraseña(), Edad = Int32.Parse(textBoxEdad.Text) };
                     db.Personas.Add(persona);
                     db.SaveChanges();
                 }
-                MessageBox.Show("Usuario añadido.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario añadido. La contraseña es: "+crearContraseña(), "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxDNI.Clear();
                 textBoxCUIL.Clear();
                 textBoxNombre.Clear();
@@ -258,6 +258,10 @@ namespace SiADi
         private void comboBoxArea_SelectedValueChanged(object sender, EventArgs e)
         {
             cargarComboBoxCargo();
+        }
+        private string crearContraseña()
+        {
+            return textBoxNombre.Text.Substring(0, 2) + textBoxApellido.Text.Substring(0, 2) + textBoxCUIL.Text.Substring(0, 4);
         }
     }
 }
