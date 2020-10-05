@@ -190,7 +190,7 @@ namespace SiADi
 
         private bool hayErrores()
         {
-            return !errorApellido && !errorCuil && !errorDireccion && !errorDni && !errorFecha && !errorImagen && !errorNombre && !errorTelefono;
+            return errorApellido && errorCuil && errorDireccion && errorDni && errorFecha && errorImagen && errorNombre && errorTelefono;
         }
 
         private void cargarComboBoxArea()
@@ -239,8 +239,16 @@ namespace SiADi
                 textBoxApellido.Clear();
                 textBoxTelefono.Clear();
                 textBoxDireccion.Clear();
-                errorProvider1.Clear(); //TODO POPULAR COMBOBOX
-            }
+                errorProvider1.Clear();
+                errorDni = true;
+                errorCuil = true;
+                errorNombre = true;
+                errorApellido = true;
+                errorFecha = true;
+                errorTelefono = true;
+                errorDireccion = true;
+                errorImagen = true;
+    }
             else
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
