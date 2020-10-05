@@ -209,12 +209,12 @@ namespace SiADi
             try
             {
                 using (var db = new SiADiDB())
-                            {
-                                comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue).Cargos.ToList();
-                                comboBoxCargo.DisplayMember = "Nombre";
-                                comboBoxCargo.ValueMember = "Id";
-                                comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
-                            }
+                {
+                    comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue).Cargos.ToList();
+                    comboBoxCargo.DisplayMember = "Nombre";
+                    comboBoxCargo.ValueMember = "Id";
+                    comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
+                }
             }
             catch(System.ArgumentOutOfRangeException)
             {
