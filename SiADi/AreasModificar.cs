@@ -63,7 +63,6 @@ namespace SiADi
                     dataGridViewAreas.AutoGenerateColumns = false;
                     dataGridViewAreas.DataSource = list;
                     dataGridViewAreas.Refresh();
-
                 }
             }
         }
