@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiADi.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace SiADi
     public partial class IngresoVista : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
+        bool errorDni = true;
+        bool errorContraseña = true;
         public IngresoVista()
         {
             InitializeComponent();
@@ -41,28 +44,32 @@ namespace SiADi
             {
                 errorProvider1.SetError(textBoxDNI, "Ingrese un DNI válido.");
                 verificaciones.bordeError(textBoxDNI, this);
+                errorDni = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorDni = false;
             }
         }
 
         private void textBoxContraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
-            verificaciones.soloLetras(e);
+            //verificaciones.soloLetras(e);
         }
 
         private void textBoxContraseña_Validating(object sender, CancelEventArgs e)
         {
-            if (textBoxContraseña.TextLength != 2)
+            if (textBoxContraseña.TextLength != 8)
             {
                 errorProvider1.SetError(textBoxContraseña, "Contraseña invalida.");
                 verificaciones.bordeError(textBoxContraseña, this);
+                errorContraseña = true;
             }
             else
             {
                 errorProvider1.Clear();
+                errorContraseña = false;
             }
         }
 
@@ -84,10 +91,29 @@ namespace SiADi
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
-
-            this.Hide();
+            if (!errorDni && !errorContraseña)
+            {
+                using (var db = new SiADiDB())
+                {
+                    int dni = Int32.Parse(textBoxDNI.Text);
+                    if (db.Personas.SingleOrDefault<Persona>(persona => persona.Dni == dni)?.Contraseña == textBoxContraseña.Text)
+                    {
+                        Principal principal = new Principal();
+                        principal.Show();
+                        this.Hide();
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: datos invalidos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error: verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
