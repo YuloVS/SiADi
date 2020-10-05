@@ -89,9 +89,9 @@
             this.panelAreasSubMenu.Controls.Add(this.btnAreasModificar);
             this.panelAreasSubMenu.Controls.Add(this.btnAreasAñadir);
             this.panelAreasSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAreasSubMenu.Location = new System.Drawing.Point(0, 603);
+            this.panelAreasSubMenu.Location = new System.Drawing.Point(0, 585);
             this.panelAreasSubMenu.Name = "panelAreasSubMenu";
-            this.panelAreasSubMenu.Size = new System.Drawing.Size(233, 83);
+            this.panelAreasSubMenu.Size = new System.Drawing.Size(233, 77);
             this.panelAreasSubMenu.TabIndex = 13;
             // 
             // btnAreasModificar
@@ -143,7 +143,7 @@
             this.btnAreas.ForeColor = System.Drawing.Color.Silver;
             this.btnAreas.Image = ((System.Drawing.Image)(resources.GetObject("btnAreas.Image")));
             this.btnAreas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAreas.Location = new System.Drawing.Point(0, 558);
+            this.btnAreas.Location = new System.Drawing.Point(0, 540);
             this.btnAreas.Name = "btnAreas";
             this.btnAreas.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnAreas.Size = new System.Drawing.Size(233, 45);
@@ -160,9 +160,9 @@
             this.panelCargosSubMenu.Controls.Add(this.btnCargosModificar);
             this.panelCargosSubMenu.Controls.Add(this.btnCargosAñadir);
             this.panelCargosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCargosSubMenu.Location = new System.Drawing.Point(0, 475);
+            this.panelCargosSubMenu.Location = new System.Drawing.Point(0, 463);
             this.panelCargosSubMenu.Name = "panelCargosSubMenu";
-            this.panelCargosSubMenu.Size = new System.Drawing.Size(233, 83);
+            this.panelCargosSubMenu.Size = new System.Drawing.Size(233, 77);
             this.panelCargosSubMenu.TabIndex = 11;
             // 
             // btnCargosModificar
@@ -214,7 +214,7 @@
             this.btnCargos.ForeColor = System.Drawing.Color.Silver;
             this.btnCargos.Image = ((System.Drawing.Image)(resources.GetObject("btnCargos.Image")));
             this.btnCargos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargos.Location = new System.Drawing.Point(0, 430);
+            this.btnCargos.Location = new System.Drawing.Point(0, 418);
             this.btnCargos.Name = "btnCargos";
             this.btnCargos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnCargos.Size = new System.Drawing.Size(233, 45);
@@ -236,7 +236,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 686);
+            this.btnExit.Location = new System.Drawing.Point(0, 662);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(233, 45);
@@ -253,9 +253,9 @@
             this.panelUsuariosSubMenu.Controls.Add(this.btnUsuariosModificar);
             this.panelUsuariosSubMenu.Controls.Add(this.btnUsuariosAñadir);
             this.panelUsuariosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUsuariosSubMenu.Location = new System.Drawing.Point(0, 347);
+            this.panelUsuariosSubMenu.Location = new System.Drawing.Point(0, 341);
             this.panelUsuariosSubMenu.Name = "panelUsuariosSubMenu";
-            this.panelUsuariosSubMenu.Size = new System.Drawing.Size(233, 83);
+            this.panelUsuariosSubMenu.Size = new System.Drawing.Size(233, 77);
             this.panelUsuariosSubMenu.TabIndex = 4;
             // 
             // btnUsuariosModificar
@@ -307,7 +307,7 @@
             this.btnUsuarios.ForeColor = System.Drawing.Color.Silver;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 302);
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 296);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(233, 45);
@@ -328,7 +328,7 @@
             this.panelAsistenciasSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAsistenciasSubMenu.Location = new System.Drawing.Point(0, 137);
             this.panelAsistenciasSubMenu.Name = "panelAsistenciasSubMenu";
-            this.panelAsistenciasSubMenu.Size = new System.Drawing.Size(233, 165);
+            this.panelAsistenciasSubMenu.Size = new System.Drawing.Size(233, 159);
             this.panelAsistenciasSubMenu.TabIndex = 2;
             // 
             // btnAsistenciasInformeInd
@@ -391,6 +391,7 @@
             // btnAsistenciasRegistrar
             // 
             this.btnAsistenciasRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsistenciasRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAsistenciasRegistrar.FlatAppearance.BorderSize = 0;
             this.btnAsistenciasRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
             this.btnAsistenciasRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
