@@ -65,6 +65,7 @@ namespace SiADi
                 this.TextboxNombreAreasAñadir.Clear();
                 this.TextboxDescipcionAreasAñadir.Clear();
                 errorProvider1.Clear();
+                error = 1;
             }
             else
             {
