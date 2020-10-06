@@ -96,7 +96,7 @@ namespace SiADi
                 using (var db = new SiADiDB())
                 {
                     int dni = Int32.Parse(textBoxDNI.Text);
-                    if (db.Personas.SingleOrDefault<Persona>(persona => persona.Dni == dni)?.Contraseña == textBoxContraseña.Text)
+                    if(db.Personas.SingleOrDefault<Persona>(persona => persona.Dni == dni)?.Contraseña == textBoxContraseña.Text)
                     {
                         bool admin;
                         Persona usuario = db.Personas.Include("Cargo").SingleOrDefault<Persona>(persona => persona.Dni == dni);
@@ -108,9 +108,16 @@ namespace SiADi
                         {
                             admin = false;
                         }
-                        Principal principal = new Principal(usuario, admin);
-                        principal.Show();
-                        this.Hide();
+                        if(usuario.Encargado)
+                        {
+                            Principal principal = new Principal(usuario, admin);
+                            principal.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Acceso no autorizado: comuniquese con el/los encargado/s de su área para obtenerlo.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
