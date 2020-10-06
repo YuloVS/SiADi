@@ -17,6 +17,7 @@ namespace SiADi
         public AreasModificar()
         {
             InitializeComponent();
+            dataGridViewAreas.ColumnCount = 2;
             cargarTabla();
         }
 
@@ -29,7 +30,7 @@ namespace SiADi
                 if (list.Length > 0)
                 {
                     dataGridViewAreas.AutoGenerateColumns = false;
-                    dataGridViewAreas.ColumnCount = 2;
+                    //dataGridViewAreas.ColumnCount = 2;
                     dataGridViewAreas.Columns[0].Name = "Nombre";
                     dataGridViewAreas.Columns[0].DataPropertyName = "Nombre";
                     dataGridViewAreas.Columns[1].Name = "Descripcion";
@@ -54,7 +55,7 @@ namespace SiADi
             errorSalario = true;*/
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void filtrar()
         {
             using (var db = new SiADiDB())
             {
@@ -67,6 +68,25 @@ namespace SiADi
                     dataGridViewAreas.Refresh();
                 }
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void textBoxFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                filtrar();
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textBoxFiltro.Clear();
+            cargarTabla();
         }
     }
 }
