@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiADi.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace SiADi
 {
     public partial class Principal : Form
     {
-        public Principal()
+        Persona usuario;
+        public Principal(Persona persona)
         {
             InitializeComponent();
             hideSubMenu();
+            usuario = persona;
         }
 
         private void hideSubMenu()
@@ -249,7 +252,7 @@ namespace SiADi
 
         private void btnCargosAñadir_Click(object sender, EventArgs e)
         {
-            openChildForm(new CargosAñadir());
+            openChildForm(new CargosAñadir(usuario));
             botonSeleccionado(btnCargosAñadir);
         }
 

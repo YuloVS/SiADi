@@ -17,10 +17,12 @@ namespace SiADi
         private bool errorNombre=true;
         private bool errorHorario=true;
         private bool errorSalario=true;
-        public CargosAñadir()
+        Persona usuario;
+        public CargosAñadir(Persona persona)
         {
             InitializeComponent();
             cargarComboBox();
+            usuario = persona;
         }
 
         private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
