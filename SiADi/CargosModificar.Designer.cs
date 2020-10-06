@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewCargos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCargos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -42,12 +42,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(182, 9);
+            this.label1.Location = new System.Drawing.Point(243, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 30);
+            this.label1.Size = new System.Drawing.Size(189, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cargos Modificar";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -55,43 +55,48 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.LightGray;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(339, 46);
+            this.button1.Location = new System.Drawing.Point(452, 57);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 29);
+            this.button1.Size = new System.Drawing.Size(35, 36);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(176, 51);
+            this.textBox1.Location = new System.Drawing.Point(235, 63);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 30);
+            this.textBox1.Size = new System.Drawing.Size(208, 36);
             this.textBox1.TabIndex = 7;
             // 
-            // dataGridView1
+            // dataGridViewCargos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(401, 285);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridViewCargos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCargos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.dataGridViewCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCargos.Location = new System.Drawing.Point(83, 149);
+            this.dataGridViewCargos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewCargos.Name = "dataGridViewCargos";
+            this.dataGridViewCargos.RowHeadersWidth = 51;
+            this.dataGridViewCargos.Size = new System.Drawing.Size(535, 351);
+            this.dataGridViewCargos.TabIndex = 9;
             // 
             // CargosModificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(500, 418);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(667, 514);
+            this.Controls.Add(this.dataGridViewCargos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CargosModificar";
             this.Text = "CargosModificar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCargos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +107,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCargos;
     }
 }

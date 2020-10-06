@@ -269,7 +269,7 @@ namespace SiADi
 
         private void btnCargosModificar_Click(object sender, EventArgs e)
         {
-            openChildForm(new CargosModificar());
+            openChildForm(new CargosModificar(usuario, admin));
             botonSeleccionado(btnCargosModificar);
         }
 
