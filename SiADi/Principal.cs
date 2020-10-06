@@ -254,7 +254,7 @@ namespace SiADi
 
         private void btnCargosAñadir_Click(object sender, EventArgs e)
         {
-            openChildForm(new CargosAñadir(usuario, true));
+            openChildForm(new CargosAñadir(usuario, admin));
             botonSeleccionado(btnCargosAñadir);
         }
 
