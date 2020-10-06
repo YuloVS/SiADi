@@ -98,8 +98,17 @@ namespace SiADi
                     int dni = Int32.Parse(textBoxDNI.Text);
                     if (db.Personas.SingleOrDefault<Persona>(persona => persona.Dni == dni)?.Contraseña == textBoxContraseña.Text)
                     {
+                        bool admin;
                         Persona usuario = db.Personas.Include("Cargo").SingleOrDefault<Persona>(persona => persona.Dni == dni);
-                        Principal principal = new Principal(usuario);
+                        if(usuario.Id == 1)
+                        {
+                            admin = true;
+                        }
+                        else
+                        {
+                            admin = false;
+                        }
+                        Principal principal = new Principal(usuario, admin);
                         principal.Show();
                         this.Hide();
                     }

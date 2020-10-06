@@ -15,11 +15,22 @@ namespace SiADi
     public partial class Principal : Form
     {
         Persona usuario;
-        public Principal(Persona persona)
+        bool admin;
+        public Principal(Persona persona, bool esAdmin)
         {
             InitializeComponent();
             hideSubMenu();
             usuario = persona;
+            admin = esAdmin;
+            vista_admin(esAdmin);
+        }
+
+        private void vista_admin(bool esAdmin)
+        {
+            if(!esAdmin)
+            {
+                btnAreas.Hide();
+            }
         }
 
         private void hideSubMenu()
@@ -252,13 +263,13 @@ namespace SiADi
 
         private void btnCargosAñadir_Click(object sender, EventArgs e)
         {
-            openChildForm(new CargosAñadir(usuario));
+            openChildForm(new CargosAñadir(usuario, admin));
             botonSeleccionado(btnCargosAñadir);
         }
 
         private void btnCargosModificar_Click(object sender, EventArgs e)
         {
-            openChildForm(new CargosModificar());
+            openChildForm(new CargosModificar(usuario, admin));
             botonSeleccionado(btnCargosModificar);
         }
 
