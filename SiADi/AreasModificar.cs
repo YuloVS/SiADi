@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace SiADi
 {
@@ -34,6 +35,7 @@ namespace SiADi
                     dataGridViewAreas.Columns[1].Name = "Descripcion";
                     dataGridViewAreas.Columns[1].DataPropertyName = "Descripcion";
                     dataGridViewAreas.DataSource = list;
+                    dataGridViewAreas.Font = new Font("Myriad Pro Cond", 15.99F);
                     dataGridViewAreas.Refresh();
 
                 }
