@@ -21,6 +21,7 @@ namespace SiADi
             InitializeComponent();
             usuario = persona;
             admin = esAdmin;
+            dataGridViewCargos.ColumnCount = 5;
             cargarTabla();
         }
 
@@ -36,7 +37,6 @@ namespace SiADi
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
-                        dataGridViewCargos.ColumnCount = 5;
                         dataGridViewCargos.Columns[0].Name = "Nombre";
                         dataGridViewCargos.Columns[0].DataPropertyName = "Nombre";
                         dataGridViewCargos.Columns[1].Name = "Salario";
@@ -59,7 +59,6 @@ namespace SiADi
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
-                        dataGridViewCargos.ColumnCount = 5;
                         dataGridViewCargos.Columns[0].Name = "Nombre";
                         dataGridViewCargos.Columns[0].DataPropertyName = "Nombre";
                         dataGridViewCargos.Columns[1].Name = "Salario";
@@ -80,11 +79,11 @@ namespace SiADi
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void filtrar()
         {
             using (var db = new SiADiDB())
             {
-                if(!admin)
+                if (!admin)
                 {
                     Cargo cargo = usuario.Cargo;
                     Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
@@ -108,5 +107,26 @@ namespace SiADi
                 }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            this.textBoxFiltro.Clear();
+            cargarTabla();
+        }
+
+        private void textBoxFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                filtrar();
+            }
+        }
+
+        
     }
 }

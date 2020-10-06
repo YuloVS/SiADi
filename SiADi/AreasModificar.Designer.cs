@@ -37,7 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewAreas = new System.Windows.Forms.DataGridView();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAreas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.dataGridViewAreas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewAreas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAreas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.dataGridViewAreas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,7 +86,7 @@
             this.dataGridViewAreas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAreas.EnableHeadersVisualStyles = false;
             this.dataGridViewAreas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.dataGridViewAreas.Location = new System.Drawing.Point(65, 121);
+            this.dataGridViewAreas.Location = new System.Drawing.Point(65, 101);
             this.dataGridViewAreas.Name = "dataGridViewAreas";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -117,19 +119,36 @@
             this.textBoxFiltro.Name = "textBoxFiltro";
             this.textBoxFiltro.Size = new System.Drawing.Size(157, 30);
             this.textBoxFiltro.TabIndex = 4;
+            this.textBoxFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFiltro_KeyPress);
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(344, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 29);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(344, 47);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(26, 29);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnLimpiar.Location = new System.Drawing.Point(209, 341);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(65, 33);
+            this.btnLimpiar.TabIndex = 19;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // AreasModificar
             // 
@@ -137,11 +156,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(500, 418);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.dataGridViewAreas);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AreasModificar";
             this.Text = "AreasModificar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAreas)).EndInit();
@@ -155,6 +175,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewAreas;
         private System.Windows.Forms.TextBox textBoxFiltro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
