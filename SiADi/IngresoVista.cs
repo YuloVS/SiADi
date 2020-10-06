@@ -99,7 +99,7 @@ namespace SiADi
                     if (db.Personas.SingleOrDefault<Persona>(persona => persona.Dni == dni)?.Contraseña == textBoxContraseña.Text)
                     {
                         Persona usuario = db.Personas.Include("Cargo").SingleOrDefault<Persona>(persona => persona.Dni == dni);
-                        Principal principal = new Principal(usuario);
+                        Principal principal = new Principal(usuario, true);
                         principal.Show();
                         this.Hide();
                     }
