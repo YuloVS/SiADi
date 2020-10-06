@@ -22,6 +22,15 @@ namespace SiADi
             hideSubMenu();
             usuario = persona;
             admin = esAdmin;
+            vista_admin(esAdmin);
+        }
+
+        private void vista_admin(bool esAdmin)
+        {
+            if(!esAdmin)
+            {
+                btnAreas.Hide();
+            }
         }
 
         private void hideSubMenu()
