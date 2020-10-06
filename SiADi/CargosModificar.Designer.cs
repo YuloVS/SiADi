@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CargosModificar));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.dataGridViewCargos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCargos)).BeginInit();
             this.SuspendLayout();
@@ -61,15 +61,16 @@
             this.button1.Size = new System.Drawing.Size(35, 36);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxFiltro
             // 
-            this.textBox1.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(235, 63);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 36);
-            this.textBox1.TabIndex = 7;
+            this.textBoxFiltro.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.textBoxFiltro.Location = new System.Drawing.Point(235, 63);
+            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(208, 36);
+            this.textBoxFiltro.TabIndex = 7;
             // 
             // dataGridViewCargos
             // 
@@ -91,7 +92,7 @@
             this.ClientSize = new System.Drawing.Size(667, 514);
             this.Controls.Add(this.dataGridViewCargos);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CargosModificar";
@@ -106,7 +107,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.DataGridView dataGridViewCargos;
     }
 }
