@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,11 @@ namespace SiADi
         private bool errorNombre=true;
         private bool errorHorario=true;
         private bool errorSalario=true;
-        public CargosAñadir()
+        Persona usuario;
+        public CargosAñadir(Persona persona)
         {
             InitializeComponent();
+            usuario = persona;
             cargarComboBox();
         }
 
@@ -120,7 +123,10 @@ namespace SiADi
         {
             using (var db = new SiADiDB())
             {
-                comboBoxArea.DataSource = db.Areas.ToList();
+                //comboBoxArea.DataSource = db.Areas.ToList();
+                //comboBoxArea.DataSource = db.Areas.Where(p => p.Id == usuario.Cargo.Id).Select(i => new { i.Id, i.Nombre }).ToList();
+                Cargo cargo = usuario.Cargo;
+                comboBoxArea.DataSource = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).ToList();
                 comboBoxArea.DisplayMember = "Nombre";
                 comboBoxArea.ValueMember = "Id";
                 comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;

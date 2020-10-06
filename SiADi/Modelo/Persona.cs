@@ -23,5 +23,6 @@ namespace SiADi.Modelo
         public Cargo Cargo { set; get; }
         public virtual ICollection<Asistencia> Asistencias { set; get; }
         public string Contraseña { get; set; }
+        public bool Encargado { get; set; }
     }
 }
