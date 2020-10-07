@@ -179,5 +179,10 @@ namespace SiADi
             if (videoCaptureDevice.IsRunning)
                 videoCaptureDevice.Stop();
         }
+
+        private void pictureBoxCamara_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
