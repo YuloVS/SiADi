@@ -117,7 +117,8 @@
             // chartInformeGral
             // 
             this.chartInformeGral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.chartInformeGral.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.chartInformeGral.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.chartInformeGral.BorderlineWidth = 2;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
@@ -188,7 +189,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AsistenciasInformeInd";
             this.Text = "AsistenciasInformeInd";
-            this.Load += new System.EventHandler(this.AsistenciasInformeInd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartInformeGral)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
