@@ -1,4 +1,5 @@
-﻿using SiADi.Modelo;
+﻿using AForge.Video.DirectShow;
+using SiADi.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing;
 
 namespace SiADi
 {
@@ -16,11 +18,13 @@ namespace SiADi
         private Verificaciones verificaciones = new Verificaciones();
         bool errorDni = true;
         bool errorContraseña = true;
+        FilterInfoCollection filterInfoCollection;
+        VideoCaptureDevice videoCaptureDevice;
         public IngresoVista()
         {
             InitializeComponent();
             textBoxContraseña.UseSystemPasswordChar = true;
-            
+
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -130,6 +134,50 @@ namespace SiADi
             {
                 MessageBox.Show("Error: verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void IngresoVista_Load(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo Device in filterInfoCollection)
+                comboBoxCamara.Items.Add(Device.Name);
+            comboBoxCamara.SelectedIndex = 0;
+            //videoCaptureDevice = new VideoCaptureDevice();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(pictureBoxCamara.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)pictureBoxCamara.Image);
+                if(result != null)
+                {
+                    textBoxDNI.Text = result.ToString();
+                    timer1.Stop();
+                    if (videoCaptureDevice.IsRunning)
+                        videoCaptureDevice.Stop();
+                }
+            }
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBoxCamara.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+            timer1.Start();
+        }
+
+        private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
+        {
+            pictureBoxCamara.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void IngresoVista_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (videoCaptureDevice.IsRunning)
+                videoCaptureDevice.Stop();
         }
     }
 }
