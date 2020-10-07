@@ -133,7 +133,7 @@
             this.labelA.AutoSize = true;
             this.labelA.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelA.Location = new System.Drawing.Point(261, 145);
+            this.labelA.Location = new System.Drawing.Point(251, 151);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(20, 26);
             this.labelA.TabIndex = 27;
