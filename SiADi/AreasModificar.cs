@@ -17,24 +17,26 @@ namespace SiADi
         public AreasModificar()
         {
             InitializeComponent();
-            dataGridViewAreas.ColumnCount = 2;
+            dataGridViewAreas.ColumnCount = 3;
             cargarTabla();
+            dataGridViewAreas.Columns["Id"].Visible = false;
         }
 
         public void cargarTabla()
         {
             using (var db = new SiADiDB())
             {
-                var list = db.Areas.ToList().Select(i => new { i.Nombre, i.Descripcion }).ToArray();
+                var list = db.Areas.ToList().Select(i => new { i.Id, i.Nombre, i.Descripcion }).ToArray();
 
                 if (list.Length > 0)
                 {
                     dataGridViewAreas.AutoGenerateColumns = false;
-                    //dataGridViewAreas.ColumnCount = 2;
-                    dataGridViewAreas.Columns[0].Name = "Nombre";
-                    dataGridViewAreas.Columns[0].DataPropertyName = "Nombre";
-                    dataGridViewAreas.Columns[1].Name = "Descripcion";
-                    dataGridViewAreas.Columns[1].DataPropertyName = "Descripcion";
+                    dataGridViewAreas.Columns[0].Name = "Id";
+                    dataGridViewAreas.Columns[0].DataPropertyName = "Id";
+                    dataGridViewAreas.Columns[1].Name = "Nombre";
+                    dataGridViewAreas.Columns[1].DataPropertyName = "Nombre";
+                    dataGridViewAreas.Columns[2].Name = "Descripcion";
+                    dataGridViewAreas.Columns[2].DataPropertyName = "Descripcion";
                     dataGridViewAreas.DataSource = list;
                     dataGridViewAreas.Font = new Font("Myriad Pro Cond", 15.99F);
                     dataGridViewAreas.Refresh();
@@ -87,6 +89,18 @@ namespace SiADi
         {
             this.textBoxFiltro.Clear();
             cargarTabla();
+        }
+
+        private void dataGridViewAreas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int fila = dataGridViewAreas.CurrentRow.Index;
+            int idArea= (int)dataGridViewAreas.Rows[fila].Cells[0].Value;
+            using (var db = new SiADiDB())
+            {
+                Area area = db.Areas.Find(idArea);
+                Form modificarArea = new AreasAñadir(area);
+                modificarArea.Show();
+            }
         }
     }
 }

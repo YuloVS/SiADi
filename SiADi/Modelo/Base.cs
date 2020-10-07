@@ -11,5 +11,6 @@ namespace SiADi.Modelo
     {
         [Key]
         public int Id { set; get; }
+        public bool baja { set; get; }
     }
 }
