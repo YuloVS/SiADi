@@ -153,7 +153,7 @@ namespace SiADi
                 Result result = barcodeReader.Decode((Bitmap)pictureBoxCamara.Image);
                 if(result != null)
                 {
-                    textBoxDNI.Text = result.ToString();
+                    labelQR.Text = result.ToString();
                     timer1.Stop();
                     if (videoCaptureDevice.IsRunning)
                         videoCaptureDevice.Stop();
