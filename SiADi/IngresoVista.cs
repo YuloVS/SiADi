@@ -176,8 +176,15 @@ namespace SiADi
 
         private void IngresoVista_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning)
-                videoCaptureDevice.Stop();
+            try
+            {
+                if (videoCaptureDevice.IsRunning)
+                    videoCaptureDevice.Stop();
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Camara apagada");
+            }
         }
 
         private void pictureBoxCamara_Click(object sender, EventArgs e)
