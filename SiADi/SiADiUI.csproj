@@ -125,9 +125,9 @@
     <Compile Include="IngresoVista.Designer.cs">
       <DependentUpon>IngresoVista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010052353490_Inicial.cs" />
-    <Compile Include="Migrations\202010052353490_Inicial.Designer.cs">
-      <DependentUpon>202010052353490_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\202010071411203_Inicial.cs" />
+    <Compile Include="Migrations\202010071411203_Inicial.Designer.cs">
+      <DependentUpon>202010071411203_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Area.cs" />
@@ -184,8 +184,8 @@
     <EmbeddedResource Include="IngresoVista.resx">
       <DependentUpon>IngresoVista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010052353490_Inicial.resx">
-      <DependentUpon>202010052353490_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010071411203_Inicial.resx">
+      <DependentUpon>202010071411203_Inicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

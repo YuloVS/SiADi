@@ -44,6 +44,7 @@
             this.pictureBoxCamara = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +63,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.splitContainer1.Panel1.Controls.Add(this.btnExit);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxContraseña);
             this.splitContainer1.Panel1.Controls.Add(this.btnIngresar);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -102,7 +104,7 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.btnIngresar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIngresar.Location = new System.Drawing.Point(120, 396);
+            this.btnIngresar.Location = new System.Drawing.Point(117, 358);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(101, 40);
             this.btnIngresar.TabIndex = 39;
@@ -175,7 +177,7 @@
             this.comboBoxCamara.ForeColor = System.Drawing.Color.LightGray;
             this.comboBoxCamara.FormattingEnabled = true;
             this.comboBoxCamara.Location = new System.Drawing.Point(152, 3);
-            this.comboBoxCamara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCamara.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCamara.Name = "comboBoxCamara";
             this.comboBoxCamara.Size = new System.Drawing.Size(294, 26);
             this.comboBoxCamara.TabIndex = 41;
@@ -186,11 +188,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(220, 349);
+            this.label2.Location = new System.Drawing.Point(231, 344);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 26);
             this.label2.TabIndex = 40;
             this.label2.Text = "Escanee el codigo QR";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnEnviar
@@ -227,6 +230,28 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Silver;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(0, 405);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(338, 45);
+            this.btnExit.TabIndex = 41;
+            this.btnExit.Text = "Salir";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // IngresoVista
             // 
@@ -272,5 +297,6 @@
         private System.Windows.Forms.CheckBox checkBoxContraseña;
         private System.Windows.Forms.ComboBox comboBoxCamara;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

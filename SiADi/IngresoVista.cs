@@ -138,10 +138,21 @@ namespace SiADi
 
         private void IngresoVista_Load(object sender, EventArgs e)
         {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo Device in filterInfoCollection)
-                comboBoxCamara.Items.Add(Device.Name);
-            comboBoxCamara.SelectedIndex = 0;
+            
+            try 
+            {
+                filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                foreach (FilterInfo Device in filterInfoCollection)
+                    comboBoxCamara.Items.Add(Device.Name);
+                comboBoxCamara.SelectedIndex = 0;
+            }
+            catch(System.ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Error: no posee camaras, no podrá usar el sistema para escanear asistencias.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnEnviar.Enabled = false;
+                label2.Text = "No posee camara";
+            }
+
             //videoCaptureDevice = new VideoCaptureDevice();
         }
 
@@ -176,13 +187,28 @@ namespace SiADi
 
         private void IngresoVista_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning)
-                videoCaptureDevice.Stop();
+            try
+            {
+                if(videoCaptureDevice != null)
+                {
+                    if (videoCaptureDevice.IsRunning)
+                        videoCaptureDevice.Stop();
+                }
+            }
+            catch(System.NullReferenceException) 
+            {
+                Console.WriteLine("Sin cámara");
+            }
         }
 
         private void pictureBoxCamara_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
