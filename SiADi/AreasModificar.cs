@@ -26,7 +26,9 @@ namespace SiADi
         {
             using (var db = new SiADiDB())
             {
-                var list = db.Areas.ToList().Select(i => new { i.Id, i.Nombre, i.Descripcion }).ToArray();
+                var list = db.Areas.ToList().Where(p => !p.baja).Select(i => new { i.Id, i.Nombre, i.Descripcion }).ToArray();
+                //var list = db.Areas.ToList().Select(i => new { i.Id, i.Nombre, i.Descripcion }).ToArray();
+                //var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id", new SqlParameter("@id", area.Id)).ToArray();
 
                 if (list.Length > 0)
                 {

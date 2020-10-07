@@ -113,5 +113,22 @@ namespace SiADi
             }
             this.Close();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                var query = from a in db.Areas
+                            where a.Id == area.Id
+                            select a;
+                foreach (var tArea in query)
+                {
+                    tArea.baja = true;
+                }
+                db.SaveChanges();
+                MessageBox.Show("El área ha sido dada de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
     }
 }
