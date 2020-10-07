@@ -39,7 +39,7 @@
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxCamara = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelQR = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.pictureBoxCamara = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -57,6 +57,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -74,11 +75,12 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.comboBoxCamara);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.labelQR);
             this.splitContainer1.Panel2.Controls.Add(this.btnEnviar);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBoxCamara);
-            this.splitContainer1.Size = new System.Drawing.Size(941, 450);
-            this.splitContainer1.SplitterDistance = 338;
+            this.splitContainer1.Size = new System.Drawing.Size(1255, 554);
+            this.splitContainer1.SplitterDistance = 450;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // checkBoxContraseña
@@ -86,9 +88,10 @@
             this.checkBoxContraseña.AutoSize = true;
             this.checkBoxContraseña.Font = new System.Drawing.Font("Myriad Pro Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxContraseña.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBoxContraseña.Location = new System.Drawing.Point(282, 288);
+            this.checkBoxContraseña.Location = new System.Drawing.Point(376, 354);
+            this.checkBoxContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxContraseña.Name = "checkBoxContraseña";
-            this.checkBoxContraseña.Size = new System.Drawing.Size(41, 21);
+            this.checkBoxContraseña.Size = new System.Drawing.Size(51, 25);
             this.checkBoxContraseña.TabIndex = 40;
             this.checkBoxContraseña.Text = "Ver";
             this.checkBoxContraseña.UseVisualStyleBackColor = true;
@@ -102,9 +105,10 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.btnIngresar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIngresar.Location = new System.Drawing.Point(120, 396);
+            this.btnIngresar.Location = new System.Drawing.Point(159, 487);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(101, 40);
+            this.btnIngresar.Size = new System.Drawing.Size(135, 49);
             this.btnIngresar.TabIndex = 39;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -116,9 +120,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(77, 259);
+            this.label1.Location = new System.Drawing.Point(103, 319);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 26);
+            this.label1.Size = new System.Drawing.Size(115, 33);
             this.label1.TabIndex = 38;
             this.label1.Text = "Contraseña";
             // 
@@ -126,10 +131,11 @@
             // 
             this.textBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxContraseña.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.textBoxContraseña.Location = new System.Drawing.Point(81, 286);
+            this.textBoxContraseña.Location = new System.Drawing.Point(108, 352);
+            this.textBoxContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxContraseña.MaxLength = 8;
             this.textBoxContraseña.Name = "textBoxContraseña";
-            this.textBoxContraseña.Size = new System.Drawing.Size(178, 23);
+            this.textBoxContraseña.Size = new System.Drawing.Size(237, 29);
             this.textBoxContraseña.TabIndex = 2;
             this.textBoxContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContraseña_KeyPress);
             this.textBoxContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxContraseña_Validating);
@@ -140,9 +146,10 @@
             this.labelDNI.AutoSize = true;
             this.labelDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelDNI.Location = new System.Drawing.Point(77, 173);
+            this.labelDNI.Location = new System.Drawing.Point(103, 213);
+            this.labelDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDNI.Name = "labelDNI";
-            this.labelDNI.Size = new System.Drawing.Size(38, 26);
+            this.labelDNI.Size = new System.Drawing.Size(47, 33);
             this.labelDNI.TabIndex = 36;
             this.labelDNI.Text = "DNI";
             // 
@@ -150,10 +157,11 @@
             // 
             this.textBoxDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.textBoxDNI.Location = new System.Drawing.Point(81, 200);
+            this.textBoxDNI.Location = new System.Drawing.Point(108, 246);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(178, 23);
+            this.textBoxDNI.Size = new System.Drawing.Size(237, 29);
             this.textBoxDNI.TabIndex = 1;
             this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);
             this.textBoxDNI.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxDNI_Validating);
@@ -161,9 +169,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(173, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(115, 106);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -174,24 +183,25 @@
             this.comboBoxCamara.Font = new System.Drawing.Font("Myriad Pro Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCamara.ForeColor = System.Drawing.Color.LightGray;
             this.comboBoxCamara.FormattingEnabled = true;
-            this.comboBoxCamara.Location = new System.Drawing.Point(152, 3);
-            this.comboBoxCamara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCamara.Location = new System.Drawing.Point(203, 4);
+            this.comboBoxCamara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCamara.Name = "comboBoxCamara";
-            this.comboBoxCamara.Size = new System.Drawing.Size(294, 26);
+            this.comboBoxCamara.Size = new System.Drawing.Size(391, 30);
             this.comboBoxCamara.TabIndex = 41;
             // 
-            // label2
+            // labelQR
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(220, 349);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 26);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Escanee el codigo QR";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelQR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelQR.AutoSize = true;
+            this.labelQR.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelQR.Location = new System.Drawing.Point(294, 430);
+            this.labelQR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelQR.Name = "labelQR";
+            this.labelQR.Size = new System.Drawing.Size(204, 33);
+            this.labelQR.TabIndex = 40;
+            this.labelQR.Text = "Escanee el codigo QR";
+            this.labelQR.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnEnviar
             // 
@@ -201,20 +211,22 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.btnEnviar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEnviar.Location = new System.Drawing.Point(236, 396);
+            this.btnEnviar.Location = new System.Drawing.Point(316, 487);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(131, 40);
+            this.btnEnviar.Size = new System.Drawing.Size(175, 49);
             this.btnEnviar.TabIndex = 40;
-            this.btnEnviar.Text = "Enviar asistencia";
+            this.btnEnviar.Text = "Activar escaneo";
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // pictureBoxCamara
             // 
             this.pictureBoxCamara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxCamara.Location = new System.Drawing.Point(152, 34);
+            this.pictureBoxCamara.Location = new System.Drawing.Point(203, 42);
+            this.pictureBoxCamara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxCamara.Name = "pictureBoxCamara";
-            this.pictureBoxCamara.Size = new System.Drawing.Size(294, 294);
+            this.pictureBoxCamara.Size = new System.Drawing.Size(391, 361);
             this.pictureBoxCamara.TabIndex = 0;
             this.pictureBoxCamara.TabStop = false;
             this.pictureBoxCamara.Click += new System.EventHandler(this.pictureBoxCamara_Click);
@@ -231,13 +243,14 @@
             // IngresoVista
             // 
             this.AcceptButton = this.btnIngresar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(941, 450);
+            this.ClientSize = new System.Drawing.Size(1255, 554);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IngresoVista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresoVista";
@@ -266,7 +279,7 @@
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.PictureBox pictureBoxCamara;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelQR;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.CheckBox checkBoxContraseña;

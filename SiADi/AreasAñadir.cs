@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,25 @@ namespace SiADi
     {
         private Verificaciones verificaciones = new Verificaciones();
         private int error = 1;
+        private Area area = null;
         public AreasAñadir()
         {
             InitializeComponent();
+            buttonEditar.Hide();
+            buttonCancelar.Hide();
+            buttonEliminar.Hide();
+        }
+
+        public AreasAñadir(Area pArea)
+        {
+            InitializeComponent();
+            area = pArea;
+            LabelAreasAñadir.Text = "Modificar Area";
+            this.CenterToScreen();
+            TextboxNombreAreasAñadir.Text = area.Nombre;
+            TextboxDescipcionAreasAñadir.Text = area.Descripcion;
+            btnCrear.Hide();
+            btnLimpiar.Hide();
         }
 
         private void TextboxNombreAreasAñadir_KeyPress(object sender, KeyPressEventArgs e)
@@ -71,6 +88,47 @@ namespace SiADi
             {
                 MessageBox.Show("Error, verifique el campo 'Nombre'.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                //db.Areas.SqlQuery("UPDATE Areas SET Nombre=@nombre, Descripcion=@descripcion WHERE Id=@id", new SqlParameter("@nombre", TextboxNombreAreasAñadir.Text), new SqlParameter("@descripcion", TextboxDescipcionAreasAñadir.Text), new SqlParameter("@id", area.Id));
+                var query = from a in db.Areas
+                            where a.Id == area.Id
+                select a;
+                foreach (var tArea in query)
+                {
+                    tArea.Nombre = TextboxNombreAreasAñadir.Text;
+                    tArea.Descripcion = TextboxDescipcionAreasAñadir.Text;
+                }
+                db.SaveChanges();
+                MessageBox.Show("El área ha sido modificada.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                var query = from a in db.Areas
+                            where a.Id == area.Id
+                            select a;
+                foreach (var tArea in query)
+                {
+                    tArea.baja = true;
+                }
+                db.SaveChanges();
+                MessageBox.Show("El área ha sido dada de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
         }
     }
 }

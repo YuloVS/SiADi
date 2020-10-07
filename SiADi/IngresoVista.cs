@@ -153,7 +153,7 @@ namespace SiADi
                 Result result = barcodeReader.Decode((Bitmap)pictureBoxCamara.Image);
                 if(result != null)
                 {
-                    textBoxDNI.Text = result.ToString();
+                    labelQR.Text = result.ToString();
                     timer1.Stop();
                     if (videoCaptureDevice.IsRunning)
                         videoCaptureDevice.Stop();
@@ -176,8 +176,15 @@ namespace SiADi
 
         private void IngresoVista_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoCaptureDevice.IsRunning)
-                videoCaptureDevice.Stop();
+            /*try
+            {
+                if (videoCaptureDevice.IsRunning)
+                    videoCaptureDevice.Stop();
+            }
+            catch(System.NullReferenceException)
+            {
+                Console.WriteLine("Camara apagada");
+            }*/
         }
 
         private void pictureBoxCamara_Click(object sender, EventArgs e)

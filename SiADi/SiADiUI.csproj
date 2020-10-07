@@ -129,6 +129,10 @@
     <Compile Include="Migrations\202010052353490_Inicial.Designer.cs">
       <DependentUpon>202010052353490_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010070239261_Baja agregada.cs" />
+    <Compile Include="Migrations\202010070239261_Baja agregada.Designer.cs">
+      <DependentUpon>202010070239261_Baja agregada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Modelo\Area.cs" />
     <Compile Include="Modelo\Asistencia.cs" />
@@ -186,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010052353490_Inicial.resx">
       <DependentUpon>202010052353490_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010070239261_Baja agregada.resx">
+      <DependentUpon>202010070239261_Baja agregada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

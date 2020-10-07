@@ -20,7 +20,16 @@ namespace SiADi
         private bool errorSalario=true;
         Persona usuario;
         bool admin;
+
         public CargosAñadir(Persona persona, bool esAdmin)
+        {
+            InitializeComponent();
+            usuario = persona;
+            admin = esAdmin;
+            cargarComboBox();
+        }
+
+        public CargosAñadir(Persona persona, bool esAdmin, Cargo pCargo)
         {
             InitializeComponent();
             usuario = persona;

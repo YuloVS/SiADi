@@ -228,7 +228,7 @@ namespace SiADi
             {
                 using (var db = new SiADiDB())
                 {
-                    Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue), Contraseña = crearContraseña(), Edad = Int32.Parse(textBoxEdad.Text) };
+                    Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue), Contraseña = crearContraseña(), Edad = Int32.Parse(textBoxEdad.Text), Encargado = checkBoxEncargado.Checked };
                     db.Personas.Add(persona);
                     db.SaveChanges();
                 }
