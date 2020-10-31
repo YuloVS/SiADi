@@ -87,7 +87,7 @@ namespace SiADi
                 {
                     Cargo cargo = usuario.Cargo;
                     Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id AND c.Nombre=@nombre", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text)).ToArray();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id AND (c.Nombre=@nombre OR c.Salario=@salario)", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -97,7 +97,7 @@ namespace SiADi
                 }
                 else
                 {
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE c.Nombre=@nombre", new SqlParameter("@nombre", textBoxFiltro.Text)).ToArray();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE c.Nombre=@nombre OR c.Salario=@salario ", new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
