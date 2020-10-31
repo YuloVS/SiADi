@@ -48,10 +48,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(257, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(193, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 38);
+            this.label1.Size = new System.Drawing.Size(140, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "Modificar áreas";
             // 
@@ -87,8 +86,7 @@
             this.dataGridViewAreas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAreas.EnableHeadersVisualStyles = false;
             this.dataGridViewAreas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.dataGridViewAreas.Location = new System.Drawing.Point(87, 124);
-            this.dataGridViewAreas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewAreas.Location = new System.Drawing.Point(65, 101);
             this.dataGridViewAreas.MultiSelect = false;
             this.dataGridViewAreas.Name = "dataGridViewAreas";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -111,7 +109,7 @@
             this.dataGridViewAreas.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.LightGray;
             this.dataGridViewAreas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.dataGridViewAreas.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.LightGray;
-            this.dataGridViewAreas.Size = new System.Drawing.Size(535, 351);
+            this.dataGridViewAreas.Size = new System.Drawing.Size(401, 285);
             this.dataGridViewAreas.TabIndex = 3;
             this.dataGridViewAreas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAreas_CellClick);
             this.dataGridViewAreas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -119,10 +117,9 @@
             // textBoxFiltro
             // 
             this.textBoxFiltro.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.textBoxFiltro.Location = new System.Drawing.Point(241, 65);
-            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFiltro.Location = new System.Drawing.Point(181, 53);
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(208, 36);
+            this.textBoxFiltro.Size = new System.Drawing.Size(157, 30);
             this.textBoxFiltro.TabIndex = 4;
             this.textBoxFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFiltro_KeyPress);
             // 
@@ -132,10 +129,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.LightGray;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(459, 58);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(344, 47);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(35, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(26, 29);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -148,10 +144,9 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLimpiar.Location = new System.Drawing.Point(279, 420);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Location = new System.Drawing.Point(209, 341);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(87, 41);
+            this.btnLimpiar.Size = new System.Drawing.Size(65, 33);
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -159,16 +154,16 @@
             // 
             // AreasModificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(667, 514);
+            this.ClientSize = new System.Drawing.Size(500, 418);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.dataGridViewAreas);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AreasModificar";
             this.Text = "AreasModificar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAreas)).EndInit();

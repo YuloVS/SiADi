@@ -20,6 +20,7 @@ namespace SiADi
         private bool errorSalario=true;
         Persona usuario;
         bool admin;
+        private Cargo cargo = null;
 
         public CargosAñadir(Persona persona, bool esAdmin)
         {
@@ -27,6 +28,9 @@ namespace SiADi
             usuario = persona;
             admin = esAdmin;
             cargarComboBox();
+            buttonEditar.Hide();
+            buttonCancelar.Hide();
+            buttonEliminar.Hide();
         }
 
         public CargosAñadir(Persona persona, bool esAdmin, Cargo pCargo)
@@ -35,6 +39,37 @@ namespace SiADi
             usuario = persona;
             admin = esAdmin;
             cargarComboBox();
+            buttonEditar.Hide();
+            buttonCancelar.Hide();
+            buttonEliminar.Hide();
+        }
+
+        public CargosAñadir(Cargo pCargo)
+        {
+            using (var db = new SiADiDB())
+            {
+                InitializeComponent();
+                cargo = pCargo;
+                LabelCargosAñadir.Text = "Modificar Cargos";
+                this.CenterToScreen();
+                textBoxNombre.Text = cargo.Nombre;
+                horarioEntrada.Value = cargo.Horario_entrada;
+                horarioSalida.Value = cargo.Horario_salida;
+                if (admin)
+                {
+                    comboBoxArea.DataSource = db.Areas.ToList();
+                }
+                else
+                {
+                    comboBoxArea.DataSource = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).ToList();
+                }
+                comboBoxArea.DisplayMember = "Nombre";
+                comboBoxArea.ValueMember = "Id";
+                comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;
+                textBoxSalario.Text = cargo.Salario.ToString();
+                btnCrear.Hide();
+                btnLimpiar.Hide();
+            }
         }
 
         private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -170,6 +205,28 @@ namespace SiADi
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                var query = from c in db.Cargos
+                            where c.Id == cargo.Id
+                            select c;
+                foreach (var tCargo in query)
+                {
+                    tCargo.baja = true;
+                }
+                db.SaveChanges();
+                MessageBox.Show("El cargo ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
         }
     }
 }
