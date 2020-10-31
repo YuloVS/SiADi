@@ -63,7 +63,7 @@ namespace SiADi
         {
             using (var db = new SiADiDB())
             {
-                var list = db.Areas.ToList().Where(p => p.Nombre == textBoxFiltro.Text).Select(i => new { i.Nombre, i.Descripcion }).ToArray();
+                var list = db.Areas.ToList().Where(p => p.Nombre == textBoxFiltro.Text || p.Descripcion.Contains(textBoxFiltro.Text)).Select(i => new { i.Nombre, i.Descripcion }).ToArray();
 
                 if (list.Length > 0)
                 {
