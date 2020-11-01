@@ -31,6 +31,7 @@ namespace SiADi
             buttonEditar.Hide();
             buttonCancelar.Hide();
             buttonEliminar.Hide();
+            textBoxArea.Hide();
         }
 
         public CargosAñadir(Persona persona, bool esAdmin, Cargo pCargo)
@@ -38,38 +39,21 @@ namespace SiADi
             InitializeComponent();
             usuario = persona;
             admin = esAdmin;
+            cargo = pCargo;
+            errorNombre = false;
+            errorHorario = false;
+            errorSalario = false;
+            LabelCargosAñadir.Text = "Modificar Cargo";
+            this.CenterToScreen();
+            textBoxNombre.Text = cargo.Nombre;
+            horarioEntrada.Value = cargo.Horario_entrada;
+            horarioSalida.Value = cargo.Horario_salida;
             cargarComboBox();
-            buttonEditar.Hide();
-            buttonCancelar.Hide();
-            buttonEliminar.Hide();
-        }
-
-        public CargosAñadir(Cargo pCargo)
-        {
-            using (var db = new SiADiDB())
-            {
-                InitializeComponent();
-                cargo = pCargo;
-                LabelCargosAñadir.Text = "Modificar Cargos";
-                this.CenterToScreen();
-                textBoxNombre.Text = cargo.Nombre;
-                horarioEntrada.Value = cargo.Horario_entrada;
-                horarioSalida.Value = cargo.Horario_salida;
-                if (admin)
-                {
-                    comboBoxArea.DataSource = db.Areas.ToList();
-                }
-                else
-                {
-                    comboBoxArea.DataSource = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).ToList();
-                }
-                comboBoxArea.DisplayMember = "Nombre";
-                comboBoxArea.ValueMember = "Id";
-                comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;
-                textBoxSalario.Text = cargo.Salario.ToString();
-                btnCrear.Hide();
-                btnLimpiar.Hide();
-            }
+            textBoxArea = //BUSCAR EL AREA DEL CARGO QUE SE SELECCIONO
+            textBoxSalario.Text = cargo.Salario.ToString();
+            btnCrear.Hide();
+            btnLimpiar.Hide();
+            comboBoxArea.Hide();
         }
 
         private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -227,6 +211,39 @@ namespace SiADi
                 MessageBox.Show("El cargo ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.Close();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (!errorHorario && !errorNombre && !errorSalario)
+            {
+                using (var db = new SiADiDB())
+                {
+                    var query = from c in db.Cargos
+                                where c.Id == cargo.Id
+                                select c;
+                    foreach (var tCargo in query)
+                    {
+                        tCargo.Nombre = textBoxNombre.Text;
+                        tCargo.Horario_entrada = horarioEntrada.Value;
+                        tCargo.Horario_salida = horarioSalida.Value;
+                        tCargo.Salario = float.Parse(textBoxSalario.Text);
+                    }
+                    db.SaveChanges();
+                    MessageBox.Show("El cargo ha sido modificado.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+                this.textBoxNombre.Clear();
+                this.textBoxSalario.Clear();
+                errorProvider1.Clear();
+                errorNombre = true;
+                errorHorario = true;
+                errorSalario = true;
+            }
+            else
+            {
+                MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

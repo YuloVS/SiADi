@@ -46,6 +46,7 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
+            this.textBoxArea = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +125,7 @@
             this.LabelCargosAñadir.AutoSize = true;
             this.LabelCargosAñadir.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
             this.LabelCargosAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.LabelCargosAñadir.Location = new System.Drawing.Point(206, 9);
+            this.LabelCargosAñadir.Location = new System.Drawing.Point(179, 9);
             this.LabelCargosAñadir.Name = "LabelCargosAñadir";
             this.LabelCargosAñadir.Size = new System.Drawing.Size(118, 30);
             this.LabelCargosAñadir.TabIndex = 20;
@@ -264,6 +265,18 @@
             this.buttonEditar.TabIndex = 33;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // textBoxArea
+            // 
+            this.textBoxArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxArea.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.textBoxArea.Location = new System.Drawing.Point(184, 224);
+            this.textBoxArea.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxArea.MaxLength = 6;
+            this.textBoxArea.Name = "textBoxArea";
+            this.textBoxArea.Size = new System.Drawing.Size(97, 23);
+            this.textBoxArea.TabIndex = 36;
             // 
             // CargosAñadir
             // 
@@ -273,6 +286,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(500, 418);
             this.ControlBox = false;
+            this.Controls.Add(this.textBoxArea);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEditar);
@@ -318,5 +332,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.TextBox textBoxArea;
     }
 }

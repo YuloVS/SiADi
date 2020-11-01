@@ -34,7 +34,7 @@ namespace SiADi
                 {
                     Cargo cargo = usuario.Cargo;
                     Area area =  db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id WHERE (c.baja=0)", new SqlParameter("@id", area.Id)).ToArray();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id AND(c.baja=0)", new SqlParameter("@id", area.Id)).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -139,7 +139,7 @@ namespace SiADi
             using (var db = new SiADiDB())
             {
                 Cargo cargo = db.Cargos.Find(idCargo);
-                Form modificarCargos = new CargosAñadir(cargo);
+                Form modificarCargos = new CargosAñadir(usuario, admin, cargo);
                 modificarCargos.Show();
             }
         }
