@@ -48,17 +48,35 @@
             this.textBoxEdad = new System.Windows.Forms.TextBox();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.labelTelefono = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelCargo = new System.Windows.Forms.Label();
             this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.btnAgregarFoto = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelArea = new System.Windows.Forms.Label();
             this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.checkBoxEncargado = new System.Windows.Forms.CheckBox();
+            this.buttonAgregarFoto = new System.Windows.Forms.Button();
+            this.textBoxEdad2 = new System.Windows.Forms.TextBox();
+            this.labelEdad2 = new System.Windows.Forms.Label();
+            this.labelTelefono2 = new System.Windows.Forms.Label();
+            this.textBoxTelefono2 = new System.Windows.Forms.TextBox();
+            this.pictureBoxUsuario2 = new System.Windows.Forms.PictureBox();
+            this.labelFechaNacimiento2 = new System.Windows.Forms.Label();
+            this.labelNombre2 = new System.Windows.Forms.Label();
+            this.labelApellido2 = new System.Windows.Forms.Label();
+            this.labelCUIL2 = new System.Windows.Forms.Label();
+            this.labelDNI2 = new System.Windows.Forms.Label();
+            this.labelDireccion2 = new System.Windows.Forms.Label();
+            this.labelArea2 = new System.Windows.Forms.Label();
+            this.labelCargo2 = new System.Windows.Forms.Label();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +96,7 @@
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDireccion.Location = new System.Drawing.Point(35, 259);
-            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDireccion.MaxLength = 45;
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(342, 23);
@@ -102,7 +120,7 @@
             this.comboBoxCargo.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Location = new System.Drawing.Point(250, 317);
-            this.comboBoxCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCargo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCargo.Name = "comboBoxCargo";
             this.comboBoxCargo.Size = new System.Drawing.Size(128, 29);
             this.comboBoxCargo.TabIndex = 7;
@@ -192,7 +210,7 @@
             this.textBoxCUIL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCUIL.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxCUIL.Location = new System.Drawing.Point(184, 82);
-            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCUIL.MaxLength = 11;
             this.textBoxCUIL.Name = "textBoxCUIL";
             this.textBoxCUIL.Size = new System.Drawing.Size(120, 23);
@@ -217,7 +235,7 @@
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxNombre.Location = new System.Drawing.Point(35, 140);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(120, 23);
@@ -230,7 +248,7 @@
             this.textBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellido.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxApellido.Location = new System.Drawing.Point(184, 140);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(120, 23);
             this.textBoxApellido.TabIndex = 3;
@@ -242,7 +260,7 @@
             this.dateTimePickerFechaNacimiento.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.dateTimePickerFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(35, 198);
-            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaNacimiento.MaxDate = new System.DateTime(2002, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
@@ -269,7 +287,7 @@
             this.textBoxEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEdad.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxEdad.Location = new System.Drawing.Point(158, 203);
-            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdad.MaxLength = 2;
             this.textBoxEdad.Name = "textBoxEdad";
             this.textBoxEdad.ReadOnly = true;
@@ -282,7 +300,7 @@
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxTelefono.Location = new System.Drawing.Point(222, 203);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.MaxLength = 10;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(128, 23);
@@ -302,23 +320,23 @@
             this.labelTelefono.TabIndex = 57;
             this.labelTelefono.Text = "Teléfono";
             // 
-            // label10
+            // labelCargo
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label10.Location = new System.Drawing.Point(236, 292);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 26);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "Cargo";
+            this.labelCargo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCargo.AutoSize = true;
+            this.labelCargo.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelCargo.Location = new System.Drawing.Point(236, 292);
+            this.labelCargo.Name = "labelCargo";
+            this.labelCargo.Size = new System.Drawing.Size(53, 26);
+            this.labelCargo.TabIndex = 58;
+            this.labelCargo.Text = "Cargo";
             // 
             // pictureBoxUsuario
             // 
             this.pictureBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxUsuario.Location = new System.Drawing.Point(379, 54);
-            this.pictureBoxUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
             this.pictureBoxUsuario.Size = new System.Drawing.Size(116, 126);
             this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +348,7 @@
             this.textBoxDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDNI.Location = new System.Drawing.Point(35, 82);
-            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(120, 23);
@@ -362,24 +380,24 @@
             this.btnAgregarFoto.UseVisualStyleBackColor = false;
             this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
             // 
-            // label2
+            // labelArea
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label2.Location = new System.Drawing.Point(20, 292);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 26);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "Área";
+            this.labelArea.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelArea.AutoSize = true;
+            this.labelArea.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelArea.Location = new System.Drawing.Point(20, 292);
+            this.labelArea.Name = "labelArea";
+            this.labelArea.Size = new System.Drawing.Size(44, 26);
+            this.labelArea.TabIndex = 65;
+            this.labelArea.Text = "Área";
             // 
             // comboBoxArea
             // 
             this.comboBoxArea.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxArea.FormattingEnabled = true;
             this.comboBoxArea.Location = new System.Drawing.Point(35, 317);
-            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(128, 29);
             this.comboBoxArea.TabIndex = 64;
@@ -397,6 +415,224 @@
             this.checkBoxEncargado.Text = "Encargado";
             this.checkBoxEncargado.UseVisualStyleBackColor = true;
             // 
+            // buttonAgregarFoto
+            // 
+            this.buttonAgregarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAgregarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.buttonAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.buttonAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarFoto.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.buttonAgregarFoto.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonAgregarFoto.Location = new System.Drawing.Point(394, 168);
+            this.buttonAgregarFoto.Name = "buttonAgregarFoto";
+            this.buttonAgregarFoto.Size = new System.Drawing.Size(84, 28);
+            this.buttonAgregarFoto.TabIndex = 68;
+            this.buttonAgregarFoto.Text = "Añadir foto";
+            this.buttonAgregarFoto.UseVisualStyleBackColor = false;
+            this.buttonAgregarFoto.Click += new System.EventHandler(this.buttonAgregarFoto_Click);
+            // 
+            // textBoxEdad2
+            // 
+            this.textBoxEdad2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEdad2.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.textBoxEdad2.Location = new System.Drawing.Point(195, 203);
+            this.textBoxEdad2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEdad2.MaxLength = 2;
+            this.textBoxEdad2.Name = "textBoxEdad2";
+            this.textBoxEdad2.ReadOnly = true;
+            this.textBoxEdad2.Size = new System.Drawing.Size(34, 23);
+            this.textBoxEdad2.TabIndex = 70;
+            this.textBoxEdad2.TabStop = false;
+            // 
+            // labelEdad2
+            // 
+            this.labelEdad2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelEdad2.AutoSize = true;
+            this.labelEdad2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelEdad2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelEdad2.Location = new System.Drawing.Point(190, 175);
+            this.labelEdad2.Name = "labelEdad2";
+            this.labelEdad2.Size = new System.Drawing.Size(46, 26);
+            this.labelEdad2.TabIndex = 69;
+            this.labelEdad2.Text = "Edad";
+            // 
+            // labelTelefono2
+            // 
+            this.labelTelefono2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTelefono2.AutoSize = true;
+            this.labelTelefono2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelTelefono2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelTelefono2.Location = new System.Drawing.Point(279, 175);
+            this.labelTelefono2.Name = "labelTelefono2";
+            this.labelTelefono2.Size = new System.Drawing.Size(71, 26);
+            this.labelTelefono2.TabIndex = 72;
+            this.labelTelefono2.Text = "Teléfono";
+            // 
+            // textBoxTelefono2
+            // 
+            this.textBoxTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTelefono2.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.textBoxTelefono2.Location = new System.Drawing.Point(284, 203);
+            this.textBoxTelefono2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefono2.MaxLength = 10;
+            this.textBoxTelefono2.Name = "textBoxTelefono2";
+            this.textBoxTelefono2.Size = new System.Drawing.Size(128, 23);
+            this.textBoxTelefono2.TabIndex = 71;
+            // 
+            // pictureBoxUsuario2
+            // 
+            this.pictureBoxUsuario2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxUsuario2.Location = new System.Drawing.Point(379, 37);
+            this.pictureBoxUsuario2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxUsuario2.Name = "pictureBoxUsuario2";
+            this.pictureBoxUsuario2.Size = new System.Drawing.Size(116, 126);
+            this.pictureBoxUsuario2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUsuario2.TabIndex = 73;
+            this.pictureBoxUsuario2.TabStop = false;
+            // 
+            // labelFechaNacimiento2
+            // 
+            this.labelFechaNacimiento2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelFechaNacimiento2.AutoSize = true;
+            this.labelFechaNacimiento2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelFechaNacimiento2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelFechaNacimiento2.Location = new System.Drawing.Point(30, 175);
+            this.labelFechaNacimiento2.Name = "labelFechaNacimiento2";
+            this.labelFechaNacimiento2.Size = new System.Drawing.Size(134, 26);
+            this.labelFechaNacimiento2.TabIndex = 74;
+            this.labelFechaNacimiento2.Text = "Fecha nacimiento";
+            // 
+            // labelNombre2
+            // 
+            this.labelNombre2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelNombre2.AutoSize = true;
+            this.labelNombre2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelNombre2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelNombre2.Location = new System.Drawing.Point(30, 112);
+            this.labelNombre2.Name = "labelNombre2";
+            this.labelNombre2.Size = new System.Drawing.Size(69, 26);
+            this.labelNombre2.TabIndex = 75;
+            this.labelNombre2.Text = "Nombre";
+            // 
+            // labelApellido2
+            // 
+            this.labelApellido2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelApellido2.AutoSize = true;
+            this.labelApellido2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelApellido2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelApellido2.Location = new System.Drawing.Point(179, 112);
+            this.labelApellido2.Name = "labelApellido2";
+            this.labelApellido2.Size = new System.Drawing.Size(69, 26);
+            this.labelApellido2.TabIndex = 76;
+            this.labelApellido2.Text = "Apellido";
+            // 
+            // labelCUIL2
+            // 
+            this.labelCUIL2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCUIL2.AutoSize = true;
+            this.labelCUIL2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelCUIL2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelCUIL2.Location = new System.Drawing.Point(179, 56);
+            this.labelCUIL2.Name = "labelCUIL2";
+            this.labelCUIL2.Size = new System.Drawing.Size(45, 26);
+            this.labelCUIL2.TabIndex = 77;
+            this.labelCUIL2.Text = "CUIL";
+            // 
+            // labelDNI2
+            // 
+            this.labelDNI2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelDNI2.AutoSize = true;
+            this.labelDNI2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelDNI2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelDNI2.Location = new System.Drawing.Point(30, 56);
+            this.labelDNI2.Name = "labelDNI2";
+            this.labelDNI2.Size = new System.Drawing.Size(38, 26);
+            this.labelDNI2.TabIndex = 78;
+            this.labelDNI2.Text = "DNI";
+            // 
+            // labelDireccion2
+            // 
+            this.labelDireccion2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelDireccion2.AutoSize = true;
+            this.labelDireccion2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelDireccion2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelDireccion2.Location = new System.Drawing.Point(30, 231);
+            this.labelDireccion2.Name = "labelDireccion2";
+            this.labelDireccion2.Size = new System.Drawing.Size(76, 26);
+            this.labelDireccion2.TabIndex = 79;
+            this.labelDireccion2.Text = "Dirección";
+            // 
+            // labelArea2
+            // 
+            this.labelArea2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelArea2.AutoSize = true;
+            this.labelArea2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelArea2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelArea2.Location = new System.Drawing.Point(30, 289);
+            this.labelArea2.Name = "labelArea2";
+            this.labelArea2.Size = new System.Drawing.Size(44, 26);
+            this.labelArea2.TabIndex = 80;
+            this.labelArea2.Text = "Área";
+            // 
+            // labelCargo2
+            // 
+            this.labelCargo2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCargo2.AutoSize = true;
+            this.labelCargo2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
+            this.labelCargo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelCargo2.Location = new System.Drawing.Point(245, 289);
+            this.labelCargo2.Name = "labelCargo2";
+            this.labelCargo2.Size = new System.Drawing.Size(53, 26);
+            this.labelCargo2.TabIndex = 81;
+            this.labelCargo2.Text = "Cargo";
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEliminar.BackColor = System.Drawing.Color.Red;
+            this.buttonEliminar.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonEliminar.Location = new System.Drawing.Point(210, 366);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 40);
+            this.buttonEliminar.TabIndex = 84;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.buttonCancelar.FlatAppearance.BorderSize = 0;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonCancelar.Location = new System.Drawing.Point(38, 366);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(150, 40);
+            this.buttonCancelar.TabIndex = 83;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.buttonEditar.FlatAppearance.BorderSize = 0;
+            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditar.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonEditar.Location = new System.Drawing.Point(314, 366);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(150, 40);
+            this.buttonEditar.TabIndex = 82;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = false;
+            // 
             // UsuariosAñadir
             // 
             this.AcceptButton = this.btnCrear;
@@ -404,12 +640,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(500, 418);
+            this.Controls.Add(this.buttonEliminar);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonEditar);
+            this.Controls.Add(this.labelCargo2);
+            this.Controls.Add(this.labelArea2);
+            this.Controls.Add(this.labelDireccion2);
+            this.Controls.Add(this.labelDNI2);
+            this.Controls.Add(this.labelCUIL2);
+            this.Controls.Add(this.labelApellido2);
+            this.Controls.Add(this.labelNombre2);
+            this.Controls.Add(this.labelFechaNacimiento2);
+            this.Controls.Add(this.pictureBoxUsuario2);
+            this.Controls.Add(this.labelTelefono2);
+            this.Controls.Add(this.textBoxTelefono2);
+            this.Controls.Add(this.textBoxEdad2);
+            this.Controls.Add(this.labelEdad2);
+            this.Controls.Add(this.buttonAgregarFoto);
             this.Controls.Add(this.checkBoxEncargado);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelArea);
             this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.btnAgregarFoto);
             this.Controls.Add(this.pictureBoxUsuario);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelCargo);
             this.Controls.Add(this.labelTelefono);
             this.Controls.Add(this.textBoxTelefono);
             this.Controls.Add(this.textBoxEdad);
@@ -430,11 +683,13 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsuariosAñadir";
             this.Text = "UsuariosAñadir";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,14 +716,31 @@
         private System.Windows.Forms.TextBox textBoxEdad;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label labelTelefono;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelCargo;
         private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Button btnAgregarFoto;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelArea;
         private System.Windows.Forms.ComboBox comboBoxArea;
         private System.Windows.Forms.CheckBox checkBoxEncargado;
+        private System.Windows.Forms.TextBox textBoxEdad2;
+        private System.Windows.Forms.Label labelEdad2;
+        private System.Windows.Forms.Button buttonAgregarFoto;
+        private System.Windows.Forms.Label labelTelefono2;
+        private System.Windows.Forms.TextBox textBoxTelefono2;
+        private System.Windows.Forms.PictureBox pictureBoxUsuario2;
+        private System.Windows.Forms.Label labelFechaNacimiento2;
+        private System.Windows.Forms.Label labelNombre2;
+        private System.Windows.Forms.Label labelApellido2;
+        private System.Windows.Forms.Label labelCUIL2;
+        private System.Windows.Forms.Label labelDNI2;
+        private System.Windows.Forms.Label labelDireccion2;
+        private System.Windows.Forms.Label labelArea2;
+        private System.Windows.Forms.Label labelCargo2;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button buttonEditar;
     }
 }
