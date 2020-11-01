@@ -147,5 +147,11 @@ namespace SiADi
                 }
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textBoxFiltro.Clear();
+            cargarTabla();
+        }
     }
 }
