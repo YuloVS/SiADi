@@ -72,6 +72,14 @@ namespace SiADi
             labelCargo.Hide();
             btnCrear.Hide();
             btnLimpiar.Hide();
+            errorDni = false;
+            errorCuil = false;
+            errorNombre = false;
+            errorApellido = false;
+            errorFecha = false;
+            errorTelefono = false;
+            errorDireccion = false;
+            errorImagen = false;
         }
 
         private void modoEdicion()
@@ -247,7 +255,7 @@ namespace SiADi
 
         private bool hayErrores()
         {
-            return errorApellido && errorCuil && errorDireccion && errorDni && errorFecha && errorImagen && errorNombre && errorTelefono;
+            return errorApellido || errorCuil || errorDireccion || errorDni || errorFecha || errorImagen || errorNombre || errorTelefono;
         }
 
         private void cargarComboBoxArea()
@@ -355,7 +363,7 @@ namespace SiADi
                     tPersona.baja = true;
                 }
                 db.SaveChanges();
-                MessageBox.Show("El cargo ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El usuario ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.Close();
         }
@@ -363,6 +371,63 @@ namespace SiADi
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxTelefono2_Validated(object sender, EventArgs e)
+        {
+            if (textBoxTelefono.TextLength < 10)
+            {
+                errorProvider1.SetError(textBoxTelefono, "Número telefonico invalido.");
+                verificaciones.bordeError(textBoxTelefono, this);
+                errorTelefono = true;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                errorTelefono = false;
+            }
+        }
+
+        private void textBoxTelefono2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            verificaciones.soloNumeros(e);
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (!hayErrores())
+            {
+                using (var db = new SiADiDB())
+                {
+                    Persona personaupdate = db.Personas.Find(persona.Id);
+                    personaupdate.Dni = Convert.ToInt32(textBoxDNI.Text);
+                    personaupdate.Cuil = Convert.ToInt64(textBoxCUIL.Text);
+                    personaupdate.Nombre = textBoxNombre.Text;
+                    personaupdate.Apellido = textBoxApellido.Text;
+                    personaupdate.Fecha_nacimiento = dateTimePickerFechaNacimiento.Value;
+                    personaupdate.Edad = Convert.ToInt32(textBoxEdad2.Text);
+                    personaupdate.Telefono = Convert.ToInt64(textBoxTelefono2.Text);
+                    personaupdate.Cargo.Area = db.Areas.Find(comboBoxArea.SelectedValue);
+                    personaupdate.Encargado = checkBoxEncargado.Checked;
+                    personaupdate.Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue);
+                    db.SaveChanges();
+                    MessageBox.Show("El usuario ha sido modificado.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+                errorProvider1.Clear();
+                errorDni = true;
+                errorCuil = true;
+                errorNombre = true;
+                errorApellido = true;
+                errorFecha = true;
+                errorTelefono = true;
+                errorDireccion = true;
+                errorImagen = true;
+            }
+            else
+            {
+                MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

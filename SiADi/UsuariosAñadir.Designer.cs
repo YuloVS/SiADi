@@ -478,6 +478,8 @@
             this.textBoxTelefono2.Name = "textBoxTelefono2";
             this.textBoxTelefono2.Size = new System.Drawing.Size(128, 23);
             this.textBoxTelefono2.TabIndex = 71;
+            this.textBoxTelefono2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono2_KeyPress);
+            this.textBoxTelefono2.Validated += new System.EventHandler(this.textBoxTelefono2_Validated);
             // 
             // pictureBoxUsuario2
             // 
@@ -532,7 +534,7 @@
             this.labelCUIL2.AutoSize = true;
             this.labelCUIL2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelCUIL2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelCUIL2.Location = new System.Drawing.Point(179, 56);
+            this.labelCUIL2.Location = new System.Drawing.Point(179, 54);
             this.labelCUIL2.Name = "labelCUIL2";
             this.labelCUIL2.Size = new System.Drawing.Size(45, 26);
             this.labelCUIL2.TabIndex = 77;
@@ -544,7 +546,7 @@
             this.labelDNI2.AutoSize = true;
             this.labelDNI2.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F);
             this.labelDNI2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelDNI2.Location = new System.Drawing.Point(30, 56);
+            this.labelDNI2.Location = new System.Drawing.Point(30, 54);
             this.labelDNI2.Name = "labelDNI2";
             this.labelDNI2.Size = new System.Drawing.Size(38, 26);
             this.labelDNI2.TabIndex = 78;
@@ -632,6 +634,7 @@
             this.buttonEditar.TabIndex = 82;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // UsuariosAñadir
             // 

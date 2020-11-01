@@ -28,6 +28,7 @@ namespace SiADi
             {
                 var consulta = from p in db.Personas
                     join c in db.Cargos on p.Cargo.Id equals c.Id
+                    where p.baja != true
                     select new {Id = p.Id, Cuil = p.Cuil, Nombre = p.Nombre, Apellido = p.Apellido, cNombre = c.Nombre, Telefono = p.Telefono};
                 var list = consulta.ToArray();
                 if (list.Length > 0)
