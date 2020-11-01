@@ -19,15 +19,18 @@ namespace SiADi
         private bool errorCuil = true;
         private bool errorNombre = true;
         private bool errorApellido = true;
-        private bool errorFecha = true;
+        private bool errorFecha = false;
         private bool errorTelefono = true;
         private bool errorDireccion = true;
-        private bool errorImagen = true;
-        private Persona persona = null;
+        private bool errorImagen = false;
+        private Persona usuario;
+        private bool admin;
 
-        public UsuariosAñadir()
+        public UsuariosAñadir(Persona persona, bool esAdmin)
         {
             InitializeComponent();
+            this.usuario = persona;
+            this.admin = esAdmin;
             cargarComboBoxArea();
             labelEdad2.Hide();
             textBoxEdad2.Hide();
@@ -49,13 +52,14 @@ namespace SiADi
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
         }
         
-        public UsuariosAñadir(Persona persona)
+        public UsuariosAñadir(Persona persona, bool esAdmin, Persona usuario)
         {
             InitializeComponent();
-            labelUsuariosAñadir.Text = "Modificar Cargo";
+            this.usuario = usuario;
+            this.admin = esAdmin;
+            labelUsuariosAñadir.Text = "Modificar Usuario";
             this.CenterToScreen();
             cargarComboBoxArea();
-            this.persona = persona;
             modoEdicion();
             labelEdad.Hide();
             textBoxEdad.Hide();
@@ -85,16 +89,16 @@ namespace SiADi
 
         private void modoEdicion()
         {
-            this.textBoxDNI.Text = persona.Dni.ToString();
-            this.textBoxCUIL.Text = persona.Cuil.ToString();
-            this.textBoxNombre.Text = persona.Nombre;
-            this.textBoxApellido.Text = persona.Apellido;
-            this.dateTimePickerFechaNacimiento.Value = persona.Fecha_nacimiento;
-            this.textBoxEdad2.Text = persona.Edad.ToString();
-            this.textBoxTelefono2.Text = persona.Telefono.ToString();
-            this.textBoxDireccion.Text = persona.Direccion;
-            this.comboBoxArea.SelectedValue = persona.Cargo.Area.Id;
-            this.comboBoxCargo.SelectedValue = persona.Cargo.Id;
+            this.textBoxDNI.Text = usuario.Dni.ToString();
+            this.textBoxCUIL.Text = usuario.Cuil.ToString();
+            this.textBoxNombre.Text = usuario.Nombre;
+            this.textBoxApellido.Text = usuario.Apellido;
+            this.dateTimePickerFechaNacimiento.Value = usuario.Fecha_nacimiento;
+            this.textBoxEdad2.Text = usuario.Edad.ToString();
+            this.textBoxTelefono2.Text = usuario.Telefono.ToString();
+            this.textBoxDireccion.Text = usuario.Direccion;
+            this.comboBoxArea.SelectedValue = usuario.Cargo.Area.Id;
+            this.comboBoxCargo.SelectedValue = usuario.Cargo.Id;
         }
 
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -263,7 +267,15 @@ namespace SiADi
         {
             using (var db = new SiADiDB())
             {
-                comboBoxArea.DataSource = db.Areas.ToList();
+                if (admin)
+                {
+                    comboBoxArea.DataSource = db.Areas.Where(a => a.baja == false).ToList();
+                }
+                else 
+                {
+                    Cargo cargo = this.usuario.Cargo;
+                    comboBoxArea.DataSource = db.Areas.Where(a => a.baja == false && a.Id == cargo.AreaId).ToList();
+                }
                 comboBoxArea.DisplayMember = "Nombre";
                 comboBoxArea.ValueMember = "Id";
                 comboBoxArea.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -276,7 +288,7 @@ namespace SiADi
             {
                 using (var db = new SiADiDB())
                 {
-                    comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue)?.Cargos.ToList();
+                    comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue)?.Cargos.Where(c => c.baja == false).ToList();
                     comboBoxCargo.DisplayMember = "Nombre";
                     comboBoxCargo.ValueMember = "Id";
                     comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -357,7 +369,7 @@ namespace SiADi
             using (var db = new SiADiDB())
             {
                 var query = from u in db.Personas
-                            where u.Id == persona.Id
+                            where u.Id == usuario.Id
                             select u;
                 foreach (var tPersona in query)
                 {
@@ -400,7 +412,7 @@ namespace SiADi
             {
                 using (var db = new SiADiDB())
                 {
-                    Persona personaupdate = db.Personas.Find(persona.Id);
+                    Persona personaupdate = db.Personas.Find(usuario.Id);
                     personaupdate.Dni = Convert.ToInt32(textBoxDNI.Text);
                     personaupdate.Cuil = Convert.ToInt64(textBoxCUIL.Text);
                     personaupdate.Nombre = textBoxNombre.Text;

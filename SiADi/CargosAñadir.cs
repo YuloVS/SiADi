@@ -154,12 +154,13 @@ namespace SiADi
             {
                 if(admin)
                 {
-                    comboBoxArea.DataSource = db.Areas.ToList();
+                    comboBoxArea.DataSource = db.Areas.Where(a => a.baja == false).ToList();
                 }
                 else
                 {
                     Cargo cargo = usuario.Cargo;
-                    comboBoxArea.DataSource = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).ToList();
+                    comboBoxArea.DataSource = db.Areas.Where(a => a.baja == false && a.Id == cargo.AreaId).ToList();
+                    //comboBoxArea.DataSource = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.AreaId WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).ToList();
                 }
                 comboBoxArea.DisplayMember = "Nombre";
                 comboBoxArea.ValueMember = "Id";

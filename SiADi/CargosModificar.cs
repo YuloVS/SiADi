@@ -33,8 +33,8 @@ namespace SiADi
                 if(!admin)
                 {
                     Cargo cargo = usuario.Cargo;
-                    Area area =  db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id AND(c.baja=0)", new SqlParameter("@id", area.Id)).ToArray();
+                    Area area =  db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.AreaId WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE a.Id=@id AND(c.baja=0)", new SqlParameter("@id", area.Id)).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -49,7 +49,7 @@ namespace SiADi
                         dataGridViewCargos.Columns[4].Name = "Salida";
                         dataGridViewCargos.Columns[4].DataPropertyName = "Horario_salida";
                         dataGridViewCargos.Columns[5].Name = "Area";
-                        dataGridViewCargos.Columns[5].DataPropertyName = "Area_Id";
+                        dataGridViewCargos.Columns[5].DataPropertyName = "AreaId";
                         dataGridViewCargos.DataSource = list;
                         dataGridViewCargos.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridViewCargos.Refresh();
@@ -58,7 +58,7 @@ namespace SiADi
                 }
                 else
                 {
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE (c.baja=0)").ToArray();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE (c.baja=0)").ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -73,7 +73,7 @@ namespace SiADi
                         dataGridViewCargos.Columns[4].Name = "Salida";
                         dataGridViewCargos.Columns[4].DataPropertyName = "Horario_salida";
                         dataGridViewCargos.Columns[5].Name = "Area";
-                        dataGridViewCargos.Columns[5].DataPropertyName = "Area_Id";
+                        dataGridViewCargos.Columns[5].DataPropertyName = "AreaId";
                         dataGridViewCargos.DataSource = list;
                         dataGridViewCargos.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridViewCargos.Refresh();
@@ -91,8 +91,8 @@ namespace SiADi
                 if (!admin)
                 {
                     Cargo cargo = usuario.Cargo;
-                    Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.Area_Id WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE a.Id=@id AND (c.Nombre=@nombre OR c.Salario=@salario)", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.AreaId WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE a.Id=@id AND (c.Nombre=@nombre OR c.Salario=@salario)", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -102,7 +102,7 @@ namespace SiADi
                 }
                 else
                 {
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.Area_Id = a.Id WHERE c.Nombre=@nombre OR c.Salario=@salario ", new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE c.Nombre=@nombre OR c.Salario=@salario ", new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
