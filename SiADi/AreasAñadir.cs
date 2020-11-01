@@ -97,21 +97,31 @@ namespace SiADi
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            using (var db = new SiADiDB())
+            if (error == 0)
             {
-                //db.Areas.SqlQuery("UPDATE Areas SET Nombre=@nombre, Descripcion=@descripcion WHERE Id=@id", new SqlParameter("@nombre", TextboxNombreAreasAñadir.Text), new SqlParameter("@descripcion", TextboxDescipcionAreasAñadir.Text), new SqlParameter("@id", area.Id));
-                var query = from a in db.Areas
-                            where a.Id == area.Id
-                select a;
-                foreach (var tArea in query)
+                using (var db = new SiADiDB())
                 {
-                    tArea.Nombre = TextboxNombreAreasAñadir.Text;
-                    tArea.Descripcion = TextboxDescipcionAreasAñadir.Text;
+                    var query = from a in db.Areas
+                                where a.Id == area.Id
+                                select a;
+                    foreach (var tArea in query)
+                    {
+                        tArea.Nombre = TextboxNombreAreasAñadir.Text;
+                        tArea.Descripcion = TextboxDescipcionAreasAñadir.Text;
+                    }
+                    db.SaveChanges();
+                    MessageBox.Show("El área ha sido modificada.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                db.SaveChanges();
-                MessageBox.Show("El área ha sido modificada.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                this.TextboxNombreAreasAñadir.Clear();
+                this.TextboxDescipcionAreasAñadir.Clear();
+                errorProvider1.Clear();
+                error = 1;
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("Error, verifique el campo 'Nombre'.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

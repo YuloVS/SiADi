@@ -130,6 +130,7 @@
             this.dataGridViewCargos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.LightGray;
             this.dataGridViewCargos.Size = new System.Drawing.Size(428, 285);
             this.dataGridViewCargos.TabIndex = 9;
+            this.dataGridViewCargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCargos_CellClick);
             // 
             // btnLimpiar
             // 
