@@ -51,11 +51,8 @@ namespace SiADi
             this.textBoxEdad.Text = persona.Edad.ToString();
             this.textBoxTelefono.Text = persona.Telefono.ToString();
             this.textBoxDireccion.Text = persona.Direccion;
-            //this.comboBoxCargo.ValueMember = persona.Cargo.Nombre;
-            using (var db = new SiADiDB())
-            {
-                Area area = persona.Cargo.Area;
-            }
+            this.comboBoxArea.SelectedValue = persona.Cargo.Area.Id;
+            this.comboBoxCargo.SelectedValue = persona.Cargo.Id;
         }
 
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
