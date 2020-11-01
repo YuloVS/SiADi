@@ -20,7 +20,7 @@ namespace SiADi.Modelo
         public long Telefono { set; get; }
         public string Codigo_qr { set; get; }
         public string Foto { set; get; }
-        public Cargo Cargo { set; get; }
+        public virtual Cargo Cargo { set; get; }
         public virtual ICollection<Asistencia> Asistencias { set; get; }
         public string Contraseña { get; set; }
         public bool Encargado { get; set; }

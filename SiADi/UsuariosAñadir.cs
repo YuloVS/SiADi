@@ -23,13 +23,39 @@ namespace SiADi
         private bool errorTelefono = true;
         private bool errorDireccion = true;
         private bool errorImagen = true;
+        private Persona persona = null;
 
         public UsuariosAñadir()
         {
             InitializeComponent();
             cargarComboBoxArea();
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
+        }
+        
+        public UsuariosAñadir(Persona persona)
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            cargarComboBoxArea();
+            this.persona = persona;
+            modoEdicion();
+        }
 
+        private void modoEdicion()
+        {
+            this.textBoxDNI.Text = persona.Dni.ToString();
+            this.textBoxCUIL.Text = persona.Cuil.ToString();
+            this.textBoxNombre.Text = persona.Nombre;
+            this.textBoxApellido.Text = persona.Apellido;
+            this.dateTimePickerFechaNacimiento.Value = persona.Fecha_nacimiento;
+            this.textBoxEdad.Text = persona.Edad.ToString();
+            this.textBoxTelefono.Text = persona.Telefono.ToString();
+            this.textBoxDireccion.Text = persona.Direccion;
+            //this.comboBoxCargo.ValueMember = persona.Cargo.Nombre;
+            using (var db = new SiADiDB())
+            {
+                Area area = persona.Cargo.Area;
+            }
         }
 
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -210,7 +236,7 @@ namespace SiADi
             {
                 using (var db = new SiADiDB())
                 {
-                    comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue).Cargos.ToList();
+                    comboBoxCargo.DataSource = db.Areas.Find(comboBoxArea.SelectedValue)?.Cargos.ToList();
                     comboBoxCargo.DisplayMember = "Nombre";
                     comboBoxCargo.ValueMember = "Id";
                     comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -248,7 +274,7 @@ namespace SiADi
                 errorTelefono = true;
                 errorDireccion = true;
                 errorImagen = true;
-    }
+            }
             else
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);

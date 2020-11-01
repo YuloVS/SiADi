@@ -13,5 +13,7 @@ namespace SiADi.Modelo
         public DateTime Fecha { set; get; }
         public DateTime Hora { set; get; }
         public bool Tipo { set; get; }
+        public int PersonaId;
+        public virtual Persona Persona { get; set; }
     }
 }
