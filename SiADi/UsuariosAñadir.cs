@@ -52,6 +52,7 @@ namespace SiADi
         public UsuariosAñadir(Persona persona)
         {
             InitializeComponent();
+            labelUsuariosAñadir.Text = "Modificar Cargo";
             this.CenterToScreen();
             cargarComboBoxArea();
             this.persona = persona;

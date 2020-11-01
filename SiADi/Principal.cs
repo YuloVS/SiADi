@@ -257,7 +257,7 @@ namespace SiADi
 
         private void btnUsuariosModificar_Click(object sender, EventArgs e)
         {
-            openChildForm(new UsuariosModificar());
+            openChildForm(new UsuariosModificar(usuario, admin));
             botonSeleccionado(btnUsuariosModificar);
         }
 

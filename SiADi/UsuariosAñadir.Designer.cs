@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUsuariosAñadir = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelDireccion = new System.Windows.Forms.Label();
             this.comboBoxCargo = new System.Windows.Forms.ComboBox();
@@ -79,17 +79,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelUsuariosAñadir
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(196, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 30);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nuevo Usuario";
+            this.labelUsuariosAñadir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelUsuariosAñadir.AutoSize = true;
+            this.labelUsuariosAñadir.Font = new System.Drawing.Font("Myriad Pro Cond", 20.25F);
+            this.labelUsuariosAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelUsuariosAñadir.Location = new System.Drawing.Point(196, 15);
+            this.labelUsuariosAñadir.Name = "labelUsuariosAñadir";
+            this.labelUsuariosAñadir.Size = new System.Drawing.Size(133, 30);
+            this.labelUsuariosAñadir.TabIndex = 2;
+            this.labelUsuariosAñadir.Text = "Nuevo Usuario";
             // 
             // textBoxDireccion
             // 
@@ -423,7 +423,7 @@
             this.buttonAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarFoto.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.buttonAgregarFoto.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonAgregarFoto.Location = new System.Drawing.Point(394, 168);
+            this.buttonAgregarFoto.Location = new System.Drawing.Point(371, 168);
             this.buttonAgregarFoto.Name = "buttonAgregarFoto";
             this.buttonAgregarFoto.Size = new System.Drawing.Size(84, 28);
             this.buttonAgregarFoto.TabIndex = 68;
@@ -484,7 +484,7 @@
             // pictureBoxUsuario2
             // 
             this.pictureBoxUsuario2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxUsuario2.Location = new System.Drawing.Point(379, 37);
+            this.pictureBoxUsuario2.Location = new System.Drawing.Point(358, 37);
             this.pictureBoxUsuario2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUsuario2.Name = "pictureBoxUsuario2";
             this.pictureBoxUsuario2.Size = new System.Drawing.Size(116, 126);
@@ -685,7 +685,7 @@
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelDNI);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelUsuariosAñadir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsuariosAñadir";
@@ -700,7 +700,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUsuariosAñadir;
         private System.Windows.Forms.TextBox textBoxDireccion;
         private System.Windows.Forms.Label labelDireccion;
         private System.Windows.Forms.ComboBox comboBoxCargo;
