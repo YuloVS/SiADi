@@ -142,10 +142,16 @@ namespace SiADi
                 using (var db = new SiADiDB())
                 {
                     Persona usuario = db.Personas.Find(idUsuario);
-                    Form modificarUsuario = new UsuariosAñadir(usuario);
+                    Form modificarUsuario = new UsuariosAñadir(this.usuario, admin, usuario);
                     modificarUsuario.Show();
                 }
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.textBoxFiltro.Clear();
+            cargarTabla();
         }
     }
 }

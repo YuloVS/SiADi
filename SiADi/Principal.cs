@@ -251,7 +251,7 @@ namespace SiADi
 
         private void btnUsuariosAñadir_Click(object sender, EventArgs e)
         {
-            openChildForm(new UsuariosAñadir());
+            openChildForm(new UsuariosAñadir(usuario, admin));
             botonSeleccionado(btnUsuariosAñadir);
         }
 
