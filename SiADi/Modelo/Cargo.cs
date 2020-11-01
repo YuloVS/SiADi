@@ -14,5 +14,7 @@ namespace SiADi.Modelo
         public double Salario { get; set; }
         public DateTime Horario_entrada { set; get; }
         public DateTime Horario_salida { set; get; }
+        public int AreaId;
+        public virtual Area Area { get; set; }
     }
 }
