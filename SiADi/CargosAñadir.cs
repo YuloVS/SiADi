@@ -48,8 +48,7 @@ namespace SiADi
             textBoxNombre.Text = cargo.Nombre;
             horarioEntrada.Value = cargo.Horario_entrada;
             horarioSalida.Value = cargo.Horario_salida;
-            cargarComboBox();
-            textBoxArea = //BUSCAR EL AREA DEL CARGO QUE SE SELECCIONO
+            textBoxArea.Text = cargo.Area.Nombre;
             textBoxSalario.Text = cargo.Salario.ToString();
             btnCrear.Hide();
             btnLimpiar.Hide();
