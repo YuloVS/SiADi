@@ -29,16 +29,58 @@ namespace SiADi
         {
             InitializeComponent();
             cargarComboBoxArea();
+            labelEdad2.Hide();
+            textBoxEdad2.Hide();
+            buttonAgregarFoto.Hide();
+            labelTelefono2.Hide();
+            textBoxTelefono2.Hide();
+            pictureBoxUsuario2.Hide();
+            labelFechaNacimiento2.Hide();
+            labelNombre2.Hide();
+            labelApellido2.Hide();
+            labelCUIL2.Hide();
+            labelDNI2.Hide();
+            labelDireccion2.Hide();
+            labelArea2.Hide();
+            labelCargo2.Hide();
+            buttonCancelar.Hide();
+            buttonEditar.Hide();
+            buttonEliminar.Hide();
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
         }
         
         public UsuariosAñadir(Persona persona)
         {
             InitializeComponent();
+            labelUsuariosAñadir.Text = "Modificar Cargo";
             this.CenterToScreen();
             cargarComboBoxArea();
             this.persona = persona;
             modoEdicion();
+            labelEdad.Hide();
+            textBoxEdad.Hide();
+            btnAgregarFoto.Hide();
+            labelTelefono.Hide();
+            textBoxTelefono.Hide();
+            pictureBoxUsuario.Hide();
+            labelFechaNacimiento.Hide();
+            labelNombre.Hide();
+            labelApellido.Hide();
+            labelCUIL.Hide();
+            labelDNI.Hide();
+            labelDireccion.Hide();
+            labelArea.Hide();
+            labelCargo.Hide();
+            btnCrear.Hide();
+            btnLimpiar.Hide();
+            errorDni = false;
+            errorCuil = false;
+            errorNombre = false;
+            errorApellido = false;
+            errorFecha = false;
+            errorTelefono = false;
+            errorDireccion = false;
+            errorImagen = false;
         }
 
         private void modoEdicion()
@@ -48,14 +90,11 @@ namespace SiADi
             this.textBoxNombre.Text = persona.Nombre;
             this.textBoxApellido.Text = persona.Apellido;
             this.dateTimePickerFechaNacimiento.Value = persona.Fecha_nacimiento;
-            this.textBoxEdad.Text = persona.Edad.ToString();
-            this.textBoxTelefono.Text = persona.Telefono.ToString();
+            this.textBoxEdad2.Text = persona.Edad.ToString();
+            this.textBoxTelefono2.Text = persona.Telefono.ToString();
             this.textBoxDireccion.Text = persona.Direccion;
-            //this.comboBoxCargo.ValueMember = persona.Cargo.Nombre;
-            using (var db = new SiADiDB())
-            {
-                Area area = persona.Cargo.Area;
-            }
+            this.comboBoxArea.SelectedValue = persona.Cargo.Area.Id;
+            this.comboBoxCargo.SelectedValue = persona.Cargo.Id;
         }
 
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +182,7 @@ namespace SiADi
         {
             DateTime ahora = DateTime.Now;
             textBoxEdad.Text = (ahora.Year - dateTimePickerFechaNacimiento.Value.Year).ToString();
+            textBoxEdad2.Text = (ahora.Year - dateTimePickerFechaNacimiento.Value.Year).ToString();
         }
 
         private void textBoxTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -216,7 +256,7 @@ namespace SiADi
 
         private bool hayErrores()
         {
-            return errorApellido && errorCuil && errorDireccion && errorDni && errorFecha && errorImagen && errorNombre && errorTelefono;
+            return errorApellido || errorCuil || errorDireccion || errorDni || errorFecha || errorImagen || errorNombre || errorTelefono;
         }
 
         private void cargarComboBoxArea()
@@ -288,6 +328,107 @@ namespace SiADi
         private string crearContraseña()
         {
             return textBoxNombre.Text.Substring(0, 2) + textBoxApellido.Text.Substring(0, 2) + textBoxCUIL.Text.Substring(0, 4);
+        }
+
+        private void buttonAgregarFoto_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                string imagen = openFileDialog2.FileName;
+                if (Image.FromFile(imagen).Width == Image.FromFile(imagen).Height)
+                {
+                    pictureBoxUsuario2.Image = Image.FromFile(imagen);
+                    errorImagen = false;
+                }
+                else
+                {
+                    MessageBox.Show("La imagen debe ser cuadrada", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    errorImagen = true;
+                }
+            }
+            else
+            {
+                errorImagen = true;
+            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                var query = from u in db.Personas
+                            where u.Id == persona.Id
+                            select u;
+                foreach (var tPersona in query)
+                {
+                    tPersona.baja = true;
+                }
+                db.SaveChanges();
+                MessageBox.Show("El usuario ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBoxTelefono2_Validated(object sender, EventArgs e)
+        {
+            if (textBoxTelefono.TextLength < 10)
+            {
+                errorProvider1.SetError(textBoxTelefono, "Número telefonico invalido.");
+                verificaciones.bordeError(textBoxTelefono, this);
+                errorTelefono = true;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                errorTelefono = false;
+            }
+        }
+
+        private void textBoxTelefono2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            verificaciones.soloNumeros(e);
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (!hayErrores())
+            {
+                using (var db = new SiADiDB())
+                {
+                    Persona personaupdate = db.Personas.Find(persona.Id);
+                    personaupdate.Dni = Convert.ToInt32(textBoxDNI.Text);
+                    personaupdate.Cuil = Convert.ToInt64(textBoxCUIL.Text);
+                    personaupdate.Nombre = textBoxNombre.Text;
+                    personaupdate.Apellido = textBoxApellido.Text;
+                    personaupdate.Fecha_nacimiento = dateTimePickerFechaNacimiento.Value;
+                    personaupdate.Edad = Convert.ToInt32(textBoxEdad2.Text);
+                    personaupdate.Telefono = Convert.ToInt64(textBoxTelefono2.Text);
+                    personaupdate.Cargo.Area = db.Areas.Find(comboBoxArea.SelectedValue);
+                    personaupdate.Encargado = checkBoxEncargado.Checked;
+                    personaupdate.Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue);
+                    db.SaveChanges();
+                    MessageBox.Show("El usuario ha sido modificado.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+                errorProvider1.Clear();
+                errorDni = true;
+                errorCuil = true;
+                errorNombre = true;
+                errorApellido = true;
+                errorFecha = true;
+                errorTelefono = true;
+                errorDireccion = true;
+                errorImagen = true;
+            }
+            else
+            {
+                MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
