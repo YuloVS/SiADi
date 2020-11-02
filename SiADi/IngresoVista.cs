@@ -161,10 +161,36 @@ namespace SiADi
                 Result result = barcodeReader.Decode((Bitmap)pictureBoxCamara.Image);
                 if(result != null)
                 {
-                    labelQR.Text = result.ToString();
                     timer1.Stop();
                     if (videoCaptureDevice.IsRunning)
                         videoCaptureDevice.Stop();
+                    //CODIGO DE ASISTENCIA
+                    using (var db = new SiADiDB())
+                    {
+                        long cuil = long.Parse(result.Text);
+                        Persona persona = db.Personas.FirstOrDefault(p => p.Cuil == cuil);
+                        Asistencia asistencia = new Asistencia();
+                        asistencia.Fecha = DateTime.Today;
+                        asistencia.Hora = DateTime.Now;
+                        var ultima =
+                            (from a in db.Asistencias orderby a.Id descending where a.PersonaId == persona.Id select a.Tipo)
+                            .First();
+                        asistencia.Tipo = !ultima;
+                        persona?.Asistencias.Add(asistencia);
+                        db.SaveChanges();
+                        if (ultima)
+                        {
+                            string msj = "Hora de salida registrada.\nAdios " + persona.Apellido + " " +
+                                         persona.Nombre + "!";
+                            MessageBox.Show(msj, "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            string msj = "Hora de ingreso registrada.\nHola " + persona.Apellido + " " +
+                                         persona.Nombre + "!";
+                            MessageBox.Show(msj, "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
             }
         }
