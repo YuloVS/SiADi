@@ -233,7 +233,7 @@ namespace SiADi
 
         private void btnAsistencicasModificar_Click(object sender, EventArgs e)
         {
-            openChildForm(new AsistenciasModificar());
+            openChildForm(new AsistenciasModificar(usuario, admin));
             botonSeleccionado(btnAsistenciasModificar);
         }
 
