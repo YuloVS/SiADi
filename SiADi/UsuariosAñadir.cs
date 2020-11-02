@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 
 namespace SiADi
@@ -440,6 +443,40 @@ namespace SiADi
             else
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (PdfDocument document = new PdfDocument())
+            {
+                //Add a page to the document
+                //PdfSection section1 = document.Sections.Add();
+                //section1.PageSettings.Size = PdfPageSize.A5;
+                //PdfPage page = section1.Pages.Add();//
+                PdfPage page = document.Pages.Add();
+
+                //Create PDF graphics for a page
+                PdfGraphics graphics = page.Graphics;
+
+                //Set the standard font
+                PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+
+                //Draw the text
+                graphics.DrawString("CREDENCIAL DE EMPLEADO", font, PdfBrushes.Black, new PointF(150, 5));
+                graphics.DrawString("2045123987", font, PdfBrushes.Black, new PointF(150, 30));
+                graphics.DrawString("Nombre: Juan", font, PdfBrushes.Black, new PointF(150, 55));
+                graphics.DrawString("Apellido: Pelotas", font, PdfBrushes.Black, new PointF(150, 80));
+                graphics.DrawString("Area - Cargo", font, PdfBrushes.Black, new PointF(150, 105));
+
+                Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+                
+                PdfBitmap image = new PdfBitmap(qrcode.Draw("el pepe", 60));
+                
+                graphics.DrawImage(image, 0, 0);
+                
+                //Save the document
+                document.Save("d://el.pdf");
             }
         }
     }
