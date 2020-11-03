@@ -112,7 +112,6 @@
             this.dataGridViewAreas.Size = new System.Drawing.Size(401, 285);
             this.dataGridViewAreas.TabIndex = 3;
             this.dataGridViewAreas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAreas_CellClick);
-            this.dataGridViewAreas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBoxFiltro
             // 
