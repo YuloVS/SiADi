@@ -103,6 +103,7 @@
             this.buttonEditar.TabIndex = 23;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // NombreAreasAñadir
             // 

@@ -59,6 +59,11 @@ namespace SiADi
             }
             this.Close();
         }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
