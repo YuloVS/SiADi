@@ -27,16 +27,6 @@ namespace SiADi
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
             verificaciones.soloNumeros(e);
@@ -55,11 +45,6 @@ namespace SiADi
                 errorProvider1.Clear();
                 errorDni = false;
             }
-        }
-
-        private void textBoxContraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //verificaciones.soloLetras(e);
         }
 
         private void textBoxContraseña_Validating(object sender, CancelEventArgs e)
@@ -222,11 +207,6 @@ namespace SiADi
             {
                 Console.WriteLine("Sin cámara");
             }
-        }
-
-        private void pictureBoxCamara_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)

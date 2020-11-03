@@ -71,7 +71,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.labelDNI);
             this.splitContainer1.Panel1.Controls.Add(this.textBoxDNI);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -158,7 +157,6 @@
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(178, 23);
             this.textBoxContraseña.TabIndex = 2;
-            this.textBoxContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContraseña_KeyPress);
             this.textBoxContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxContraseña_Validating);
             // 
             // labelDNI
@@ -219,7 +217,6 @@
             this.labelQR.Size = new System.Drawing.Size(157, 26);
             this.labelQR.TabIndex = 40;
             this.labelQR.Text = "Escanee el codigo QR";
-            this.labelQR.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnEnviar
             // 
@@ -245,7 +242,6 @@
             this.pictureBoxCamara.Size = new System.Drawing.Size(294, 294);
             this.pictureBoxCamara.TabIndex = 0;
             this.pictureBoxCamara.TabStop = false;
-            this.pictureBoxCamara.Click += new System.EventHandler(this.pictureBoxCamara_Click);
             // 
             // errorProvider1
             // 
