@@ -173,7 +173,7 @@ namespace SiADi
                 using (var db = new SiADiDB())
                 {
                     Persona usuario = db.Personas.Find(idUsuario);
-                    Form modificarUsuario = new UsuariosAñadir(this.usuario, admin, usuario);
+                    Form modificarUsuario = new imagen(this.usuario, admin, usuario);
                     modificarUsuario.Show();
                 }
             }

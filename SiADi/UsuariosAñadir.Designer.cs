@@ -1,6 +1,6 @@
 ﻿namespace SiADi
 {
-    partial class UsuariosAñadir
+    partial class imagen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(imagen));
             this.labelUsuariosAñadir = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelDireccion = new System.Windows.Forms.Label();
@@ -49,20 +50,16 @@
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.labelTelefono = new System.Windows.Forms.Label();
             this.labelCargo = new System.Windows.Forms.Label();
-            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.btnAgregarFoto = new System.Windows.Forms.Button();
             this.labelArea = new System.Windows.Forms.Label();
             this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.checkBoxEncargado = new System.Windows.Forms.CheckBox();
-            this.buttonAgregarFoto = new System.Windows.Forms.Button();
             this.textBoxEdad2 = new System.Windows.Forms.TextBox();
             this.labelEdad2 = new System.Windows.Forms.Label();
             this.labelTelefono2 = new System.Windows.Forms.Label();
             this.textBoxTelefono2 = new System.Windows.Forms.TextBox();
-            this.pictureBoxUsuario2 = new System.Windows.Forms.PictureBox();
             this.labelFechaNacimiento2 = new System.Windows.Forms.Label();
             this.labelNombre2 = new System.Windows.Forms.Label();
             this.labelApellido2 = new System.Windows.Forms.Label();
@@ -75,9 +72,9 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelUsuariosAñadir
@@ -97,7 +94,7 @@
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDireccion.Location = new System.Drawing.Point(35, 259);
-            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDireccion.MaxLength = 45;
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(342, 23);
@@ -121,7 +118,7 @@
             this.comboBoxCargo.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxCargo.FormattingEnabled = true;
             this.comboBoxCargo.Location = new System.Drawing.Point(250, 317);
-            this.comboBoxCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCargo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCargo.Name = "comboBoxCargo";
             this.comboBoxCargo.Size = new System.Drawing.Size(128, 29);
             this.comboBoxCargo.TabIndex = 7;
@@ -146,7 +143,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLimpiar.Location = new System.Drawing.Point(42, 367);
+            this.btnLimpiar.Location = new System.Drawing.Point(25, 366);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
             this.btnLimpiar.TabIndex = 38;
@@ -211,7 +208,7 @@
             this.textBoxCUIL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCUIL.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxCUIL.Location = new System.Drawing.Point(184, 82);
-            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCUIL.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCUIL.MaxLength = 11;
             this.textBoxCUIL.Name = "textBoxCUIL";
             this.textBoxCUIL.Size = new System.Drawing.Size(120, 23);
@@ -236,7 +233,7 @@
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxNombre.Location = new System.Drawing.Point(35, 140);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(120, 23);
@@ -249,7 +246,7 @@
             this.textBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxApellido.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxApellido.Location = new System.Drawing.Point(184, 140);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(120, 23);
             this.textBoxApellido.TabIndex = 3;
@@ -261,7 +258,7 @@
             this.dateTimePickerFechaNacimiento.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.dateTimePickerFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFechaNacimiento.Location = new System.Drawing.Point(35, 198);
-            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaNacimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaNacimiento.MaxDate = new System.DateTime(2002, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFechaNacimiento.Name = "dateTimePickerFechaNacimiento";
@@ -288,7 +285,7 @@
             this.textBoxEdad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEdad.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxEdad.Location = new System.Drawing.Point(158, 203);
-            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEdad.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdad.MaxLength = 2;
             this.textBoxEdad.Name = "textBoxEdad";
             this.textBoxEdad.ReadOnly = true;
@@ -301,7 +298,7 @@
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxTelefono.Location = new System.Drawing.Point(222, 203);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.MaxLength = 10;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(128, 23);
@@ -333,23 +330,12 @@
             this.labelCargo.TabIndex = 58;
             this.labelCargo.Text = "Cargo";
             // 
-            // pictureBoxUsuario
-            // 
-            this.pictureBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(379, 54);
-            this.pictureBoxUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(116, 126);
-            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUsuario.TabIndex = 61;
-            this.pictureBoxUsuario.TabStop = false;
-            // 
             // textBoxDNI
             // 
             this.textBoxDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDNI.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxDNI.Location = new System.Drawing.Point(35, 82);
-            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.MaxLength = 8;
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(120, 23);
@@ -364,22 +350,6 @@
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // btnAgregarFoto
-            // 
-            this.btnAgregarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarFoto.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.btnAgregarFoto.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAgregarFoto.Location = new System.Drawing.Point(371, 125);
-            this.btnAgregarFoto.Name = "btnAgregarFoto";
-            this.btnAgregarFoto.Size = new System.Drawing.Size(84, 28);
-            this.btnAgregarFoto.TabIndex = 63;
-            this.btnAgregarFoto.Text = "Añadir foto";
-            this.btnAgregarFoto.UseVisualStyleBackColor = false;
-            this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
             // 
             // labelArea
             // 
@@ -398,7 +368,7 @@
             this.comboBoxArea.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.comboBoxArea.FormattingEnabled = true;
             this.comboBoxArea.Location = new System.Drawing.Point(35, 317);
-            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxArea.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(128, 29);
             this.comboBoxArea.TabIndex = 64;
@@ -416,28 +386,12 @@
             this.checkBoxEncargado.Text = "Encargado";
             this.checkBoxEncargado.UseVisualStyleBackColor = true;
             // 
-            // buttonAgregarFoto
-            // 
-            this.buttonAgregarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAgregarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.buttonAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.buttonAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregarFoto.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.buttonAgregarFoto.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonAgregarFoto.Location = new System.Drawing.Point(371, 168);
-            this.buttonAgregarFoto.Name = "buttonAgregarFoto";
-            this.buttonAgregarFoto.Size = new System.Drawing.Size(84, 28);
-            this.buttonAgregarFoto.TabIndex = 68;
-            this.buttonAgregarFoto.Text = "Añadir foto";
-            this.buttonAgregarFoto.UseVisualStyleBackColor = false;
-            this.buttonAgregarFoto.Click += new System.EventHandler(this.buttonAgregarFoto_Click);
-            // 
             // textBoxEdad2
             // 
             this.textBoxEdad2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEdad2.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxEdad2.Location = new System.Drawing.Point(195, 203);
-            this.textBoxEdad2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEdad2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEdad2.MaxLength = 2;
             this.textBoxEdad2.Name = "textBoxEdad2";
             this.textBoxEdad2.ReadOnly = true;
@@ -474,24 +428,13 @@
             this.textBoxTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono2.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
             this.textBoxTelefono2.Location = new System.Drawing.Point(284, 203);
-            this.textBoxTelefono2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefono2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono2.MaxLength = 10;
             this.textBoxTelefono2.Name = "textBoxTelefono2";
             this.textBoxTelefono2.Size = new System.Drawing.Size(128, 23);
             this.textBoxTelefono2.TabIndex = 71;
             this.textBoxTelefono2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono2_KeyPress);
             this.textBoxTelefono2.Validated += new System.EventHandler(this.textBoxTelefono2_Validated);
-            // 
-            // pictureBoxUsuario2
-            // 
-            this.pictureBoxUsuario2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxUsuario2.Location = new System.Drawing.Point(358, 37);
-            this.pictureBoxUsuario2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxUsuario2.Name = "pictureBoxUsuario2";
-            this.pictureBoxUsuario2.Size = new System.Drawing.Size(116, 126);
-            this.pictureBoxUsuario2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUsuario2.TabIndex = 73;
-            this.pictureBoxUsuario2.TabStop = false;
             // 
             // labelFechaNacimiento2
             // 
@@ -613,7 +556,7 @@
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCancelar.Location = new System.Drawing.Point(38, 366);
+            this.buttonCancelar.Location = new System.Drawing.Point(35, 366);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(150, 40);
             this.buttonCancelar.TabIndex = 83;
@@ -644,8 +587,8 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Myriad Pro Cond", 12.25F);
             this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(400, 256);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(375, 94);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 47);
             this.button1.TabIndex = 85;
@@ -653,13 +596,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UsuariosAñadir
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(365, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 136);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imagen
             // 
             this.AcceptButton = this.btnCrear;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(500, 418);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonCancelar);
@@ -672,17 +626,13 @@
             this.Controls.Add(this.labelApellido2);
             this.Controls.Add(this.labelNombre2);
             this.Controls.Add(this.labelFechaNacimiento2);
-            this.Controls.Add(this.pictureBoxUsuario2);
             this.Controls.Add(this.labelTelefono2);
             this.Controls.Add(this.textBoxTelefono2);
             this.Controls.Add(this.textBoxEdad2);
             this.Controls.Add(this.labelEdad2);
-            this.Controls.Add(this.buttonAgregarFoto);
             this.Controls.Add(this.checkBoxEncargado);
             this.Controls.Add(this.labelArea);
             this.Controls.Add(this.comboBoxArea);
-            this.Controls.Add(this.btnAgregarFoto);
-            this.Controls.Add(this.pictureBoxUsuario);
             this.Controls.Add(this.labelCargo);
             this.Controls.Add(this.labelTelefono);
             this.Controls.Add(this.textBoxTelefono);
@@ -705,12 +655,11 @@
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.labelUsuariosAñadir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "UsuariosAñadir";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "imagen";
             this.Text = "UsuariosAñadir";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,20 +689,16 @@
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.Label labelCargo;
-        private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
-        private System.Windows.Forms.Button btnAgregarFoto;
         private System.Windows.Forms.Label labelArea;
         private System.Windows.Forms.ComboBox comboBoxArea;
         private System.Windows.Forms.CheckBox checkBoxEncargado;
         private System.Windows.Forms.TextBox textBoxEdad2;
         private System.Windows.Forms.Label labelEdad2;
-        private System.Windows.Forms.Button buttonAgregarFoto;
         private System.Windows.Forms.Label labelTelefono2;
         private System.Windows.Forms.TextBox textBoxTelefono2;
-        private System.Windows.Forms.PictureBox pictureBoxUsuario2;
         private System.Windows.Forms.Label labelFechaNacimiento2;
         private System.Windows.Forms.Label labelNombre2;
         private System.Windows.Forms.Label labelApellido2;
@@ -765,5 +710,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

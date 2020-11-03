@@ -1,21 +1,18 @@
 ﻿using SiADi.Modelo;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using System.Drawing;
+
 
 
 namespace SiADi
 {
-    public partial class UsuariosAñadir : Form
+    public partial class imagen : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
         private bool errorDni = true;
@@ -29,7 +26,7 @@ namespace SiADi
         private Persona usuario;
         private bool admin;
 
-        public UsuariosAñadir(Persona persona, bool esAdmin)
+        public imagen(Persona persona, bool esAdmin)
         {
             InitializeComponent();
             this.usuario = persona;
@@ -37,10 +34,8 @@ namespace SiADi
             cargarComboBoxArea();
             labelEdad2.Hide();
             textBoxEdad2.Hide();
-            buttonAgregarFoto.Hide();
             labelTelefono2.Hide();
             textBoxTelefono2.Hide();
-            pictureBoxUsuario2.Hide();
             labelFechaNacimiento2.Hide();
             labelNombre2.Hide();
             labelApellido2.Hide();
@@ -56,7 +51,7 @@ namespace SiADi
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
         }
         
-        public UsuariosAñadir(Persona persona, bool esAdmin, Persona usuario)
+        public imagen(Persona persona, bool esAdmin, Persona usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
@@ -67,10 +62,8 @@ namespace SiADi
             modoEdicion();
             labelEdad.Hide();
             textBoxEdad.Hide();
-            btnAgregarFoto.Hide();
             labelTelefono.Hide();
             textBoxTelefono.Hide();
-            pictureBoxUsuario.Hide();
             labelFechaNacimiento.Hide();
             labelNombre.Hide();
             labelApellido.Hide();
@@ -88,7 +81,7 @@ namespace SiADi
             errorFecha = false;
             errorTelefono = false;
             errorDireccion = false;
-            errorImagen = false;
+            pictureBox1.Hide();
         }
 
         private void modoEdicion()
@@ -240,28 +233,6 @@ namespace SiADi
             errorProvider1.Clear();
         }
 
-        private void btnAgregarFoto_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
-            {
-                string imagen = openFileDialog2.FileName;
-                if (Image.FromFile(imagen).Width == Image.FromFile(imagen).Height)
-                {
-                    pictureBoxUsuario.Image = Image.FromFile(imagen);
-                    errorImagen = false;
-                }
-                else
-                {
-                    MessageBox.Show("La imagen debe ser cuadrada", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    errorImagen = true;
-                }
-            }
-            else
-            {
-                errorImagen = true;
-            }
-        }
-
         private bool hayErrores()
         {
             return errorApellido || errorCuil || errorDireccion || errorDni || errorFecha || errorImagen || errorNombre || errorTelefono;
@@ -344,28 +315,6 @@ namespace SiADi
         private string crearContraseña()
         {
             return textBoxNombre.Text.Substring(0, 2) + textBoxApellido.Text.Substring(0, 2) + textBoxCUIL.Text.Substring(0, 4);
-        }
-
-        private void buttonAgregarFoto_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
-            {
-                string imagen = openFileDialog2.FileName;
-                if (Image.FromFile(imagen).Width == Image.FromFile(imagen).Height)
-                {
-                    pictureBoxUsuario2.Image = Image.FromFile(imagen);
-                    errorImagen = false;
-                }
-                else
-                {
-                    MessageBox.Show("La imagen debe ser cuadrada", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    errorImagen = true;
-                }
-            }
-            else
-            {
-                errorImagen = true;
-            }
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
@@ -477,5 +426,6 @@ namespace SiADi
                 MessageBox.Show("Credencial guardada en: \nC://SiADi-Credenciales/Credencial "+usuario.Apellido+" "+usuario.Nombre+".pdf", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
     }
 }
