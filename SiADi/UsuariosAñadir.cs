@@ -52,6 +52,7 @@ namespace SiADi
             buttonCancelar.Hide();
             buttonEditar.Hide();
             buttonEliminar.Hide();
+            button1.Hide();
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
         }
         
