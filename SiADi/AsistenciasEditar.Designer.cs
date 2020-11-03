@@ -201,6 +201,7 @@
             // 
             // radioButtonEntrada
             // 
+            this.radioButtonEntrada.AutoCheck = false;
             this.radioButtonEntrada.AutoSize = true;
             this.radioButtonEntrada.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButtonEntrada.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
@@ -229,6 +230,7 @@
             // 
             // radioButtonSalida
             // 
+            this.radioButtonSalida.AutoCheck = false;
             this.radioButtonSalida.AutoSize = true;
             this.radioButtonSalida.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButtonSalida.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));

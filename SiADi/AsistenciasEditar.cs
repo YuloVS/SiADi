@@ -27,7 +27,7 @@ namespace SiADi
             textBoxNombre.Text = asistencia.Persona.Nombre;
             textBoxApellido.Text = asistencia.Persona.Apellido;
             horarioAsistencia.Value = asistencia.Hora;
-            fechaAsistencia.Value = asistencia.Hora;
+            fechaAsistencia.Value = asistencia.Fecha;
             if (asistencia.Tipo)
             {
                 radioButtonEntrada.Checked = true;
@@ -62,7 +62,15 @@ namespace SiADi
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-
+            using (var db = new SiADiDB())
+            {
+                Asistencia asistenciaupdate = db.Asistencias.Find(asistencia.Id);
+                asistenciaupdate.Fecha = fechaAsistencia.Value;
+                asistenciaupdate.Hora = horarioAsistencia.Value;
+                db.SaveChanges();
+                MessageBox.Show("La asistencia ha sido modificada.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
         }
     }
 }
