@@ -54,7 +54,9 @@ namespace SiADi
        
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form ingreso = new IngresoVista();
+            ingreso.Show();
+            this.Close();
         }
 
         private Form activeForm = null;
