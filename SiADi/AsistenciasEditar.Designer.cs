@@ -38,8 +38,8 @@
             this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.Label();
             this.Hora = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.horarioSalida = new System.Windows.Forms.DateTimePicker();
+            this.fechaAsistencia = new System.Windows.Forms.DateTimePicker();
+            this.horarioAsistencia = new System.Windows.Forms.DateTimePicker();
             this.radioButtonEntrada = new System.Windows.Forms.RadioButton();
             this.Tipo = new System.Windows.Forms.Label();
             this.radioButtonSalida = new System.Windows.Forms.RadioButton();
@@ -86,6 +86,7 @@
             this.buttonCancelar.TabIndex = 24;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonEditar
             // 
@@ -122,6 +123,7 @@
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.MaxLength = 30;
             this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
             this.textBoxNombre.Size = new System.Drawing.Size(177, 23);
             this.textBoxNombre.TabIndex = 27;
             // 
@@ -145,6 +147,7 @@
             this.textBoxApellido.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellido.MaxLength = 30;
             this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.ReadOnly = true;
             this.textBoxApellido.Size = new System.Drawing.Size(241, 23);
             this.textBoxApellido.TabIndex = 29;
             // 
@@ -172,27 +175,27 @@
             this.Hora.TabIndex = 31;
             this.Hora.Text = "Hora de asistencia";
             // 
-            // dateTimePicker2
+            // fechaAsistencia
             // 
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(33, 175);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(105, 30);
-            this.dateTimePicker2.TabIndex = 33;
+            this.fechaAsistencia.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.fechaAsistencia.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.fechaAsistencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaAsistencia.Location = new System.Drawing.Point(33, 175);
+            this.fechaAsistencia.Name = "fechaAsistencia";
+            this.fechaAsistencia.Size = new System.Drawing.Size(105, 30);
+            this.fechaAsistencia.TabIndex = 33;
             // 
-            // horarioSalida
+            // horarioAsistencia
             // 
-            this.horarioSalida.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.horarioSalida.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
-            this.horarioSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.horarioSalida.Location = new System.Drawing.Point(234, 175);
-            this.horarioSalida.Margin = new System.Windows.Forms.Padding(2);
-            this.horarioSalida.Name = "horarioSalida";
-            this.horarioSalida.ShowUpDown = true;
-            this.horarioSalida.Size = new System.Drawing.Size(80, 30);
-            this.horarioSalida.TabIndex = 35;
+            this.horarioAsistencia.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.horarioAsistencia.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F);
+            this.horarioAsistencia.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.horarioAsistencia.Location = new System.Drawing.Point(234, 175);
+            this.horarioAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.horarioAsistencia.Name = "horarioAsistencia";
+            this.horarioAsistencia.ShowUpDown = true;
+            this.horarioAsistencia.Size = new System.Drawing.Size(80, 30);
+            this.horarioAsistencia.TabIndex = 35;
             // 
             // radioButtonEntrada
             // 
@@ -248,8 +251,8 @@
             this.Controls.Add(this.radioButtonSalida);
             this.Controls.Add(this.Tipo);
             this.Controls.Add(this.radioButtonEntrada);
-            this.Controls.Add(this.horarioSalida);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.horarioAsistencia);
+            this.Controls.Add(this.fechaAsistencia);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.Fecha);
             this.Controls.Add(this.textBoxApellido);
@@ -280,8 +283,8 @@
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.Label Fecha;
         private System.Windows.Forms.Label Hora;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker horarioSalida;
+        private System.Windows.Forms.DateTimePicker fechaAsistencia;
+        private System.Windows.Forms.DateTimePicker horarioAsistencia;
         private System.Windows.Forms.RadioButton radioButtonEntrada;
         private System.Windows.Forms.Label Tipo;
         private System.Windows.Forms.RadioButton radioButtonSalida;

@@ -7,16 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SiADi.Modelo;
 
 namespace SiADi
 {
     public partial class AsistenciasEditar : Form
     {
-        public AsistenciasEditar()
+        private Verificaciones verificaciones = new Verificaciones();
+        private Persona usuario;
+        private bool admin;
+        private Asistencia asistencia;
+        public AsistenciasEditar(Persona persona, bool esAdmin, Asistencia pAsistencia)
         {
             InitializeComponent();
+            usuario = persona;
+            admin = esAdmin;
+            asistencia = pAsistencia;
+            this.CenterToScreen();
+            textBoxNombre.Text = asistencia.Persona.Nombre;
+            textBoxApellido.Text = asistencia.Persona.Apellido;
+            horarioAsistencia.Value = asistencia.Hora;
+            fechaAsistencia.Value = asistencia.Hora;
+            if (asistencia.Tipo)
+            {
+                radioButtonEntrada.Checked = true;
+            }
+            else
+            {
+                radioButtonSalida.Checked = true;
+            }
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 
