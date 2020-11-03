@@ -34,7 +34,7 @@ namespace SiADi
                     var consulta = from a in db.Asistencias
                                    join p in db.Personas on a.PersonaId equals p.Id
                                    orderby a.Hora descending
-                                   where p.baja != true && p.Cargo.AreaId == usuario.Cargo.AreaId
+                                   where p.baja != true && a.baja != true && p.Cargo.AreaId == usuario.Cargo.AreaId
                                    select new { Id = a.Id, Nombre = p.Nombre, Apellido = p.Apellido, a.Fecha, a.Hora, a.Tipo };
                     var list = consulta.ToArray();
                     if (list.Length > 0)
@@ -64,7 +64,7 @@ namespace SiADi
                     var consulta = from a in db.Asistencias
                                    join p in db.Personas on a.PersonaId equals p.Id
                                    orderby a.Hora descending 
-                                   where p.baja != true
+                                   where a.baja != true && p.baja != true
                                    select new { Id = a.Id, Nombre = p.Nombre, Apellido = p.Apellido, a.Fecha, a.Hora, a.Tipo };
                     var list = consulta.ToArray();
                     if (list.Length > 0)

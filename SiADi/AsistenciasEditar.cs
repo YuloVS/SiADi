@@ -42,6 +42,23 @@ namespace SiADi
         {
             this.Close();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            using (var db = new SiADiDB())
+            {
+                var query = from a in db.Asistencias
+                            where a.Id == asistencia.Id
+                            select a;
+                foreach (var tAsistencia in query)
+                {
+                    tAsistencia.baja = true;
+                }
+                db.SaveChanges();
+                MessageBox.Show("La asistencia ha sido dado de baja.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
     }
 }
 
