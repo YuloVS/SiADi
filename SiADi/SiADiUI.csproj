@@ -99,6 +99,12 @@
     <Compile Include="AreasModificar.Designer.cs">
       <DependentUpon>AreasModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsistenciasEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsistenciasEditar.Designer.cs">
+      <DependentUpon>AsistenciasEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="AsistenciasInformeGral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AreasModificar.resx">
       <DependentUpon>AreasModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsistenciasEditar.resx">
+      <DependentUpon>AsistenciasEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AsistenciasInformeGral.resx">
       <DependentUpon>AsistenciasInformeGral.cs</DependentUpon>
