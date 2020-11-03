@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using System.Drawing;
 
 
 namespace SiADi
@@ -440,6 +443,37 @@ namespace SiADi
             else
             {
                 MessageBox.Show("Error, verifique los campos.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (PdfDocument document = new PdfDocument())
+            {
+                //Agrego una pagina al doc
+                PdfPage page = document.Pages.Add();
+
+                //Se generan los graficos para el PDF
+                PdfGraphics graphics = page.Graphics;
+
+                //Defino la fuente
+                PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+
+                //Escribo las credenciales
+                graphics.DrawString("CREDENCIAL DE EMPLEADO", font, PdfBrushes.Black, new PointF(150, 5));
+                graphics.DrawString(usuario.Cuil.ToString(), font, PdfBrushes.Black, new PointF(150, 30));
+                graphics.DrawString("Nombre: "+usuario.Nombre, font, PdfBrushes.Black, new PointF(150, 55));
+                graphics.DrawString("Apellido: "+usuario.Apellido, font, PdfBrushes.Black, new PointF(150, 80));
+                graphics.DrawString(usuario.Cargo.Area.Nombre+" - "+usuario.Cargo.Nombre, font, PdfBrushes.Black, new PointF(150, 105));
+
+                //Genero y escribo el QR
+                Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+                PdfBitmap image = new PdfBitmap(qrcode.Draw(usuario.Cuil.ToString(), 60));
+                graphics.DrawImage(image, 0, 0);
+                
+                //Guardo el PDF
+                document.Save("C://SiADi-Credenciales/Credencial "+usuario.Apellido+" "+usuario.Nombre+".pdf");
+                MessageBox.Show("Credencial guardada en: \nC://SiADi-Credenciales/Credencial "+usuario.Apellido+" "+usuario.Nombre+".pdf", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
