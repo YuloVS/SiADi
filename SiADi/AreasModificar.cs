@@ -46,19 +46,7 @@ namespace SiADi
                 }
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            /*
-            MessageBox.Show("Cargo añadido.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.textBoxNombre.Clear();
-            this.textBoxSalario.Clear();
-            errorProvider1.Clear();
-            errorNombre = true;
-            errorHorario = true;
-            errorSalario = true;*/
-        }
-
+        
         private void filtrar()
         {
             using (var db = new SiADiDB())

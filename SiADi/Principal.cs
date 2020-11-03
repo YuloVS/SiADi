@@ -286,10 +286,5 @@ namespace SiADi
             openChildForm(new AreasModificar());
             botonSeleccionado(btnAreasModificar);
         }
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
