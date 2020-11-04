@@ -1,6 +1,6 @@
 ﻿namespace SiADi
 {
-    partial class imagen
+    partial class UsuariosAñadir
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(imagen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosAñadir));
             this.labelUsuariosAñadir = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelDireccion = new System.Windows.Forms.Label();
@@ -71,10 +71,11 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelUsuariosAñadir
@@ -580,22 +581,6 @@
             this.buttonEditar.UseVisualStyleBackColor = false;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Myriad Pro Cond", 12.25F);
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(375, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 47);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "Generar credencial";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -605,6 +590,15 @@
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(344, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(135, 136);
+            this.pictureBox2.TabIndex = 87;
+            this.pictureBox2.TabStop = false;
+            // 
             // imagen
             // 
             this.AcceptButton = this.btnCrear;
@@ -613,8 +607,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(500, 418);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEditar);
@@ -654,18 +647,18 @@
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.labelUsuariosAñadir);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "imagen";
             this.Text = "UsuariosAñadir";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.Button button1;
 
         #endregion
 
@@ -711,5 +704,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

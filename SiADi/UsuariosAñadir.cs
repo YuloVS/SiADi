@@ -12,7 +12,7 @@ using Syncfusion.Pdf.Graphics;
 
 namespace SiADi
 {
-    public partial class imagen : Form
+    public partial class UsuariosAñadir : Form
     {
         private Verificaciones verificaciones = new Verificaciones();
         private bool errorDni = true;
@@ -26,7 +26,7 @@ namespace SiADi
         private Persona usuario;
         private bool admin;
 
-        public imagen(Persona persona, bool esAdmin)
+        public UsuariosAñadir(Persona persona, bool esAdmin)
         {
             InitializeComponent();
             this.usuario = persona;
@@ -47,11 +47,11 @@ namespace SiADi
             buttonCancelar.Hide();
             buttonEditar.Hide();
             buttonEliminar.Hide();
-            button1.Hide();
+            pictureBox2.Hide();
             //cargarComboBoxCargo(); TODO: Guardar todo en Mayus
         }
         
-        public imagen(Persona persona, bool esAdmin, Persona usuario)
+        public UsuariosAñadir(Persona persona, bool esAdmin, Persona usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
@@ -74,6 +74,7 @@ namespace SiADi
             labelCargo.Hide();
             btnCrear.Hide();
             btnLimpiar.Hide();
+            pictureBox1.Hide();
             errorDni = false;
             errorCuil = false;
             errorNombre = false;
@@ -81,7 +82,6 @@ namespace SiADi
             errorFecha = false;
             errorTelefono = false;
             errorDireccion = false;
-            pictureBox1.Hide();
         }
 
         private void modoEdicion()
@@ -284,6 +284,7 @@ namespace SiADi
                     Persona persona = new Persona { Dni = Int32.Parse(textBoxDNI.Text), Cuil = Int64.Parse(textBoxCUIL.Text), Nombre = textBoxNombre.Text, Apellido = textBoxApellido.Text, Fecha_nacimiento = dateTimePickerFechaNacimiento.Value, Telefono = Int64.Parse(textBoxTelefono.Text), Direccion = textBoxDireccion.Text, Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue), Contraseña = crearContraseña(), Edad = Int32.Parse(textBoxEdad.Text), Encargado = checkBoxEncargado.Checked };
                     db.Personas.Add(persona);
                     db.SaveChanges();
+                    crearCredencial(persona);
                 }
                 MessageBox.Show("Usuario añadido. La contraseña es: "+crearContraseña(), "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBoxDNI.Clear();
@@ -377,6 +378,7 @@ namespace SiADi
                     personaupdate.Encargado = checkBoxEncargado.Checked;
                     personaupdate.Cargo = db.Cargos.Find(comboBoxCargo.SelectedValue);
                     db.SaveChanges();
+                    crearCredencial(personaupdate);
                     MessageBox.Show("El usuario ha sido modificado.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
@@ -396,7 +398,7 @@ namespace SiADi
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void crearCredencial(Persona persona)
         {
             using (PdfDocument document = new PdfDocument())
             {
@@ -411,19 +413,19 @@ namespace SiADi
 
                 //Escribo las credenciales
                 graphics.DrawString("CREDENCIAL DE EMPLEADO", font, PdfBrushes.Black, new PointF(150, 5));
-                graphics.DrawString(usuario.Cuil.ToString(), font, PdfBrushes.Black, new PointF(150, 30));
-                graphics.DrawString("Nombre: "+usuario.Nombre, font, PdfBrushes.Black, new PointF(150, 55));
-                graphics.DrawString("Apellido: "+usuario.Apellido, font, PdfBrushes.Black, new PointF(150, 80));
-                graphics.DrawString(usuario.Cargo.Area.Nombre+" - "+usuario.Cargo.Nombre, font, PdfBrushes.Black, new PointF(150, 105));
+                graphics.DrawString(persona.Cuil.ToString(), font, PdfBrushes.Black, new PointF(150, 30));
+                graphics.DrawString("Nombre: " + persona.Nombre, font, PdfBrushes.Black, new PointF(150, 55));
+                graphics.DrawString("Apellido: " + persona.Apellido, font, PdfBrushes.Black, new PointF(150, 80));
+                graphics.DrawString(persona.Cargo.Area.Nombre + " - " + persona.Cargo.Nombre, font, PdfBrushes.Black, new PointF(150, 105));
 
                 //Genero y escribo el QR
                 Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-                PdfBitmap image = new PdfBitmap(qrcode.Draw(usuario.Cuil.ToString(), 60));
+                PdfBitmap image = new PdfBitmap(qrcode.Draw(persona.Cuil.ToString(), 60));
                 graphics.DrawImage(image, 0, 0);
-                
+
                 //Guardo el PDF
-                document.Save("C://SiADi-Credenciales/Credencial "+usuario.Apellido+" "+usuario.Nombre+".pdf");
-                MessageBox.Show("Credencial guardada en: \nC://SiADi-Credenciales/Credencial "+usuario.Apellido+" "+usuario.Nombre+".pdf", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                document.Save("C://SiADi-Credenciales/Credencial " + persona.Apellido + " " + persona.Nombre + ".pdf");
+                MessageBox.Show("Credencial guardada en: \nC://SiADi-Credenciales/Credencial " + persona.Apellido + " " + persona.Nombre + ".pdf", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
