@@ -30,6 +30,7 @@ namespace SiADi
             if(!esAdmin)
             {
                 btnAreas.Hide();
+                buttonBD.Hide();
             }
         }
 
@@ -285,6 +286,11 @@ namespace SiADi
         {
             openChildForm(new AreasModificar());
             botonSeleccionado(btnAreasModificar);
+        }
+
+        private void buttonBD_Click(object sender, EventArgs e)
+        {
+            openChildForm(new BaseDatos());
         }
     }
 }
