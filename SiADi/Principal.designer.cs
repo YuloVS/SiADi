@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.buttonBD = new System.Windows.Forms.Button();
             this.panelAreasSubMenu = new System.Windows.Forms.Panel();
             this.btnAreasModificar = new System.Windows.Forms.Button();
             this.btnAreasAñadir = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.buttonBD = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelAreasSubMenu.SuspendLayout();
             this.panelCargosSubMenu.SuspendLayout();
@@ -84,6 +84,27 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // buttonBD
+            // 
+            this.buttonBD.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonBD.FlatAppearance.BorderSize = 0;
+            this.buttonBD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.buttonBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.buttonBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBD.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBD.ForeColor = System.Drawing.Color.Silver;
+            this.buttonBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBD.Location = new System.Drawing.Point(0, 662);
+            this.buttonBD.Name = "buttonBD";
+            this.buttonBD.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonBD.Size = new System.Drawing.Size(233, 45);
+            this.buttonBD.TabIndex = 14;
+            this.buttonBD.Text = "Base de Datos";
+            this.buttonBD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBD.UseVisualStyleBackColor = true;
+            this.buttonBD.Click += new System.EventHandler(this.buttonBD_Click);
             // 
             // panelAreasSubMenu
             // 
@@ -463,28 +484,6 @@
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            // 
-            // buttonBD
-            // 
-            this.buttonBD.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonBD.FlatAppearance.BorderSize = 0;
-            this.buttonBD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.buttonBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.buttonBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBD.Font = new System.Drawing.Font("Myriad Pro Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBD.ForeColor = System.Drawing.Color.Silver;
-            this.buttonBD.Image = ((System.Drawing.Image)(resources.GetObject("buttonBD.Image")));
-            this.buttonBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBD.Location = new System.Drawing.Point(0, 662);
-            this.buttonBD.Name = "buttonBD";
-            this.buttonBD.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonBD.Size = new System.Drawing.Size(233, 45);
-            this.buttonBD.TabIndex = 14;
-            this.buttonBD.Text = "Base de Datos";
-            this.buttonBD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBD.UseVisualStyleBackColor = true;
-            this.buttonBD.Click += new System.EventHandler(this.buttonBD_Click);
             // 
             // Principal
             // 
