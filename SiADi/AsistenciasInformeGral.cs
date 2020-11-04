@@ -223,6 +223,7 @@ namespace SiADi
                         dataGridView1.Columns[2].DataPropertyName = "Apellido";
                         dataGridView1.Columns[3].Name = "Entrada";
                         dataGridView1.Columns[3].DataPropertyName = "Entrada";
+                        dataGridView1.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridView1.DataSource = list;
                         dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridView1.Refresh();
@@ -248,6 +249,7 @@ namespace SiADi
                         dataGridView1.Columns[2].DataPropertyName = "Apellido";
                         dataGridView1.Columns[3].Name = "Entrada";
                         dataGridView1.Columns[3].DataPropertyName = "Entrada";
+                        dataGridView1.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridView1.DataSource = list;
                         dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridView1.Refresh();
@@ -270,14 +272,15 @@ namespace SiADi
                     if (list.Length > 0)
                     {
                         dataGridView1.AutoGenerateColumns = false;
-                        dataGridView1.Columns[0].Name = "Id";
-                        dataGridView1.Columns[0].DataPropertyName = "Id";
-                        dataGridView1.Columns[1].Name = "Cuil";
-                        dataGridView1.Columns[1].DataPropertyName = "Cuil";
-                        dataGridView1.Columns[2].Name = "Nombre";
-                        dataGridView1.Columns[2].DataPropertyName = "Nombre";
-                        dataGridView1.Columns[3].Name = "Apellido";
-                        dataGridView1.Columns[3].DataPropertyName = "Apellido";
+                        dataGridView1.Columns[0].Name = "Cuil";
+                        dataGridView1.Columns[0].DataPropertyName = "Cuil";
+                        dataGridView1.Columns[1].Name = "Nombre";
+                        dataGridView1.Columns[1].DataPropertyName = "Nombre";
+                        dataGridView1.Columns[2].Name = "Apellido";
+                        dataGridView1.Columns[2].DataPropertyName = "Apellido";
+                        dataGridView1.Columns[3].Name = "Entrada";
+                        dataGridView1.Columns[3].DataPropertyName = "Entrada";
+                        dataGridView1.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridView1.DataSource = list;
                         dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridView1.Refresh();
@@ -293,14 +296,15 @@ namespace SiADi
                     if (list.Length > 0)
                     {
                         dataGridView1.AutoGenerateColumns = false;
-                        dataGridView1.Columns[0].Name = "Id";
-                        dataGridView1.Columns[0].DataPropertyName = "Id";
-                        dataGridView1.Columns[1].Name = "Cuil";
-                        dataGridView1.Columns[1].DataPropertyName = "Cuil";
-                        dataGridView1.Columns[2].Name = "Nombre";
-                        dataGridView1.Columns[2].DataPropertyName = "Nombre";
-                        dataGridView1.Columns[3].Name = "Apellido";
-                        dataGridView1.Columns[3].DataPropertyName = "Apellido";
+                        dataGridView1.Columns[0].Name = "Cuil";
+                        dataGridView1.Columns[0].DataPropertyName = "Cuil";
+                        dataGridView1.Columns[1].Name = "Nombre";
+                        dataGridView1.Columns[1].DataPropertyName = "Nombre";
+                        dataGridView1.Columns[2].Name = "Apellido";
+                        dataGridView1.Columns[2].DataPropertyName = "Apellido";
+                        dataGridView1.Columns[3].Name = "Entrada";
+                        dataGridView1.Columns[3].DataPropertyName = "Entrada";
+                        dataGridView1.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridView1.DataSource = list;
                         dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridView1.Refresh();

@@ -33,7 +33,7 @@ namespace SiADi
                 if(!admin)
                 {
                     Cargo cargo = usuario.Cargo;
-                    var cargos = from c in db.Cargos where c.AreaId == cargo.AreaId select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre };
+                    var cargos = from c in db.Cargos where c.AreaId == cargo.AreaId && !c.baja && !c.Area.baja select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre };
                     var list = cargos.ToArray();
                     if (list.Length > 0)
                     {
@@ -46,8 +46,10 @@ namespace SiADi
                         dataGridViewCargos.Columns[2].DataPropertyName = "Salario";
                         dataGridViewCargos.Columns[3].Name = "Entrada";
                         dataGridViewCargos.Columns[3].DataPropertyName = "Horario_entrada";
+                        dataGridViewCargos.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridViewCargos.Columns[4].Name = "Salida";
                         dataGridViewCargos.Columns[4].DataPropertyName = "Horario_salida";
+                        dataGridViewCargos.Columns[4].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridViewCargos.Columns[5].Name = "Area";
                         dataGridViewCargos.Columns[5].DataPropertyName = "Area";
                         dataGridViewCargos.DataSource = list;
@@ -58,7 +60,7 @@ namespace SiADi
                 else
                 {
                     Cargo cargo = usuario.Cargo;
-                    var cargos = from c in db.Cargos select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre };
+                    var cargos = from c in db.Cargos where !c.baja && !c.Area.baja select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre };
                     var list = cargos.ToArray();
                     if (list.Length > 0)
                     {
@@ -71,8 +73,10 @@ namespace SiADi
                         dataGridViewCargos.Columns[2].DataPropertyName = "Salario";
                         dataGridViewCargos.Columns[3].Name = "Entrada";
                         dataGridViewCargos.Columns[3].DataPropertyName = "Horario_entrada";
+                        dataGridViewCargos.Columns[3].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridViewCargos.Columns[4].Name = "Salida";
                         dataGridViewCargos.Columns[4].DataPropertyName = "Horario_salida";
+                        dataGridViewCargos.Columns[4].DefaultCellStyle.Format = "HH:mm:ss";
                         dataGridViewCargos.Columns[5].Name = "Area";
                         dataGridViewCargos.Columns[5].DataPropertyName = "Area";
                         dataGridViewCargos.DataSource = list;
@@ -92,8 +96,19 @@ namespace SiADi
                 if (!admin)
                 {
                     Cargo cargo = usuario.Cargo;
-                    Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.AreaId WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE a.Id=@id AND (c.Nombre=@nombre OR c.Salario=@salario)", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    //Area area = db.Areas.SqlQuery("SELECT * FROM Areas a INNER JOIN Cargos ON a.Id = Cargos.AreaId WHERE Cargos.Id=@id", new SqlParameter("@id", cargo.Id)).Single();
+                    //var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE a.Id=@id AND (c.Nombre=@nombre OR c.Salario=@salario)", new SqlParameter("@id", area.Id), new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    double.TryParse(textBoxFiltro.Text, out double textNumero);
+                    var list = (from c in db.Cargos
+                        where (c.Nombre.Contains(textBoxFiltro.Text) || c.Salario == textNumero || c.Area.Nombre.Contains(textBoxFiltro.Text)) && !c.Area.baja && c.AreaId == cargo.AreaId
+                        select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre }
+                        ).ToArray();
+                    if (list.Length > 0)
+                    {
+                        dataGridViewCargos.AutoGenerateColumns = false;
+                        dataGridViewCargos.DataSource = list;
+                        dataGridViewCargos.Refresh();
+                    }
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
@@ -103,7 +118,12 @@ namespace SiADi
                 }
                 else
                 {
-                    var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE c.Nombre=@nombre OR c.Salario=@salario ", new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    //var list = db.Cargos.SqlQuery("SELECT * FROM Cargos c INNER JOIN Areas a ON c.AreaId = a.Id WHERE c.Nombre=@nombre OR c.Salario=@salario ", new SqlParameter("@nombre", textBoxFiltro.Text), new SqlParameter("@salario", Convert.ToDouble(textBoxFiltro.Text))).ToArray();
+                    double.TryParse(textBoxFiltro.Text, out double textNumero);
+                    var list = (from c in db.Cargos
+                        where (c.Nombre.Contains(textBoxFiltro.Text) || c.Salario == textNumero || c.Area.Nombre.Contains(textBoxFiltro.Text)) && !c.Area.baja
+                        select new { Id = c.Id, Nombre = c.Nombre, Salario = c.Salario, Horario_entrada = c.Horario_entrada, Horario_salida = c.Horario_salida, Area = c.Area.Nombre }
+                        ).ToArray();
                     if (list.Length > 0)
                     {
                         dataGridViewCargos.AutoGenerateColumns = false;
