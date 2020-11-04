@@ -21,6 +21,7 @@ namespace SiADi
         {
             AdminDB adb = new AdminDB();
             adb.backup();
+            MessageBox.Show("Backup generado, si desea restaurar la base de datos comuniquese con el encargado de sistemas.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)

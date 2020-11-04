@@ -1,4 +1,5 @@
 ﻿using SiADi.Modelo;
+using System;
 
 namespace SiADi
 {
@@ -9,7 +10,9 @@ namespace SiADi
             using (var db = new SiADiDB())
             {
                 //string query = "BACKUP DATABASE SiADi TO DISK = 'D:SiADi"+DateTime.Today.ToString("yy-MM-dd")+".bak'";
-                string query = "BACKUP DATABASE SiADi TO DISK = 'D:SiADi.bak'";
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string fecha = DateTime.Today.ToString("yyyy-MM-dd");
+                string query = "BACKUP DATABASE SiADi TO DISK = '"+path+"/SiADi"+fecha+".bak'";
                 db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, query);
             }
         }
