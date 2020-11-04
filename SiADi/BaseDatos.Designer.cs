@@ -82,7 +82,7 @@
             this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonEditar.Location = new System.Drawing.Point(52, 149);
+            this.buttonEditar.Location = new System.Drawing.Point(52, 123);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(150, 40);
             this.buttonEditar.TabIndex = 21;
@@ -97,7 +97,7 @@
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Myriad Pro Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCancelar.Location = new System.Drawing.Point(52, 319);
+            this.buttonCancelar.Location = new System.Drawing.Point(52, 273);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(150, 40);
             this.buttonCancelar.TabIndex = 22;
