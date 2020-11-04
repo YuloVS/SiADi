@@ -61,6 +61,7 @@
             this.buttonEditar.TabIndex = 21;
             this.buttonEditar.Text = "Exportar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // pictureBox1
             // 

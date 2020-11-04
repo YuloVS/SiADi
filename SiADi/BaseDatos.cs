@@ -17,5 +17,16 @@ namespace SiADi
             InitializeComponent();
         }
 
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            AdminDB adb = new AdminDB();
+            adb.backup();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            AdminDB adb = new AdminDB();
+            adb.restore();
+        }
     }
 }
