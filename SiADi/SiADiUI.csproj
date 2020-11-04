@@ -147,6 +147,7 @@
     <Compile Include="IngresoVista.Designer.cs">
       <DependentUpon>IngresoVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManejoDB.cs" />
     <Compile Include="Migrations\202010052353490_Inicial.cs" />
     <Compile Include="Migrations\202010052353490_Inicial.Designer.cs">
       <DependentUpon>202010052353490_Inicial.cs</DependentUpon>
