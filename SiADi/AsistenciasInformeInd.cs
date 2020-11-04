@@ -84,20 +84,34 @@ namespace SiADi
         {
             using (var db = new SiADiDB())
             {
-                var consulta = from a in db.Asistencias
-                    where a.PersonaId == personaId
+                var ingresos = from a in db.Asistencias
+                    where a.PersonaId == personaId && a.Tipo
                     select new { a.Hora };
-                var list = consulta.ToArray();;
-                chartIngreso.DataSource = list;
+                var ingresosLista = ingresos.ToArray();
+                var egresos = from a in db.Asistencias
+                    where a.PersonaId == personaId && !a.Tipo
+                    select new { a.Hora };
+                var egresosLista = egresos.ToArray();
+                chartIngreso.DataSource = ingresosLista;
                 chartIngreso.Series.Clear();
                 chartIngreso.Series.Add("Horario de entrada");
                 chartIngreso.Series["Horario de entrada"].ChartType = SeriesChartType.Point;
-                //chartIngreso.Series[0].Label = "#VALY";
-                //chartIngreso.Series[0].LabelForeColor = Color.White;
                 chartIngreso.Series["Horario de entrada"].XValueMember = "Hora";
                 chartIngreso.Series["Horario de entrada"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
                 chartIngreso.Series["Horario de entrada"].YValueMembers = "Hora";
                 chartIngreso.Series["Horario de entrada"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+                chartIngreso.Series[0].Color = Color.Green;
+                
+                chartEgreso.DataSource = egresosLista;
+                chartEgreso.Series.Clear();
+                chartEgreso.Series.Add("Horario de salida");
+                chartEgreso.Series["Horario de salida"].ChartType = SeriesChartType.Point;
+                chartEgreso.Series["Horario de salida"].XValueMember = "Hora";
+                chartEgreso.Series["Horario de salida"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+                chartEgreso.Series["Horario de salida"].YValueMembers = "Hora";
+                chartEgreso.Series["Horario de salida"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+                chartEgreso.Series[0].Color = Color.Red;
+
             }
         }
         
@@ -108,23 +122,19 @@ namespace SiADi
                 var consulta = from a in db.Asistencias
                     where a.PersonaId == personaId && a.Tipo
                     orderby a.Fecha descending 
-                    select a;
+                    group a by a.Fecha into g
+                    select g;
                 var inicio = 0;
                 if (consulta.FirstOrDefault() != null)
-                {
-                    inicio = Math.Abs((consulta.FirstOrDefault().Fecha - DateTime.Today).Days);
-                }
+                    inicio = Math.Abs((consulta.FirstOrDefault().FirstOrDefault().Fecha - DateTime.Today).Days);
                 var list = consulta.ToArray();
                 int asistencias = list.Length;
+                labelCantidad.Text = asistencias.ToString();
                 int faltas;
-                if (inicio-asistencias >= 0)
-                {
+                if (inicio - asistencias >= 0)
                     faltas = inicio - asistencias;
-                }
                 else
-                {
                     faltas = 0;
-                }
                 chart1.DataSource = list;
                 chart1.Series.Clear();
                 chart1.Series.Add("Ingresos");

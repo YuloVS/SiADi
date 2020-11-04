@@ -39,29 +39,34 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.label7 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.labelCantidad = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.chartIngreso = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartEgreso = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize) (this.chartIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.chartEgreso)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
+            // labelCantidad
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.label7.Location = new System.Drawing.Point(401, 299);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 33);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "XX";
+            this.labelCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelCantidad.AutoSize = true;
+            this.labelCantidad.Font = new System.Drawing.Font("Myriad Pro Cond", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelCantidad.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.labelCantidad.Location = new System.Drawing.Point(401, 299);
+            this.labelCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCantidad.Name = "labelCantidad";
+            this.labelCantidad.Size = new System.Drawing.Size(37, 33);
+            this.labelCantidad.TabIndex = 18;
+            this.labelCantidad.Text = "XX";
             // 
             // label4
             // 
@@ -238,15 +243,62 @@
             this.chart1.TabIndex = 33;
             this.chart1.Text = "chart1";
             // 
+            // chartEgreso
+            // 
+            this.chartEgreso.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            this.chartEgreso.BorderlineColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.chartEgreso.BorderlineWidth = 2;
+            chartArea3.AxisX.IsLabelAutoFit = false;
+            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX2.TitleFont = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisX2.TitleForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.IsLabelAutoFit = false;
+            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY2.TitleFont = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            chartArea3.AxisY2.TitleForeColor = System.Drawing.Color.LightGray;
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            chartArea3.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            chartArea3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            chartArea3.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            chartArea3.Name = "ChartArea1";
+            this.chartEgreso.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
+            legend3.Font = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            legend3.ForeColor = System.Drawing.Color.LightGray;
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Myriad Pro Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            legend3.TitleForeColor = System.Drawing.Color.LightGray;
+            this.chartEgreso.Legends.Add(legend3);
+            this.chartEgreso.Location = new System.Drawing.Point(130, 209);
+            this.chartEgreso.Margin = new System.Windows.Forms.Padding(4);
+            this.chartEgreso.Name = "chartEgreso";
+            this.chartEgreso.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartEgreso.PaletteCustomColors = new System.Drawing.Color[] {System.Drawing.Color.MediumSpringGreen};
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartEgreso.Series.Add(series3);
+            this.chartEgreso.Size = new System.Drawing.Size(375, 186);
+            this.chartEgreso.TabIndex = 34;
+            this.chartEgreso.Text = "chart1";
+            // 
             // AsistenciasInformeInd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (32)))), ((int) (((byte) (30)))), ((int) (((byte) (45)))));
             this.ClientSize = new System.Drawing.Size(667, 514);
+            this.Controls.Add(this.chartEgreso);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chartIngreso);
             this.Controls.Add(this.label1);
@@ -256,9 +308,14 @@
             ((System.ComponentModel.ISupportInitialize) (this.chartIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.chartEgreso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartEgreso;
+
+        private System.Windows.Forms.Label labelCantidad;
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartIngreso;
 
@@ -268,7 +325,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
     }
