@@ -24,6 +24,9 @@ namespace SiADi
             dataGridView1.ColumnCount = 4;
             cargarTabla();
             dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["Cuil"].ReadOnly = true;
+            dataGridView1.Columns["Nombre"].ReadOnly = true;
+            dataGridView1.Columns["Apellido"].ReadOnly = true;
         }
         
         public void cargarTabla()
@@ -34,9 +37,8 @@ namespace SiADi
                 {
                     int id = usuario.Cargo.AreaId;
                     var consulta = from p in db.Personas
-                                   join c in db.Cargos on p.Cargo.Id equals c.Id
-                                   where p.baja != true && id == c.Area.Id
-                                   select new { Id = p.Id, Cuil = p.Cuil, Nombre = p.Nombre, Apellido = p.Apellido, cNombre = c.Nombre, Telefono = p.Telefono };
+                                   where p.baja != true && id == p.Cargo.AreaId
+                                   select new { Id = p.Id, Cuil = p.Cuil, Nombre = p.Nombre, Apellido = p.Apellido};
                     var list = consulta.ToArray();
                     if (list.Length > 0)
                     {
@@ -49,10 +51,6 @@ namespace SiADi
                         dataGridView1.Columns[2].DataPropertyName = "Nombre";
                         dataGridView1.Columns[3].Name = "Apellido";
                         dataGridView1.Columns[3].DataPropertyName = "Apellido";
-                        dataGridView1.Columns[4].Name = "Cargo";
-                        dataGridView1.Columns[4].DataPropertyName = "cNombre";
-                        dataGridView1.Columns[5].Name = "Telefono";
-                        dataGridView1.Columns[5].DataPropertyName = "Telefono";
                         dataGridView1.DataSource = list;
                         dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
                         dataGridView1.Refresh();
@@ -158,6 +156,78 @@ namespace SiADi
                 cargarChartIngreso(personaId);
                 cargarPieChart(personaId);
             }
+        }
+
+        private void filtrar()
+        {
+            using (var db = new SiADiDB())
+            {
+                if (admin)
+                {
+                    long.TryParse(textBoxFiltro.Text, out long textNum);
+                    var consulta = from p in db.Personas
+                                   where p.Cuil == textNum || p.Nombre.Contains(textBoxFiltro.Text) || p.Apellido.Contains(textBoxFiltro.Text) 
+                                   select new { Id = p.Id, Cuil = p.Cuil, Nombre = p.Nombre, Apellido = p.Apellido};
+                    var list = consulta.ToArray();
+                    if (list.Length > 0)
+                    {
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.Columns[0].Name = "Id";
+                        dataGridView1.Columns[0].DataPropertyName = "Id";
+                        dataGridView1.Columns[1].Name = "Cuil";
+                        dataGridView1.Columns[1].DataPropertyName = "Cuil";
+                        dataGridView1.Columns[2].Name = "Nombre";
+                        dataGridView1.Columns[2].DataPropertyName = "Nombre";
+                        dataGridView1.Columns[3].Name = "Apellido";
+                        dataGridView1.Columns[3].DataPropertyName = "Apellido";
+                        dataGridView1.DataSource = list;
+                        dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
+                        dataGridView1.Refresh();
+                    }
+                }
+                else
+                {
+                    long.TryParse(textBoxFiltro.Text, out long textNum);
+                    var consulta = from p in db.Personas
+                                   where (p.Cuil == textNum || p.Nombre.Contains(textBoxFiltro.Text) || p.Apellido.Contains(textBoxFiltro.Text)) && p.Cargo.AreaId == usuario.Cargo.AreaId
+                                   select new { Id = p.Id, Cuil = p.Cuil, Nombre = p.Nombre, Apellido = p.Apellido};
+                    var list = consulta.ToArray();
+                    if (list.Length > 0)
+                    {
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.Columns[0].Name = "Id";
+                        dataGridView1.Columns[0].DataPropertyName = "Id";
+                        dataGridView1.Columns[1].Name = "Cuil";
+                        dataGridView1.Columns[1].DataPropertyName = "Cuil";
+                        dataGridView1.Columns[2].Name = "Nombre";
+                        dataGridView1.Columns[2].DataPropertyName = "Nombre";
+                        dataGridView1.Columns[3].Name = "Apellido";
+                        dataGridView1.Columns[3].DataPropertyName = "Apellido";
+                        dataGridView1.DataSource = list;
+                        dataGridView1.Font = new Font("Myriad Pro Cond", 15.99F);
+                        dataGridView1.Refresh();
+                    }
+                }
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void textBoxFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                filtrar();
+            }
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            this.textBoxFiltro.Clear();
+            cargarTabla();
         }
     }
 }
