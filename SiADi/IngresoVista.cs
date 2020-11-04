@@ -157,6 +157,11 @@ namespace SiADi
                         Asistencia asistencia = new Asistencia();
                         asistencia.Fecha = DateTime.Today;
                         asistencia.Hora = DateTime.Now;
+                        if (persona.baja)
+                        {
+                            MessageBox.Show("Usted ha sido dado de baja, comuniquese con el encargado de su area.", "SiADi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                         var ultima =
                             (from a in db.Asistencias orderby a.Id descending where a.PersonaId == persona.Id select a.Tipo)
                             .FirstOrDefault();
