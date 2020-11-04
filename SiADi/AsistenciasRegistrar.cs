@@ -65,8 +65,15 @@ namespace SiADi
                         asistencia.Hora = DateTime.Now;
                         var ultima =
                             (from a in db.Asistencias orderby a.Id descending where a.PersonaId == persona.Id select a.Tipo)
-                            .First();
-                        asistencia.Tipo = !ultima;
+                            .FirstOrDefault();
+                        if (ultima != null)
+                        {
+                            asistencia.Tipo = !ultima;
+                        }
+                        else
+                        {
+                            asistencia.Tipo = true;
+                        }
                         persona?.Asistencias.Add(asistencia);
                         db.SaveChanges();
                         if (ultima)

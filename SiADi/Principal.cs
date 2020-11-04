@@ -241,7 +241,7 @@ namespace SiADi
 
         private void btnAsistenciasInformeGral_Click(object sender, EventArgs e)
         {
-            openChildForm(new AsistenciasInformeGral());
+            openChildForm(new AsistenciasInformeGral(usuario, admin));
             botonSeleccionado(btnAsistenciasInformeGral);
         }
 
