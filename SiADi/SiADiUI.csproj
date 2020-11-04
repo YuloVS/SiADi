@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDB.cs" />
     <Compile Include="AreasAñadir.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -88,6 +88,7 @@
             this.buttonEditar.TabIndex = 21;
             this.buttonEditar.Text = "Exportar";
             this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCancelar
             // 
@@ -103,6 +104,7 @@
             this.buttonCancelar.TabIndex = 22;
             this.buttonCancelar.Text = "Importar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // pictureBox1
             // 
